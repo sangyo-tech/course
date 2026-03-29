@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>学習目的別コース一覧 | 産業技術アカデミー</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden}
+body{font-family:'Noto Sans JP',sans-serif;background:#f4f7fb;color:#222;line-height:1.8}
+a{text-decoration:none}
+
+/* HEADER */
+.hd{background:#0b1f3a;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hd-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:#fff;letter-spacing:.08em}
+.hd-back{font-size:13px;color:#8faac8;white-space:nowrap}
+.hd-back:hover{color:#0ea5c8}
+.strip{height:3px;background:linear-gradient(90deg,#1a6fbf,#0ea5c8,#c8921a)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0b1f3a 0%,#132d52 60%,#0f3b66 100%);padding:52px 24px 44px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(14,165,200,.07);pointer-events:none}
+.hero-label{font-size:11px;letter-spacing:.25em;color:#e8b84b;font-weight:700;margin-bottom:14px}
+.hero-title{font-family:'Noto Serif JP',serif;font-size:30px;font-weight:700;color:#fff;letter-spacing:.06em;margin-bottom:12px}
+.hero-sub{font-size:14px;color:#8faac8;max-width:900px;margin:0 auto;line-height:1.8}
+
+/* LOGIN NOTICE */
+.login-notice{
+  background:linear-gradient(135deg,#0b1f3a,#132d52);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  text-align:center;
+}
+.login-notice-text{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  line-height:1.6;
+}
+.login-notice-text strong{color:#f2c14f;}
+
+
+/* WRAP */
+.wrap{width:100%;max-width:none;margin:0;padding:44px 24px 72px}
+.sec{margin-bottom:44px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.sec-tag{font-size:10px;letter-spacing:.2em;font-weight:700;padding:4px 12px;border-radius:4px}
+.sec-tag.blue{background:#e8f2fb;color:#1a6fbf}
+.sec-tag.navy{background:#e0e8f4;color:#0b1f3a}
+.sec-title{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:#0b1f3a}
+.sec-divider{flex:1;height:1px;background:#e8eef6;min-width:80px}
+
+/* カード共通 */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;align-items:stretch}
+.card{
+  background:#fff;border:1px solid #e8eef6;border-radius:12px;padding:20px;
+  display:flex;flex-direction:column;gap:6px;
+  transition:transform .15s,box-shadow .15s,border-color .15s;
+  min-height:160px;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,111,191,.12);border-color:#1a6fbf}
+.card-level{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;width:fit-content}
+.lv-blue{color:#fff;background:linear-gradient(135deg,#1a6fbf,#0ea5c8)}
+.lv-navy{background:#0b1f3a;color:#fff}
+.card-name{font-size:15px;font-weight:700;color:#0b1f3a;line-height:1.4}
+.card-desc{font-size:12.5px;color:#777;line-height:1.7;flex:1}
+.card-action{margin-top:auto;padding-top:10px;border-top:1px solid #f0f4f8;}
+.card.blue{border-top:3px solid #1a6fbf}
+.card.blue:hover{border-color:#1a6fbf;box-shadow:0 8px 24px rgba(26,111,191,.15)}
+.card.navy{border-top:3px solid #0b1f3a}
+.card.navy:hover{border-color:#0b1f3a;box-shadow:0 8px 24px rgba(11,31,58,.15)}
+
+/* 視聴ボタン（確認テストなし → 全幅） */
+.watch-btn{
+  display:block;
+  width:100%;
+  font-size:12px;font-weight:700;
+  color:#fff;
+  background:linear-gradient(135deg,#4a6080,#2e4060);
+  padding:10px 12px;
+  border-radius:6px;
+  text-align:center;
+  transition:opacity .15s;
+}
+.watch-btn:hover{opacity:.85}
+
+/* ログイン必要バッジ */
+.lock-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:10px;font-weight:700;
+  color:#8a6020;
+  background:#fff3d0;
+  border:1px solid #f0cc70;
+  padding:2px 8px;border-radius:4px;
+  margin-bottom:4px;width:fit-content;
+}
+
+
+/* 無料体験案内バー */
+.trial-notice{
+  background:linear-gradient(135deg,#fff0f3,#fde8ee);
+  border:1.5px solid #f0aab8;
+  border-radius:12px;
+  padding:20px 24px;
+  margin-bottom:28px;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.trial-notice-icon{font-size:1.8rem;flex-shrink:0;line-height:1;}
+.trial-notice-body{flex:1;min-width:200px;}
+.trial-notice-title{
+  font-size:14px;font-weight:700;color:#c0304a;
+  margin-bottom:6px;
+}
+.trial-notice-text{
+  font-size:13px;color:#555;line-height:1.75;margin-bottom:12px;
+}
+.trial-apply-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:700;
+  color:#fff;background:linear-gradient(135deg,#e0405a,#c0304a);
+  padding:10px 22px;border-radius:6px;
+  transition:opacity .15s;white-space:nowrap;
+}
+.trial-apply-btn:hover{opacity:.85}
+
+.back-btn{display:inline-flex;align-items:center;gap:8px;background:#0b1f3a;color:#fff;font-size:14px;padding:12px 24px;border-radius:8px;margin-top:8px}
+.back-btn:hover{background:#132d52}
+
+@media(max-width:900px){
+  .wrap{padding:36px 20px 60px}
+  .cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+}
+@media(max-width:600px){
+  .hero{padding:40px 16px 36px}
+  .hero-title{font-size:24px}
+  .hd{padding:0 16px}
+  .wrap{padding:32px 16px 60px}
+  .cards{grid-template-columns:1fr}
+  .free-cards{grid-template-columns:1fr}
+  .free-card-action{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hd">
+  <span class="hd-logo">産業技術アカデミー</span>
+  <a class="hd-back" href="https://sangyo-tech-testt.ulizaportal.jp/">産業技術アカデミーページ（要ログイン）へ</a>
+</div>
+<div class="strip"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">COURSE LIST</div>
+  <div class="hero-title">学習目的別コース一覧</div>
+  <div class="hero-sub">あなたの目的・レベルに合ったコースを選んで学習を始めましょう。</div>
+</div>
+
+<!-- ログイン案内バー -->
+<div class="login-notice">
+  <div class="login-notice-text">
+    <strong>🔒 視聴はログインが必要です。</strong>
+    企業契約後にすべてのコースをご利用いただけます。
+  </div>
+
+</div>
+
+<div class="wrap">
+
+  <!-- 無料体験案内 -->
+  <div class="trial-notice">
+    <div class="trial-notice-icon">🎓</div>
+    <div class="trial-notice-body">
+      <div class="trial-notice-title">無料体験をご希望の方へ</div>
+      <div class="trial-notice-text">
+        無料体験はお申し込み後に無料体験用URLが発行されます。<br>
+        品質管理 基礎コースの一部閲覧・確認テストをお試しいただけます。
+      </div>
+      <a href="https://forms.gle/W9AEgSZJLVy9AcdW9" class="trial-apply-btn">🎓 無料体験に申し込む</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       レベル別
+  ============================================================ -->
+  <div class="sec">
+    <div class="sec-head">
+      <span class="sec-tag blue">レベル別</span>
+      <span class="sec-title">段階別コース</span>
+      <span class="sec-divider"></span>
+    </div>
+    <div class="cards">
+      <div class="card blue">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-blue">LEVEL 00</span>
+        <span class="card-name">教養編</span>
+        <span class="card-desc">社会人・ビジネスの基礎知識を学ぶ入門コース</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card blue">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-blue">LEVEL 01</span>
+        <span class="card-name">初級編</span>
+        <span class="card-desc">品質管理の基礎を体系的に学ぶコース</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card blue">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-blue">LEVEL 02</span>
+        <span class="card-name">中級編</span>
+        <span class="card-desc">実務で活かせる中級の品質知識を習得</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card blue">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-blue">LEVEL 03</span>
+        <span class="card-name">実践編</span>
+        <span class="card-desc">現場で即使える実践的な知識とスキル</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card blue">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-blue">LEVEL 04</span>
+        <span class="card-name">具体例編</span>
+        <span class="card-desc">実際の事例を通して理解を深めるコース</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       規格別
+  ============================================================ -->
+  <div class="sec">
+    <div class="sec-head">
+      <span class="sec-tag" style="background:#fef3d8;color:#b07a10;">規格別</span>
+      <span class="sec-title">規格・GMP別コース</span>
+      <span class="sec-divider"></span>
+    </div>
+    <div class="cards">
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">GMP</span>
+        <span class="card-name">健康食品GMPコース</span>
+        <span class="card-desc">健康食品GMP基準の理解と実践</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a18-18d6-6f3d-3ef9-ba6924487efd" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">ISO 9001</span>
+        <span class="card-name">ISO9001コース</span>
+        <span class="card-desc">品質マネジメントシステムの構築と運用</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">ISO 13485</span>
+        <span class="card-name">ISO13485コース</span>
+        <span class="card-desc">医療機器品質マネジメントの理解と実践</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">ISO 14001</span>
+        <span class="card-name">ISO14001コース</span>
+        <span class="card-desc">環境マネジメントシステムの理解と実践</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">ISO 16949</span>
+        <span class="card-name">ISO16949コース</span>
+        <span class="card-desc">自動車産業品質マネジメントの理解と実践</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card" style="border-top:3px solid #c8921a;">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level" style="background:#c8921a;color:#fff;">ISO 22000</span>
+        <span class="card-name">ISO22000コース</span>
+        <span class="card-desc">食品安全マネジメントシステムの理解と実践</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       専門コース（品質）
+  ============================================================ -->
+  <div class="sec">
+    <div class="sec-head">
+      <span class="sec-tag navy">専門コース（品質）</span>
+      <span class="sec-title">専門コース（品質）</span>
+      <span class="sec-divider"></span>
+    </div>
+    <div class="cards">
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">品質管理</span>
+        <span class="card-name">品質管理 基礎コース</span>
+        <span class="card-desc">全社員・新人向け。品質管理の考え方と基礎を学ぶ</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a0b-e481-e184-07fa-8f958917ea65" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">製造業</span>
+        <span class="card-name">製造業 基礎知識コース</span>
+        <span class="card-desc">新人・非製造部門向け。製造業の仕組みを理解する</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a0c-5242-52e5-8d58-e19d717a6aef" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">現場力</span>
+        <span class="card-name">現場力向上コース</span>
+        <span class="card-desc">製造・現場部門向け。現場の実力を高める</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a0c-c9e7-7558-c77b-6b977b93b7b5" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">問題解決</span>
+        <span class="card-name">問題解決 基礎コース</span>
+        <span class="card-desc">新人〜中堅向け。問題解決の思考法と手法を学ぶ</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a0d-334c-ae19-4696-52b4d3c6a28d" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">QC</span>
+        <span class="card-name">QC七つ道具コース</span>
+        <span class="card-desc">品質・製造・生産管理向け。QC手法をマスターする</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a03-5a66-6b56-375a-fb29f9ebb64f" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">統計</span>
+        <span class="card-name">統計・データ分析コース</span>
+        <span class="card-desc">品質・技術・研究向け。データを活用した分析手法</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a03-1583-fe7b-97f3-284e57000c76" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">検査</span>
+        <span class="card-name">検査・計測コース</span>
+        <span class="card-desc">品質・検査員向け。正確な検査・計測の知識と技術</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a0d-6ed2-d794-2338-4eb44ee80f79" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">QMS</span>
+        <span class="card-name">品質マネジメントシステムコース</span>
+        <span class="card-desc">品質部門・管理職向け。QMSの構築と運用を学ぶ</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a14-f306-8c75-f39e-c4b76f0b0466" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">FMEA</span>
+        <span class="card-name">FMEA・源流管理コース</span>
+        <span class="card-desc">設計・品質・生産技術向け。源流での品質作り込み</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a15-2996-2647-ebd6-c899267f778d" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">4M管理</span>
+        <span class="card-name">変更管理・4M管理コース</span>
+        <span class="card-desc">品質・製造・技術向け。変化点管理の実践手法</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a15-7a3d-c0be-77f2-510396162736" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">クレーム</span>
+        <span class="card-name">クレーム対応・是正処置コース</span>
+        <span class="card-desc">品質・管理職向け。クレームを再発防止につなげる</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a15-ae15-1135-17cb-6adb2bddfb83" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">購買</span>
+        <span class="card-name">サプライヤ品質管理コース</span>
+        <span class="card-desc">購買・品質向け。仕入先の品質を管理・向上させる</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a15-ec77-e250-32c9-b8dad2d96c85" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">KPI</span>
+        <span class="card-name">品質コスト・KPI管理コース</span>
+        <span class="card-desc">管理職向け。品質コストの見える化とKPI設定</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a16-1884-e2e2-eeec-5a365a102e2b" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">リスク</span>
+        <span class="card-name">リスクマネジメントコース</span>
+        <span class="card-desc">管理職向け。リスクの特定・評価・対応を学ぶ</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a17-18ae-ae29-8543-a40dbc40e504" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">TPS</span>
+        <span class="card-name">トヨタ生産方式コース</span>
+        <span class="card-desc">製造・生産管理向け。TPSの思想と実践手法</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a17-4654-7599-afe7-62665f9590c6" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">標準化</span>
+        <span class="card-name">標準化コース</span>
+        <span class="card-desc">全社員向け。標準化の考え方と手順書・規程の作り方</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a17-76a1-a66f-154b-d1e48cbd201d" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">設備</span>
+        <span class="card-name">設備・保全コース</span>
+        <span class="card-desc">製造・保全部門向け。設備管理と予防保全の実践</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">DX</span>
+        <span class="card-name">DX・データ活用コース</span>
+        <span class="card-desc">管理職・技術向け。製造業のDX推進とデータ活用</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a17-bd8c-001c-d8f0-6775673ed838" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">育成</span>
+        <span class="card-name">品質人材育成・組織マネジメントコース</span>
+        <span class="card-desc">管理職向け。品質人材を育てる組織づくり</span>
+        <div class="card-action"><a href="https://ulizaportal.jp/pages/00674a17-e787-0f7e-3b1b-7b632daebc11" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+      <div class="card navy">
+        <span class="lock-badge">🔒 ログイン必要</span>
+        <span class="card-level lv-navy">総合</span>
+        <span class="card-name">総合ケーススタディコース</span>
+        <span class="card-desc">中堅〜管理職向け。実際の事例で総合力を鍛える</span>
+        <div class="card-action"><a href="https://sangyo-tech-testt.ulizaportal.jp/" class="watch-btn">視聴はログインが必要です 🔒</a></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="back-btn" href="https://sangyo-tech-testt.ulizaportal.jp/">産業技術アカデミーページ（要ログイン）へ</a>
+</div>
+
+</body>
+</html>
