@@ -2336,7 +2336,15 @@
 
 
 
-  </style>
+  
+    .search-filter-bar{background:rgba(255,255,255,.04);border:1px solid var(--c-border);border-radius:12px;padding:20px;margin-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .search-input{flex:1;min-width:200px;padding:10px 16px;border-radius:8px;border:1px solid var(--c-border);background:rgba(255,255,255,.06);color:var(--c-text);font-size:15px;outline:none;transition:border .2s}
+    .search-input:focus{border-color:var(--c-accent)}
+    .search-input::placeholder{color:var(--c-sub)}
+    .filter-btn{padding:8px 16px;border-radius:20px;border:1px solid var(--c-border);background:transparent;color:var(--c-sub);cursor:pointer;font-size:13px;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--c-accent);color:#fff;border-color:var(--c-accent)}
+    .no-results{text-align:center;padding:40px;color:var(--c-sub);font-size:16px;display:none}
+    </style>
 
 
 
@@ -2420,7 +2428,23 @@
 
 
 
-  <section class="hero">
+  
+
+  <div class="container">
+    <div class="search-filter-bar">
+      <input type="text" class="search-input" placeholder="コース名やキーワードで検索..." id="courseSearch">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="basics">基礎・入門</button>
+      <button class="filter-btn" data-filter="qc-stats">QC・統計</button>
+      <button class="filter-btn" data-filter="management">マネジメント</button>
+      <button class="filter-btn" data-filter="specialty">専門・業界</button>
+      <button class="filter-btn" data-filter="level">レベル別</button>
+      <button class="filter-btn" data-filter="theme">テーマ横断</button>
+    </div>
+    <div class="no-results" id="noResults">該当するコースが見つかりません</div>
+  </div>
+
+<section id="basics" class="hero">
 
 
 
@@ -2628,7 +2652,7 @@
 
 
 
-      <section class="category">
+      <section id="qc-stats" class="category">
 
 
 
@@ -2908,7 +2932,7 @@
 
 
 
-      <section class="category">
+      <section id="management" class="category">
 
 
 
@@ -3128,7 +3152,7 @@
 
 
 
-      <section class="category">
+      <section id="specialty" class="category">
 
 
 
@@ -3648,7 +3672,7 @@
 
 
 
-      <section class="category">
+      <section id="theme" class="category">
 
 
 
@@ -3948,7 +3972,7 @@
 
 
 
-  <section class="category">
+  <section id="level" class="category">
 
 
 
@@ -4706,6 +4730,24 @@
 
 
 
+
+<script>
+(function(){
+  var si=document.getElementById("courseSearch"),fb=document.querySelectorAll(".filter-btn"),ss=document.querySelectorAll("section[id]"),nr=document.getElementById("noResults");
+  function run(){
+    var q=si.value.toLowerCase().trim(),af=document.querySelector(".filter-btn.active"),fl=af?af.dataset.filter:"all",vc=0;
+    ss.forEach(function(s){
+      var mf=(fl==="all"||s.id===fl),cs=s.querySelectorAll(".course-card"),sv=false;
+      cs.forEach(function(c){var t=c.textContent.toLowerCase(),ms=!q||t.includes(q),sh=mf&&ms;c.style.display=sh?"":"none";if(sh){sv=true;vc++;}});
+      s.style.display=sv?"":"none";
+    });
+    if(nr)nr.style.display=vc===0?"block":"none";
+  }
+  si.addEventListener("input",run);
+  fb.forEach(function(b){b.addEventListener("click",function(){fb.forEach(function(x){x.classList.remove("active")});b.classList.add("active");run();if(b.dataset.filter!=="all"){var t=document.getElementById(b.dataset.filter);if(t)t.scrollIntoView({behavior:"smooth",block:"start"});}});});
+  if(location.hash){var id=location.hash.substring(1),mb=document.querySelector(".filter-btn[data-filter=\""+id+"\"]");if(mb)mb.click();}
+})();
+</script>
 </body>
 
 
