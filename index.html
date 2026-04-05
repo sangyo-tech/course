@@ -9498,70 +9498,32 @@
 
 </script>
 
-<script>(function(){  const filterBar = document.querySelector('.search-filter-bar');  if(!filterBar) return;  const label = document.createElement('div');  label.className = 'filter-result-label';  label.innerHTML = '🔍 <span></span>の検索結果：<em></em>件のコースが見つかりました';  filterBar.parentElement.insertBefore(label, filterBar.nextSibling);  const categoryNames = {all:'すべて',basics:'基礎・入門','qc-stats':'QC・統計',management:'マネジメント',specialty:'専門・業界',level:'レベル別',theme:'テーマ横断'};  document.querySelectorAll('.filter-btn').forEach(function(btn){    btn.addEventListener('click',function(){      const f = this.dataset.filter;      if(f === 'all'){        label.classList.remove('active');      } else {        const visible = document.querySelectorAll('.course-card:not([style*="display: none"])');        setTimeout(function(){          const count = document.querySelectorAll('.course-card:not([style*="display: none"])').length;          label.querySelector('span').textContent = categoryNames[f] || f;          label.querySelector('em').textContent = count;          label.classList.add('active');          label.scrollIntoView({behavior:'smooth',block:'start'});        },100);      }    });  });})();</script>
 <script>
 (function(){
-  var filterBar=document.querySelector(".search-filter-bar");
-  if(!filterBar)return;
-  var btns=filterBar.querySelectorAll(".filter-btn");
-  var grid=document.querySelector(".courses-grid");
-  var loginBanner=document.querySelector(".login-notice");
-  if(!grid)return;
-
-  /* Create search result label */
-  var resultLabel=document.createElement("div");
-  resultLabel.id="search-result-label";
-  resultLabel.style.cssText="display:none;color:rgba(255,255,255,.7);font-size:14px;margin:12px 0 8px 4px;font-weight:600;";
-  if(loginBanner&&loginBanner.nextSibling){
-    loginBanner.parentNode.insertBefore(resultLabel,loginBanner.nextSibling);
-  }else{
-    grid.parentNode.insertBefore(resultLabel,grid);
-  }
-
-  /* Create loading overlay */
-  var overlay=document.createElement("div");
-  overlay.id="search-overlay";
-  overlay.style.cssText="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(15,20,30,.92);color:#6aacdd;padding:18px 36px;border-radius:10px;font-size:15px;z-index:9999;box-shadow:0 4px 24px rgba(0,0,0,.4);";
-  overlay.textContent="\u691C\u7D22\u4E2D\u2026";
-  document.body.appendChild(overlay);
-
-  /* Override filter button behavior */
-  var categoryNames={basics:"\u57FA\u790E\u30FB\u5165\u9580","qc-stats":"QC\u30FB\u7D71\u8A08",management:"\u30DE\u30CD\u30B8\u30E1\u30F3\u30C8","specialty-industry":"\u5C02\u9580\u30FB\u696D\u754C","level-based":"\u30EC\u30D9\u30EB\u5225","cross-theme":"\u30C6\u30FC\u30DE\u6A2A\u65AD"};
-  btns.forEach(function(btn){
-    btn.addEventListener("click",function(e){
-      e.stopImmediatePropagation();
-      var filter=this.getAttribute("data-filter")||this.dataset.filter;
-      /* Show loading */
-      overlay.style.display="block";
-      grid.style.opacity="0.3";
-      grid.style.transition="opacity 0.2s";
-      /* Update active state */
-      btns.forEach(function(b){b.classList.remove("active");});
-      this.classList.add("active");
+  var notice=document.querySelector(".login-notice");
+  if(!notice)return;
+  var lbl=document.createElement("div");
+  lbl.style.cssText="display:none;text-align:center;padding:10px 0 4px;color:#6aacdd;font-size:14px;font-weight:600;";
+  notice.parentNode.insertBefore(lbl,notice.nextSibling);
+  var ov=document.createElement("div");
+  ov.style.cssText="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,21,32,0.6);z-index:9999;justify-content:center;align-items:center;";
+  ov.innerHTML='<div style="background:#162233;padding:24px 48px;border-radius:12px;color:#fff;font-size:16px;">\u691c\u7d22\u4e2d\u2026</div>';
+  document.body.appendChild(ov);
+  var names={basics:"\u57FA\u790E\u30FB\u5165\u9580","qc-stats":"QC\u30FB\u7D71\u8A08\u30FB\u691C\u67FB",management:"\u30DE\u30CD\u30B8\u30E1\u30F3\u30C8\u30FB\u7BA1\u7406",specialty:"\u5C02\u9580\u30FB\u696D\u754C\u7279\u5316",level:"\u30EC\u30D9\u30EB\u5225\u30B3\u30FC\u30B9",theme:"\u30C6\u30FC\u30DE\u6A2A\u65AD\u30B3\u30FC\u30B9"};
+  document.querySelectorAll(".filter-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var f=btn.getAttribute("data-filter");
+      ov.style.display="flex";
       setTimeout(function(){
-        overlay.style.display="none";
-        grid.style.opacity="1";
-        /* Show result label */
-        var cards=grid.querySelectorAll(".course-card");
-        var shown=0;
-        cards.forEach(function(c){
-          var cats=(c.getAttribute("data-category")||"").split(" ");
-          if(filter==="all"||cats.indexOf(filter)>-1){
-            c.style.display="";
-            shown++;
-          }else{
-            c.style.display="none";
-          }
-        });
-        var name=categoryNames[filter]||filter;
-        if(filter==="all"){
-          resultLabel.style.display="none";
-        }else{
-          resultLabel.textContent="\u691C\u7D22\u7D50\u679C\uFF1A\u300C"+name+"\u300D "+shown+"\u4EF6\u306E\u30B3\u30FC\u30B9";
-          resultLabel.style.display="block";
-        }
-      },400);
-    },true);
+        ov.style.display="none";
+        var secs=document.querySelectorAll("section.category");
+        var total=0;
+        secs.forEach(function(s){if(s.style.display!=="none")total+=s.querySelectorAll(".course-card").length;});
+        var name=names[f]||f;
+        lbl.textContent="\uD83D\uDD0D \u300C"+name+"\u300D\u306E\u691C\u7D22\u7D50\u679C\uFF1A"+total+"\u4EF6\u306E\u30B3\u30FC\u30B9";
+        lbl.style.display="block";
+      },450);
+    });
   });
 })();
 </script>
