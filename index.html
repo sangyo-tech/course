@@ -2338,9 +2338,9 @@
 
   
     .search-filter-bar{background:rgba(255,255,255,.04);border:1px solid var(--c-border);border-radius:12px;padding:20px;margin-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .search-input{flex:1;min-width:200px;padding:10px 16px;border-radius:8px;border:1px solid var(--c-border);background:rgba(255,255,255,.06);color:var(--c-text);font-size:15px;outline:none;transition:border .2s}
-    .search-input:focus{border-color:var(--c-accent)}
-    .search-input::placeholder{color:var(--c-sub)}
+    
+    
+
     .filter-btn{padding:8px 16px;border-radius:20px;border:1px solid var(--c-border);background:transparent;color:var(--c-sub);cursor:pointer;font-size:13px;transition:all .2s}
     .filter-btn:hover,.filter-btn.active{background:var(--c-accent);color:#fff;border-color:var(--c-accent)}
     .no-results{text-align:center;padding:40px;color:var(--c-sub);font-size:16px;display:none}
@@ -2432,7 +2432,7 @@
 
   <div class="container">
     <div class="search-filter-bar">
-      <input type="text" class="search-input" placeholder="コース名やキーワードで検索..." id="courseSearch">
+      
       <button class="filter-btn active" data-filter="all">すべて</button>
       <button class="filter-btn" data-filter="basics">基礎・入門</button>
       <button class="filter-btn" data-filter="qc-stats">QC・統計</button>
@@ -2636,7 +2636,7 @@
 
 
 
-        <a href="https://forms.gle/W9AEgSZJLVy9AcdW9" class="trial-btn">🎓 無料体験に申し込む</a>
+        <a href="https://apply.sangyo-tech.jp/?plan=trial" class="trial-btn">🎓 無料体験に申し込む</a>
 
 
 
@@ -4492,7 +4492,7 @@
 
         <div class="course-card-header">
 
-          <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🏥</div>
+          <div class="course-card-icon">🏥</div>
 
           <div class="course-card-meta">
 
@@ -4514,7 +4514,7 @@
 
         <div class="course-card-footer">
 
-          <a href="#" class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</a>
+          <a href="#" class="course-card-btn">▶ 準備中</a>
 
         </div>
 
@@ -4526,7 +4526,7 @@
 
         <div class="course-card-header">
 
-          <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🚗</div>
+          <div class="course-card-icon">🚗</div>
 
           <div class="course-card-meta">
 
@@ -4548,7 +4548,7 @@
 
         <div class="course-card-footer">
 
-          <a href="#" class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</a>
+          <a href="#" class="course-card-btn">▶ 準備中</a>
 
         </div>
 
@@ -4560,7 +4560,7 @@
 
         <div class="course-card-header">
 
-          <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🌿</div>
+          <div class="course-card-icon">🌿</div>
 
           <div class="course-card-meta">
 
@@ -4582,7 +4582,7 @@
 
         <div class="course-card-footer">
 
-          <a href="#" class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</a>
+          <a href="#" class="course-card-btn">▶ 準備中</a>
 
         </div>
 
@@ -4640,7 +4640,7 @@
 
 
 
-        <a href="https://update.sangyo-tech.jp/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);color:var(--color-text-secondary);font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">📅 今後の追加予定を見る</a>
+        <a href="https://update.sangyo-tech.jp/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);color:var(--color-text-secondary);font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">📅 今後の追加予定を見る</a>            <a href="https://apply.sangyo-tech.jp/?plan=contact" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(106,172,221,.15),rgba(106,172,221,.08));border:1px solid rgba(106,172,221,.3);color:#6aacdd;font-size:14px;font-weight:500;border-radius:8px;text-decoration:none;margin-top:12px;transition:all .3s ease;">✉️ コンテンツリクエストを送る</a>
 
 
 
@@ -4733,7 +4733,7 @@
 
 <script>
 (function(){
-  var si=document.getElementById("courseSearch"),fb=document.querySelectorAll(".filter-btn"),ss=document.querySelectorAll("section[id]"),nr=document.getElementById("noResults");
+  var si={value:"",addEventListener:function(){}},fb=document.querySelectorAll(".filter-btn"),ss=document.querySelectorAll("section[id]"),nr=document.getElementById("noResults");
   function run(){
     var q=si.value.toLowerCase().trim(),af=document.querySelector(".filter-btn.active"),fl=af?af.dataset.filter:"all",vc=0;
     ss.forEach(function(s){
