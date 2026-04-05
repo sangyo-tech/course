@@ -1,5 +1,9369 @@
 <!DOCTYPE html>
 
+
+
+<html lang="ja">
+
+
+
+<head>
+
+
+
+  <meta charset="UTF-8">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <title>コース一覧 | 産業技術アカデミー</title>
+
+
+
+  <meta name="description" content="産業技術アカデミーのコース一覧。品質管理・QC・統計・マネジメント・業界特化まで全30コース、178本以上のコンテンツを提供。">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+
+
+    :root {
+
+
+
+      --color-bg-primary: #0b1520;
+
+
+
+      --color-bg-secondary: #0a1e38;
+
+
+
+      --color-bg-card: rgba(255,255,255,.04);
+
+
+
+      --color-text-primary: #ffffff;
+
+
+
+      --color-text-secondary: rgba(255,255,255,.85);
+
+
+
+      --color-text-muted: rgba(255,255,255,.65);
+
+
+
+      --color-accent-gold: #f2c14f;
+
+
+
+      --color-accent-gold-light: #e2c97a;
+
+
+
+      --color-accent-blue: #7dd8f5;
+
+
+
+      --color-accent-green: #7de8a8;
+
+
+
+      --color-accent-purple: #c8a0ff;
+
+
+
+      --color-border: rgba(255,255,255,.10);
+
+
+
+      --font-display: 'M PLUS Rounded 1c', 'Yu Gothic', sans-serif;
+
+
+
+      --font-body: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+
+
+
+      --radius-sm: 8px;
+
+
+
+      --radius-md: 14px;
+
+
+
+      --radius-lg: 20px;
+
+
+
+      --transition-fast: .2s ease;
+
+
+
+      --transition-normal: .3s ease;
+
+
+
+    }
+
+
+
+
+
+
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+    html { scroll-behavior: smooth; }
+
+
+
+    
+
+
+
+    body {
+
+
+
+      font-family: var(--font-body);
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      line-height: 1.8;
+
+
+
+      background: var(--color-bg-primary);
+
+
+
+      min-height: 100vh;
+
+
+
+    }
+
+
+
+
+
+
+
+    a { text-decoration: none; color: inherit; }
+
+
+
+
+
+
+
+    .container {
+
+
+
+      max-width: 1200px;
+
+
+
+      margin: 0 auto;
+
+
+
+      padding: 0 24px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ヘッダー */
+
+
+
+    .header {
+
+
+
+      background: rgba(11,21,32,.95);
+
+
+
+      backdrop-filter: blur(12px);
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+      padding: 16px 0;
+
+
+
+      position: sticky;
+
+
+
+      top: 0;
+
+
+
+      z-index: 100;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-inner {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: space-between;
+
+
+
+      gap: 20px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand {
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand-sub {
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: .15em;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand-main {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 20px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      letter-spacing: .05em;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav a {
+
+
+
+      font-size: 14px;
+
+
+
+      font-weight: 600;
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+      transition: color var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav a:hover {
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-cta {
+
+
+
+      padding: 10px 20px;
+
+
+
+      background: linear-gradient(135deg, var(--color-accent-gold), #d4a84a);
+
+
+
+      color: #0b1520 !important;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-cta:hover {
+
+
+
+      transform: translateY(-2px);
+
+
+
+      box-shadow: 0 6px 20px rgba(242,193,79,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ヒーロー */
+
+
+
+    .hero {
+
+
+
+      background: linear-gradient(160deg, rgba(10,30,56,.98) 0%, rgba(6,18,36,.98) 100%);
+
+
+
+      padding: 64px 0 56px;
+
+
+
+      text-align: center;
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+      position: relative;
+
+
+
+      overflow: hidden;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero::before {
+
+
+
+      content: '';
+
+
+
+      position: absolute;
+
+
+
+      top: -100px;
+
+
+
+      right: -100px;
+
+
+
+      width: 400px;
+
+
+
+      height: 400px;
+
+
+
+      background: radial-gradient(circle, rgba(242,193,79,.08) 0%, transparent 70%);
+
+
+
+      pointer-events: none;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-eyebrow {
+
+
+
+      display: inline-block;
+
+
+
+      font-size: 12px;
+
+
+
+      font-weight: 700;
+
+
+
+      letter-spacing: .2em;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+      background: rgba(242,193,79,.12);
+
+
+
+      padding: 6px 16px;
+
+
+
+      border-radius: 999px;
+
+
+
+      margin-bottom: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-title {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: clamp(28px, 5vw, 42px);
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      margin-bottom: 16px;
+
+
+
+      letter-spacing: .03em;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-desc {
+
+
+
+      font-size: 16px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      max-width: 700px;
+
+
+
+      margin: 0 auto 32px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stats {
+
+
+
+      display: flex;
+
+
+
+      justify-content: center;
+
+
+
+      gap: 48px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat {
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-num {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 36px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-num span {
+
+
+
+      font-size: 18px;
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-label {
+
+
+
+      font-size: 13px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      margin-top: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ログイン案内 */
+
+
+
+    .login-notice {
+
+
+
+      background: linear-gradient(135deg, rgba(242,193,79,.08), rgba(242,193,79,.03));
+
+
+
+      border-bottom: 1px solid rgba(242,193,79,.15);
+
+
+
+      padding: 16px 24px;
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .login-notice-text {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+    }
+
+
+
+
+
+
+
+    .login-notice-text strong {
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* 無料体験バー */
+
+
+
+    .trial-bar {
+
+
+
+      background: linear-gradient(135deg, rgba(125,232,168,.10), rgba(125,232,168,.04));
+
+
+
+      border: 1px solid rgba(125,232,168,.25);
+
+
+
+      border-radius: var(--radius-lg);
+
+
+
+      padding: 24px 32px;
+
+
+
+      margin-bottom: 48px;
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: space-between;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-content {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-icon {
+
+
+
+      font-size: 2.2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-text h3 {
+
+
+
+      font-size: 16px;
+
+
+
+      font-weight: 700;
+
+
+
+      color: var(--color-accent-green);
+
+
+
+      margin-bottom: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-text p {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-btn {
+
+
+
+      display: inline-flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 8px;
+
+
+
+      padding: 14px 28px;
+
+
+
+      background: linear-gradient(135deg, #5bd4a1, #4ac090);
+
+
+
+      color: #0b1520;
+
+
+
+      font-size: 15px;
+
+
+
+      font-weight: 700;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+      white-space: nowrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-btn:hover {
+
+
+
+      transform: translateY(-2px);
+
+
+
+      box-shadow: 0 8px 24px rgba(91,212,161,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* メインコンテンツ */
+
+
+
+    .main {
+
+
+
+      padding: 56px 0 80px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* カテゴリセクション */
+
+
+
+    .category {
+
+
+
+      margin-bottom: 56px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-header {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 16px;
+
+
+
+      margin-bottom: 24px;
+
+
+
+      padding-bottom: 16px;
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon {
+
+
+
+      width: 48px;
+
+
+
+      height: 48px;
+
+
+
+      border-radius: 12px;
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: center;
+
+
+
+      font-size: 1.5rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--blue {
+
+
+
+      background: linear-gradient(135deg, rgba(26,111,191,.25), rgba(14,165,200,.15));
+
+
+
+      border: 1px solid rgba(26,111,191,.4);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--navy {
+
+
+
+      background: linear-gradient(135deg, rgba(100,140,200,.15), rgba(60,100,160,.10));
+
+
+
+      border: 1px solid rgba(100,140,200,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--gold {
+
+
+
+      background: linear-gradient(135deg, rgba(200,146,26,.25), rgba(200,168,75,.15));
+
+
+
+      border: 1px solid rgba(200,146,26,.4);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-title {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 22px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-count {
+
+
+
+      font-size: 13px;
+
+
+
+      font-weight: 600;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      background: rgba(255,255,255,.08);
+
+
+
+      padding: 6px 14px;
+
+
+
+      border-radius: 999px;
+
+
+
+      margin-left: auto;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* コースカード */
+
+
+
+    .courses-grid {
+
+
+
+      display: grid;
+
+
+
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+
+
+      gap: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card {
+
+
+
+      background: var(--color-bg-card);
+
+
+
+      border: 1px solid var(--color-border);
+
+
+
+      border-radius: var(--radius-lg);
+
+
+
+      padding: 24px;
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card:hover {
+
+
+
+      background: rgba(255,255,255,.06);
+
+
+
+      border-color: rgba(255,255,255,.18);
+
+
+
+      transform: translateY(-4px);
+
+
+
+      box-shadow: 0 12px 32px rgba(0,0,0,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--blue {
+
+
+
+      border-top: 3px solid #1a6fbf;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--blue:hover {
+
+
+
+      border-color: #1a6fbf;
+
+
+
+      box-shadow: 0 12px 32px rgba(26,111,191,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--navy {
+
+
+
+      border-top: 3px solid #4a6a9a;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--navy:hover {
+
+
+
+      border-color: #4a6a9a;
+
+
+
+      box-shadow: 0 12px 32px rgba(74,106,154,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--gold {
+
+
+
+      border-top: 3px solid #c8921a;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--gold:hover {
+
+
+
+      border-color: #c8921a;
+
+
+
+      box-shadow: 0 12px 32px rgba(200,146,26,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-header {
+
+
+
+      display: flex;
+
+
+
+      align-items: flex-start;
+
+
+
+      gap: 14px;
+
+
+
+      margin-bottom: 14px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-icon {
+
+
+
+      font-size: 1.8rem;
+
+
+
+      flex-shrink: 0;
+
+
+
+      line-height: 1;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-meta {
+
+
+
+      flex: 1;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-badge {
+
+
+
+      display: inline-block;
+
+
+
+      font-size: 10px;
+
+
+
+      font-weight: 700;
+
+
+
+      letter-spacing: .05em;
+
+
+
+      padding: 4px 10px;
+
+
+
+      border-radius: 4px;
+
+
+
+      margin-bottom: 8px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-blue {
+
+
+
+      background: linear-gradient(135deg, #1a6fbf, #0ea5c8);
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-navy {
+
+
+
+      background: #0b1f3a;
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-gold {
+
+
+
+      background: #c8921a;
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-name {
+
+
+
+      font-size: 17px;
+
+
+
+      font-weight: 700;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      line-height: 1.4;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-target {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+      margin-top: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-desc {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      line-height: 1.75;
+
+
+
+      flex: 1;
+
+
+
+      margin-bottom: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-footer {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: flex-end;
+
+
+
+      gap: 12px;
+
+
+
+      padding-top: 16px;
+
+
+
+      border-top: 1px solid var(--color-border);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-info {
+
+
+
+      display: flex;
+
+
+
+      gap: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-info-item {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-btn {
+
+
+
+      display: inline-flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 6px;
+
+
+
+      padding: 10px 18px;
+
+
+
+      background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+
+
+
+      border: 1px solid rgba(255,255,255,.15);
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+      font-size: 13px;
+
+
+
+      font-weight: 600;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-btn:hover {
+
+
+
+      background: rgba(255,255,255,.12);
+
+
+
+      border-color: rgba(255,255,255,.25);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* フッター */
+
+
+
+    .footer {
+
+
+
+      background: rgba(6,12,24,.95);
+
+
+
+      border-top: 1px solid var(--color-border);
+
+
+
+      padding: 40px 0;
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-brand {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 18px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      margin-bottom: 8px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-company {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      margin-bottom: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links {
+
+
+
+      display: flex;
+
+
+
+      justify-content: center;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links a {
+
+
+
+      font-size: 13px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      transition: color var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links a:hover {
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* レスポンシブ */
+
+
+
+    @media (max-width: 900px) {
+
+
+
+      .courses-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+      }
+
+
+
+
+
+
+
+      .hero-stats {
+
+
+
+        gap: 32px;
+
+
+
+      }
+
+
+
+    }
+
+
+
+
+
+
+
+    @media (max-width: 720px) {
+
+
+
+      .header-inner {
+
+
+
+        flex-direction: column;
+
+
+
+        align-items: flex-start;
+
+
+
+        gap: 16px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .header-nav {
+
+
+
+        width: 100%;
+
+
+
+        justify-content: flex-start;
+
+
+
+        gap: 16px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .hero {
+
+
+
+        padding: 48px 0 40px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .trial-bar {
+
+
+
+        flex-direction: column;
+
+
+
+        text-align: center;
+
+
+
+        padding: 20px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .trial-bar-content {
+
+
+
+        flex-direction: column;
+
+
+
+      }
+
+
+
+
+
+
+
+      .category-header {
+
+
+
+        flex-wrap: wrap;
+
+
+
+      }
+
+
+
+
+
+
+
+      .category-count {
+
+
+
+        margin-left: 0;
+
+
+
+        margin-top: 8px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .course-card-footer {
+
+
+
+        flex-direction: column;
+
+
+
+        align-items: flex-start;
+
+
+
+      }
+
+
+
+
+
+
+
+      .course-card-btn {
+
+
+
+        width: 100%;
+
+
+
+        justify-content: center;
+
+
+
+      }
+
+
+
+    }
+
+
+
+  </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+  <!-- ヘッダー -->
+
+
+
+  <header class="header">
+
+
+
+    <div class="container header-inner">
+
+
+
+      <a href="https://sangyo-tech.github.io/top/" class="brand">
+
+
+
+        <div class="brand-sub">INDUSTRIAL TECHNOLOGY ACADEMY</div>
+
+
+
+        <div class="brand-main">産業技術アカデミー</div>
+
+
+
+      </a>
+
+
+
+      <nav class="header-nav">
+
+
+
+        <a href="https://sangyo-tech.github.io/top/">TOP</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/about-us/">私たちについて</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Pricing/">料金プラン</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Trial/" class="header-cta">無料体験</a>
+
+
+
+      </nav>
+
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+
+
+  <!-- ヒーロー -->
+
+
+
+  <section class="hero">
+
+
+
+    <div class="container">
+
+
+
+      <div class="hero-eyebrow">COURSE LIST</div>
+
+
+
+      <h1 class="hero-title">学習コース一覧</h1>
+
+
+
+      <p class="hero-desc">入門から専門まで、製造業の品質を体系的に学べる全30コース。<br>あなたの目的・レベルに合ったコースを選んで学習を始めましょう。<br><span style="color:var(--color-accent-gold);">📦 コース・コンテンツは随時追加中！</span></p>
+
+
+
+      <div class="hero-stats">
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">30<span>コース</span></div>
+
+
+
+          <div class="hero-stat-label">体系的なカリキュラム</div>
+
+
+
+        </div>
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">178<span>本+</span></div>
+
+
+
+          <div class="hero-stat-label">学習コンテンツ</div>
+
+
+
+        </div>
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">5<span>分</span></div>
+
+
+
+          <div class="hero-stat-label">1本あたりの動画</div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+  <!-- ログイン案内 -->
+
+
+
+  <div class="login-notice">
+
+
+
+    <p class="login-notice-text"><strong>🔒 コンテンツの視聴にはログインが必要です。</strong> 企業契約後にすべてのコースをご利用いただけます。</p>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- メインコンテンツ -->
+
+
+
+  <main class="main">
+
+
+
+    <div class="container">
+
+
+
+
+
+
+
+      <!-- 無料体験バー -->
+
+
+
+      <div class="trial-bar">
+
+
+
+        <div class="trial-bar-content">
+
+
+
+          <div class="trial-bar-icon">🎓</div>
+
+
+
+          <div class="trial-bar-text">
+
+
+
+            <h3>無料体験をご希望の方へ</h3>
+
+
+
+            <p>品質管理 基礎コースの一部と確認テストを無料でお試しいただけます。</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <a href="https://forms.gle/W9AEgSZJLVy9AcdW9" class="trial-btn">🎓 無料体験に申し込む</a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+      <!-- 基礎・入門 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--blue">📚</div>
+
+
+
+          <h2 class="category-title">基礎・入門</h2>
+
+
+
+          <div class="category-count">4コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📘</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">入門</span>
+
+
+
+                <h3 class="course-card-name">品質管理 基礎コース</h3>
+
+
+
+                <p class="course-card-target">👤 全社員・新人向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質管理の考え方と基礎知識を体系的に学ぶ入門コース。品質とは何か、なぜ品質が重要なのかから始まり、PDCAサイクル、品質管理の基本用語、検査の考え方まで網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0b-e481-e184-07fa-8f958917ea65" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🏭</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">入門</span>
+
+
+
+                <h3 class="course-card-name">製造業 基礎知識コース</h3>
+
+
+
+                <p class="course-card-target">👤 新人・非製造部門向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">製造業の仕組みや用語、業務の流れを理解するコース。生産管理、在庫管理、工程管理など製造業で働くために必要な基礎知識を身につけます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0c-5242-52e5-8d58-e19d717a6aef" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💪</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">基礎</span>
+
+
+
+                <h3 class="course-card-name">現場力向上コース</h3>
+
+
+
+                <p class="course-card-target">👤 製造・現場部門向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">5S・改善・安全など現場の実力を高めるスキルを習得。整理・整頓・清掃・清潔・躾の実践方法から、ムダの見つけ方、安全作業の基本まで学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0c-c9e7-7558-c77b-6b977b93b7b5" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🧩</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">基礎</span>
+
+
+
+                <h3 class="course-card-name">問題解決 基礎コース</h3>
+
+
+
+                <p class="course-card-target">👤 新人〜中堅向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">なぜなぜ分析・QCストーリーなど問題解決の思考法と手法を学ぶ。問題の定義から、原因分析、対策立案、効果確認まで一連の流れを習得します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0d-334c-ae19-4696-52b4d3c6a28d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- QC・統計・検査 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--blue">📊</div>
+
+
+
+          <h2 class="category-title">QC・統計・検査</h2>
+
+
+
+          <div class="category-count">3コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📈</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">QC七つ道具コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・製造・生産管理向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">パレート図・特性要因図・ヒストグラム・管理図・散布図・チェックシート・層別の7つの基本ツールをマスター。実例を使った演習で実践力を養います。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a03-5a66-6b56-375a-fb29f9ebb64f" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📉</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">統計・データ分析コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・技術・研究向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">統計の基礎から工程能力指数（Cp, Cpk）、検定・推定まで実務で使える分析手法を習得。数式の意味を理解し、Excelでの計算方法も学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a03-1583-fe7b-97f3-284e57000c76" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🔍</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">検査・計測コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・検査員向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">測定の基礎・校正・MSA（測定システム解析）の知識と技術を習得。測定誤差の理解、計測機器の管理方法、GR&R分析の実践方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0d-6ed2-d794-2338-4eb44ee80f79" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- マネジメント・管理 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--navy">📋</div>
+
+
+
+          <h2 class="category-title">マネジメント・管理</h2>
+
+
+
+          <div class="category-count">8コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🏛️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質マネジメントシステムコース</h3>
+
+
+
+                <p class="course-card-target">👤 品質部門・管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">ISO9001をベースにQMSの構築・運用・内部監査を学ぶ。品質方針の策定、文書管理、内部監査の進め方、マネジメントレビューまで網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a14-f306-8c75-f39e-c4b76f0b0466" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">⚠️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">FMEA・源流管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 設計・品質・生産技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">設計段階からの品質作り込みとリスク予防手法を習得。設計FMEA・工程FMEAの作成方法、リスク優先数（RPN）の活用、源流での品質保証を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-2996-2647-ebd6-c899267f778d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🔄</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">変更管理・4M管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・製造・技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">Man・Machine・Material・Methodの変化点管理の実践手法を習得。変更点・変化点の違い、変更管理プロセス、4M変動時の対応方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-7a3d-c0be-77f2-510396162736" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📞</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">クレーム対応・是正処置コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">クレームの初動対応から原因分析・再発防止までの一連の流れを習得。8Dレポートの書き方、真因追究の方法、水平展開の進め方を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-ae15-1135-17cb-6adb2bddfb83" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🤝</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">サプライヤ品質管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 購買・品質向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">仕入先の選定・評価・監査・品質改善支援の進め方を習得。サプライヤ評価基準の設定、監査チェックリストの作成、是正処置の管理方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-ec77-e250-32c9-b8dad2d96c85" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💰</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質コスト・KPI管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質コスト（PAF：予防・評価・失敗コスト）の見える化と品質KPIの設定・運用方法を習得。品質を数値で語り、経営に貢献する品質部門を目指します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a16-1884-e2e2-eeec-5a365a102e2b" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🛡️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">リスクマネジメントコース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質リスクの特定・評価・対応策立案とリスクベース思考の実践方法を習得。リスクマトリクスの作成、リスク対応計画、残留リスクの管理を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-18ae-ae29-8543-a40dbc40e504" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">👥</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質人材育成・組織マネジメントコース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質人材の育成計画・力量管理・品質文化を根付かせる組織づくりを習得。スキルマップの作成、OJT計画、品質意識を高める仕組みづくりを学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-e787-0f7e-3b1b-7b632daebc11" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- 専門・業界特化 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--gold">🎖️</div>
+
+
+
+          <h2 class="category-title">専門・業界特化</h2>
+
+
+
+          <div class="category-count">4コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🚗</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">トヨタ生産方式コース</h3>
+
+
+
+                <p class="course-card-target">👤 製造・生産管理向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">ジャストインタイム・自働化・かんばんなどTPSの思想と実践手法を習得。ムダの7つの視点、平準化、1個流しなど現場改善に直結する知識を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-4654-7599-afe7-62665f9590c6" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📝</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">標準化コース</h3>
+
+
+
+                <p class="course-card-target">👤 全社員向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">標準化の考え方と手順書・作業標準・規程の作り方・維持管理を習得。なぜ標準化が必要か、分かりやすい文書の書き方、改訂管理の方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-76a1-a66f-154b-d1e48cbd201d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💻</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">DX・データ活用コース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職・技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">製造業のDX推進・IoT活用・データドリブンな品質管理の進め方を習得。デジタル化の第一歩、データ収集・分析の仕組みづくり、AI活用の可能性を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-bd8c-001c-d8f0-6775673ed838" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🌿</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">業界特化</span>
+
+
+
+                <h3 class="course-card-name">健康食品GMPコース</h3>
+
+
+
+                <p class="course-card-target">👤 健康食品製造向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">健康食品GMP基準の理解と製造管理・品質管理の実践ポイントを習得。原材料管理、製造工程管理、試験検査、文書管理など規格要求を網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a18-18d6-6f3d-3ef9-ba6924487efd" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+  <!-- レベル別・テーマ横断コース -->
+
+
+
+  <div style="background:linear-gradient(135deg,rgba(200,160,255,.08),rgba(125,216,245,.05));border:1px solid rgba(200,160,255,.15);border-radius:var(--radius-lg);padding:40px 24px;margin:48px auto;max-width:1200px;text-align:center;">
+
+
+
+    <p style="font-size:1.2em;margin-bottom:4px;">🎯 <strong>レベル別・テーマ横断コース</strong></p>
+
+
+
+    <p style="color:var(--color-text-muted);font-size:0.9em;margin-bottom:0;">既存コースの動画をレベル・テーマ別に再編成。目的に合った学び方ができます。</p>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <section class="category">
+
+
+
+    <div class="category-header">
+
+
+
+      <div class="category-icon" style="background:linear-gradient(135deg,#c8a0ff,#9b6fdf);color:white;">📚</div>
+
+
+
+      <h2 class="category-title">レベル別コース</h2>
+
+
+
+      <div class="category-count">5コース</div>
+
+
+
+    </div>
+
+
+
+    <div class="courses-grid">
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">🌱</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">教養</span>
+
+
+
+            <h3 class="course-card-name">教養コース</h3>
+
+
+
+            <p class="course-card-target">👤 全社員向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理の基礎的な教養を幅広く身につけるコース。業務に直接関わらない方にも役立つ知識を厳選しています。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📗</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">初級</span>
+
+
+
+            <h3 class="course-card-name">初級コース</h3>
+
+
+
+            <p class="course-card-target">👤 新人・若手向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理の基本用語や考え方を学ぶ入門レベル。初めて品質に触れる方に最適なステップです。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📘</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">中級</span>
+
+
+
+            <h3 class="course-card-name">中級コース</h3>
+
+
+
+            <p class="course-card-target">👤 中堅・リーダー向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">基礎を踏まえた応用的な品質管理手法を学ぶ中級レベル。実務での判断力を高めます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📙</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">実践</span>
+
+
+
+            <h3 class="course-card-name">実践コース</h3>
+
+
+
+            <p class="course-card-target">👤 管理者・推進担当向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">現場で即活用できる実践的な品質管理スキルを習得。ケーススタディを通じて実務対応力を鍛えます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📕</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">具体例</span>
+
+
+
+            <h3 class="course-card-name">具体例編コース</h3>
+
+
+
+            <p class="course-card-target">👤 全レベル対象</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">実際の現場事例をもとに品質管理のポイントを学ぶコース。他社事例から学び、自社への応用力を養います。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🏥</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">ISO13485コース</h3>
+
+                  <span class="course-card-target">👤 医療機器製造・品質部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>医療機器の品質マネジメントシステム規格ISO13485を体系的に学ぶコース。設計管理、リスクマネジメント、バリデーションなど医療機器特有の要求事項を習得します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🚗</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">IATF 16949コース</h3>
+
+                  <span class="course-card-target">👤 自動車関連製造・品質部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>自動車産業の品質マネジメントシステム規格IATF 16949を学ぶコース。APQP・PPAP・コアツールの活用から、自動車業界特有の品質要求への対応方法を習得します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🌍</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">ISO14001コース</h3>
+
+                  <span class="course-card-target">👤 環境管理・管理部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>環境マネジメントシステム規格ISO14001を体系的に学ぶコース。環境側面の特定・評価、法規制対応、環境目標の設定・運用から内部監査まで網羅します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+  <section class="category">
+
+
+
+    <div class="category-header">
+
+
+
+      <div class="category-icon" style="background:linear-gradient(135deg,#c8a0ff,#9b6fdf);color:white;">🏢</div>
+
+
+
+      <h2 class="category-title">テーマ横断コース</h2>
+
+
+
+      <div class="category-count">6コース</div>
+
+
+
+    </div>
+
+
+
+    <div class="courses-grid">
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">🏭</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">中小企業向け部門立ち上げコース</h3>
+
+
+
+            <p class="course-card-target">👤 経営者・部門責任者向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">中小企業で品質管理部門をゼロから立ち上げるためのノウハウを集約。体制づくりから運用定着まで学べます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📝</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">マニュアル作成コース</h3>
+
+
+
+            <p class="course-card-target">👤 品質・製造・管理部門向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理に必要なマニュアル・手順書の作り方を学ぶコース。テンプレートの活用から運用・改訂まで網羅します。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📋</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">ISO9001コース</h3>
+
+
+
+            <p class="course-card-target">👤 品質・管理部門向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">ISO9001の要求事項を体系的に学ぶコース。品質マネジメントシステムの構築・運用に必要な知識を習得します。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 追加予定のお知らせ -->
+
+
+
+      <div style="background:linear-gradient(135deg,rgba(125,216,245,.10),rgba(125,216,245,.04));border:1px solid rgba(125,216,245,.25);border-radius:20px;padding:32px;text-align:center;margin-top:24px;">
+
+
+
+        <div style="font-size:2rem;margin-bottom:12px;">📦</div>
+
+
+
+        <h3 style="font-size:18px;font-weight:700;color:var(--color-accent-blue);margin-bottom:12px;">コース・コンテンツは随時追加中！</h3>
+
+
+
+        <p style="font-size:14px;color:var(--color-text-muted);line-height:1.8;max-width:600px;margin:0 auto 20px;">
+
+
+
+          毎月5本以上コンテンツを追加予定！<br>
+
+
+
+          契約企業様からのリクエストも積極的に取り入れています。<br>
+
+
+
+          <span style="color:#ff90b0;font-weight:600;">「こんなコースが欲しい」など、お気軽にご要望ください。</span>
+
+
+
+        </p>
+
+
+
+        <a href="https://sangyo-tech.github.io/update/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);color:var(--color-text-secondary);font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">📅 今後の追加予定を見る</a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+
+  <!-- フッター -->
+
+
+
+  <footer class="footer">
+
+
+
+    <div class="container">
+
+
+
+      <div class="footer-brand">産業技術アカデミー</div>
+
+
+
+      <div class="footer-company">Product by Qulio LLC</div>
+
+
+
+      <nav class="footer-links">
+
+
+
+        <a href="https://sangyo-tech.github.io/top/">TOP</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/about-us/">私たちについて</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Pricing/">料金プラン</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Apply/">お申し込み</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Trial/">無料体験</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Contact/">お問い合わせ</a>
+
+
+
+      </nav>
+
+
+
+    </div>
+
+
+
+  <div style="margin-top:10px"><a href="https://sangyo-tech.github.io/top/tokushoho/" style="color:#6aacdd;text-decoration:none;font-size:12px">特定商取引法に基づく表記</a> &nbsp;|&nbsp; <a href="https://sangyo-tech.github.io/top/privacy/" style="color:#6aacdd;text-decoration:none;font-size:12px">プライバシーポリシー</a></div>
+
+</footer>
+
+
+
+
+
+
+
+</body>
+
+
+
+                                                                                                  </html>
+
+<!DOCTYPE html>
+
+
+
+<html lang="ja">
+
+
+
+<head>
+
+
+
+  <meta charset="UTF-8">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <title>コース一覧 | 産業技術アカデミー</title>
+
+
+
+  <meta name="description" content="産業技術アカデミーのコース一覧。品質管理・QC・統計・マネジメント・業界特化まで全30コース、178本以上のコンテンツを提供。">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+
+
+    :root {
+
+
+
+      --color-bg-primary: #0b1520;
+
+
+
+      --color-bg-secondary: #0a1e38;
+
+
+
+      --color-bg-card: rgba(255,255,255,.04);
+
+
+
+      --color-text-primary: #ffffff;
+
+
+
+      --color-text-secondary: rgba(255,255,255,.85);
+
+
+
+      --color-text-muted: rgba(255,255,255,.65);
+
+
+
+      --color-accent-gold: #f2c14f;
+
+
+
+      --color-accent-gold-light: #e2c97a;
+
+
+
+      --color-accent-blue: #7dd8f5;
+
+
+
+      --color-accent-green: #7de8a8;
+
+
+
+      --color-accent-purple: #c8a0ff;
+
+
+
+      --color-border: rgba(255,255,255,.10);
+
+
+
+      --font-display: 'M PLUS Rounded 1c', 'Yu Gothic', sans-serif;
+
+
+
+      --font-body: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+
+
+
+      --radius-sm: 8px;
+
+
+
+      --radius-md: 14px;
+
+
+
+      --radius-lg: 20px;
+
+
+
+      --transition-fast: .2s ease;
+
+
+
+      --transition-normal: .3s ease;
+
+
+
+    }
+
+
+
+
+
+
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+    html { scroll-behavior: smooth; }
+
+
+
+    
+
+
+
+    body {
+
+
+
+      font-family: var(--font-body);
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      line-height: 1.8;
+
+
+
+      background: var(--color-bg-primary);
+
+
+
+      min-height: 100vh;
+
+
+
+    }
+
+
+
+
+
+
+
+    a { text-decoration: none; color: inherit; }
+
+
+
+
+
+
+
+    .container {
+
+
+
+      max-width: 1200px;
+
+
+
+      margin: 0 auto;
+
+
+
+      padding: 0 24px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ヘッダー */
+
+
+
+    .header {
+
+
+
+      background: rgba(11,21,32,.95);
+
+
+
+      backdrop-filter: blur(12px);
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+      padding: 16px 0;
+
+
+
+      position: sticky;
+
+
+
+      top: 0;
+
+
+
+      z-index: 100;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-inner {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: space-between;
+
+
+
+      gap: 20px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand {
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand-sub {
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: .15em;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .brand-main {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 20px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      letter-spacing: .05em;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav a {
+
+
+
+      font-size: 14px;
+
+
+
+      font-weight: 600;
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+      transition: color var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-nav a:hover {
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-cta {
+
+
+
+      padding: 10px 20px;
+
+
+
+      background: linear-gradient(135deg, var(--color-accent-gold), #d4a84a);
+
+
+
+      color: #0b1520 !important;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .header-cta:hover {
+
+
+
+      transform: translateY(-2px);
+
+
+
+      box-shadow: 0 6px 20px rgba(242,193,79,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ヒーロー */
+
+
+
+    .hero {
+
+
+
+      background: linear-gradient(160deg, rgba(10,30,56,.98) 0%, rgba(6,18,36,.98) 100%);
+
+
+
+      padding: 64px 0 56px;
+
+
+
+      text-align: center;
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+      position: relative;
+
+
+
+      overflow: hidden;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero::before {
+
+
+
+      content: '';
+
+
+
+      position: absolute;
+
+
+
+      top: -100px;
+
+
+
+      right: -100px;
+
+
+
+      width: 400px;
+
+
+
+      height: 400px;
+
+
+
+      background: radial-gradient(circle, rgba(242,193,79,.08) 0%, transparent 70%);
+
+
+
+      pointer-events: none;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-eyebrow {
+
+
+
+      display: inline-block;
+
+
+
+      font-size: 12px;
+
+
+
+      font-weight: 700;
+
+
+
+      letter-spacing: .2em;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+      background: rgba(242,193,79,.12);
+
+
+
+      padding: 6px 16px;
+
+
+
+      border-radius: 999px;
+
+
+
+      margin-bottom: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-title {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: clamp(28px, 5vw, 42px);
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      margin-bottom: 16px;
+
+
+
+      letter-spacing: .03em;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-desc {
+
+
+
+      font-size: 16px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      max-width: 700px;
+
+
+
+      margin: 0 auto 32px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stats {
+
+
+
+      display: flex;
+
+
+
+      justify-content: center;
+
+
+
+      gap: 48px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat {
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-num {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 36px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-num span {
+
+
+
+      font-size: 18px;
+
+
+
+      font-weight: 700;
+
+
+
+    }
+
+
+
+
+
+
+
+    .hero-stat-label {
+
+
+
+      font-size: 13px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      margin-top: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* ログイン案内 */
+
+
+
+    .login-notice {
+
+
+
+      background: linear-gradient(135deg, rgba(242,193,79,.08), rgba(242,193,79,.03));
+
+
+
+      border-bottom: 1px solid rgba(242,193,79,.15);
+
+
+
+      padding: 16px 24px;
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .login-notice-text {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+    }
+
+
+
+
+
+
+
+    .login-notice-text strong {
+
+
+
+      color: var(--color-accent-gold);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* 無料体験バー */
+
+
+
+    .trial-bar {
+
+
+
+      background: linear-gradient(135deg, rgba(125,232,168,.10), rgba(125,232,168,.04));
+
+
+
+      border: 1px solid rgba(125,232,168,.25);
+
+
+
+      border-radius: var(--radius-lg);
+
+
+
+      padding: 24px 32px;
+
+
+
+      margin-bottom: 48px;
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: space-between;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-content {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-icon {
+
+
+
+      font-size: 2.2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-text h3 {
+
+
+
+      font-size: 16px;
+
+
+
+      font-weight: 700;
+
+
+
+      color: var(--color-accent-green);
+
+
+
+      margin-bottom: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-bar-text p {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-btn {
+
+
+
+      display: inline-flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 8px;
+
+
+
+      padding: 14px 28px;
+
+
+
+      background: linear-gradient(135deg, #5bd4a1, #4ac090);
+
+
+
+      color: #0b1520;
+
+
+
+      font-size: 15px;
+
+
+
+      font-weight: 700;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+      white-space: nowrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .trial-btn:hover {
+
+
+
+      transform: translateY(-2px);
+
+
+
+      box-shadow: 0 8px 24px rgba(91,212,161,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* メインコンテンツ */
+
+
+
+    .main {
+
+
+
+      padding: 56px 0 80px;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* カテゴリセクション */
+
+
+
+    .category {
+
+
+
+      margin-bottom: 56px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-header {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 16px;
+
+
+
+      margin-bottom: 24px;
+
+
+
+      padding-bottom: 16px;
+
+
+
+      border-bottom: 1px solid var(--color-border);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon {
+
+
+
+      width: 48px;
+
+
+
+      height: 48px;
+
+
+
+      border-radius: 12px;
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: center;
+
+
+
+      font-size: 1.5rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--blue {
+
+
+
+      background: linear-gradient(135deg, rgba(26,111,191,.25), rgba(14,165,200,.15));
+
+
+
+      border: 1px solid rgba(26,111,191,.4);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--navy {
+
+
+
+      background: linear-gradient(135deg, rgba(100,140,200,.15), rgba(60,100,160,.10));
+
+
+
+      border: 1px solid rgba(100,140,200,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-icon--gold {
+
+
+
+      background: linear-gradient(135deg, rgba(200,146,26,.25), rgba(200,168,75,.15));
+
+
+
+      border: 1px solid rgba(200,146,26,.4);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-title {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 22px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+    }
+
+
+
+
+
+
+
+    .category-count {
+
+
+
+      font-size: 13px;
+
+
+
+      font-weight: 600;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      background: rgba(255,255,255,.08);
+
+
+
+      padding: 6px 14px;
+
+
+
+      border-radius: 999px;
+
+
+
+      margin-left: auto;
+
+
+
+    }
+
+
+
+
+
+
+
+    /* コースカード */
+
+
+
+    .courses-grid {
+
+
+
+      display: grid;
+
+
+
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+
+
+      gap: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card {
+
+
+
+      background: var(--color-bg-card);
+
+
+
+      border: 1px solid var(--color-border);
+
+
+
+      border-radius: var(--radius-lg);
+
+
+
+      padding: 24px;
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card:hover {
+
+
+
+      background: rgba(255,255,255,.06);
+
+
+
+      border-color: rgba(255,255,255,.18);
+
+
+
+      transform: translateY(-4px);
+
+
+
+      box-shadow: 0 12px 32px rgba(0,0,0,.3);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--blue {
+
+
+
+      border-top: 3px solid #1a6fbf;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--blue:hover {
+
+
+
+      border-color: #1a6fbf;
+
+
+
+      box-shadow: 0 12px 32px rgba(26,111,191,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--navy {
+
+
+
+      border-top: 3px solid #4a6a9a;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--navy:hover {
+
+
+
+      border-color: #4a6a9a;
+
+
+
+      box-shadow: 0 12px 32px rgba(74,106,154,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--gold {
+
+
+
+      border-top: 3px solid #c8921a;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card--gold:hover {
+
+
+
+      border-color: #c8921a;
+
+
+
+      box-shadow: 0 12px 32px rgba(200,146,26,.2);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-header {
+
+
+
+      display: flex;
+
+
+
+      align-items: flex-start;
+
+
+
+      gap: 14px;
+
+
+
+      margin-bottom: 14px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-icon {
+
+
+
+      font-size: 1.8rem;
+
+
+
+      flex-shrink: 0;
+
+
+
+      line-height: 1;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-meta {
+
+
+
+      flex: 1;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-badge {
+
+
+
+      display: inline-block;
+
+
+
+      font-size: 10px;
+
+
+
+      font-weight: 700;
+
+
+
+      letter-spacing: .05em;
+
+
+
+      padding: 4px 10px;
+
+
+
+      border-radius: 4px;
+
+
+
+      margin-bottom: 8px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-blue {
+
+
+
+      background: linear-gradient(135deg, #1a6fbf, #0ea5c8);
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-navy {
+
+
+
+      background: #0b1f3a;
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .badge-gold {
+
+
+
+      background: #c8921a;
+
+
+
+      color: #fff;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-name {
+
+
+
+      font-size: 17px;
+
+
+
+      font-weight: 700;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      line-height: 1.4;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-target {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+      margin-top: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-desc {
+
+
+
+      font-size: 14px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      line-height: 1.75;
+
+
+
+      flex: 1;
+
+
+
+      margin-bottom: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-footer {
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: flex-end;
+
+
+
+      gap: 12px;
+
+
+
+      padding-top: 16px;
+
+
+
+      border-top: 1px solid var(--color-border);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-info {
+
+
+
+      display: flex;
+
+
+
+      gap: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-info-item {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 4px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-btn {
+
+
+
+      display: inline-flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 6px;
+
+
+
+      padding: 10px 18px;
+
+
+
+      background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+
+
+
+      border: 1px solid rgba(255,255,255,.15);
+
+
+
+      color: var(--color-text-secondary);
+
+
+
+      font-size: 13px;
+
+
+
+      font-weight: 600;
+
+
+
+      border-radius: var(--radius-sm);
+
+
+
+      transition: all var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .course-card-btn:hover {
+
+
+
+      background: rgba(255,255,255,.12);
+
+
+
+      border-color: rgba(255,255,255,.25);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* フッター */
+
+
+
+    .footer {
+
+
+
+      background: rgba(6,12,24,.95);
+
+
+
+      border-top: 1px solid var(--color-border);
+
+
+
+      padding: 40px 0;
+
+
+
+      text-align: center;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-brand {
+
+
+
+      font-family: var(--font-display);
+
+
+
+      font-size: 18px;
+
+
+
+      font-weight: 800;
+
+
+
+      color: var(--color-text-primary);
+
+
+
+      margin-bottom: 8px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-company {
+
+
+
+      font-size: 12px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      margin-bottom: 20px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links {
+
+
+
+      display: flex;
+
+
+
+      justify-content: center;
+
+
+
+      gap: 24px;
+
+
+
+      flex-wrap: wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links a {
+
+
+
+      font-size: 13px;
+
+
+
+      color: var(--color-text-muted);
+
+
+
+      transition: color var(--transition-fast);
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-links a:hover {
+
+
+
+      color: var(--color-accent-blue);
+
+
+
+    }
+
+
+
+
+
+
+
+    /* レスポンシブ */
+
+
+
+    @media (max-width: 900px) {
+
+
+
+      .courses-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+      }
+
+
+
+
+
+
+
+      .hero-stats {
+
+
+
+        gap: 32px;
+
+
+
+      }
+
+
+
+    }
+
+
+
+
+
+
+
+    @media (max-width: 720px) {
+
+
+
+      .header-inner {
+
+
+
+        flex-direction: column;
+
+
+
+        align-items: flex-start;
+
+
+
+        gap: 16px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .header-nav {
+
+
+
+        width: 100%;
+
+
+
+        justify-content: flex-start;
+
+
+
+        gap: 16px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .hero {
+
+
+
+        padding: 48px 0 40px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .trial-bar {
+
+
+
+        flex-direction: column;
+
+
+
+        text-align: center;
+
+
+
+        padding: 20px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .trial-bar-content {
+
+
+
+        flex-direction: column;
+
+
+
+      }
+
+
+
+
+
+
+
+      .category-header {
+
+
+
+        flex-wrap: wrap;
+
+
+
+      }
+
+
+
+
+
+
+
+      .category-count {
+
+
+
+        margin-left: 0;
+
+
+
+        margin-top: 8px;
+
+
+
+      }
+
+
+
+
+
+
+
+      .course-card-footer {
+
+
+
+        flex-direction: column;
+
+
+
+        align-items: flex-start;
+
+
+
+      }
+
+
+
+
+
+
+
+      .course-card-btn {
+
+
+
+        width: 100%;
+
+
+
+        justify-content: center;
+
+
+
+      }
+
+
+
+    }
+
+
+
+  </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+  <!-- ヘッダー -->
+
+
+
+  <header class="header">
+
+
+
+    <div class="container header-inner">
+
+
+
+      <a href="https://sangyo-tech.github.io/top/" class="brand">
+
+
+
+        <div class="brand-sub">INDUSTRIAL TECHNOLOGY ACADEMY</div>
+
+
+
+        <div class="brand-main">産業技術アカデミー</div>
+
+
+
+      </a>
+
+
+
+      <nav class="header-nav">
+
+
+
+        <a href="https://sangyo-tech.github.io/top/">TOP</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/about-us/">私たちについて</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Pricing/">料金プラン</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Trial/" class="header-cta">無料体験</a>
+
+
+
+      </nav>
+
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+
+
+  <!-- ヒーロー -->
+
+
+
+  <section class="hero">
+
+
+
+    <div class="container">
+
+
+
+      <div class="hero-eyebrow">COURSE LIST</div>
+
+
+
+      <h1 class="hero-title">学習コース一覧</h1>
+
+
+
+      <p class="hero-desc">入門から専門まで、製造業の品質を体系的に学べる全30コース。<br>あなたの目的・レベルに合ったコースを選んで学習を始めましょう。<br><span style="color:var(--color-accent-gold);">📦 コース・コンテンツは随時追加中！</span></p>
+
+
+
+      <div class="hero-stats">
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">30<span>コース</span></div>
+
+
+
+          <div class="hero-stat-label">体系的なカリキュラム</div>
+
+
+
+        </div>
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">178<span>本+</span></div>
+
+
+
+          <div class="hero-stat-label">学習コンテンツ</div>
+
+
+
+        </div>
+
+
+
+        <div class="hero-stat">
+
+
+
+          <div class="hero-stat-num">5<span>分</span></div>
+
+
+
+          <div class="hero-stat-label">1本あたりの動画</div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+  <!-- ログイン案内 -->
+
+
+
+  <div class="login-notice">
+
+
+
+    <p class="login-notice-text"><strong>🔒 コンテンツの視聴にはログインが必要です。</strong> 企業契約後にすべてのコースをご利用いただけます。</p>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- メインコンテンツ -->
+
+
+
+  <main class="main">
+
+
+
+    <div class="container">
+
+
+
+
+
+
+
+      <!-- 無料体験バー -->
+
+
+
+      <div class="trial-bar">
+
+
+
+        <div class="trial-bar-content">
+
+
+
+          <div class="trial-bar-icon">🎓</div>
+
+
+
+          <div class="trial-bar-text">
+
+
+
+            <h3>無料体験をご希望の方へ</h3>
+
+
+
+            <p>品質管理 基礎コースの一部と確認テストを無料でお試しいただけます。</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <a href="https://forms.gle/W9AEgSZJLVy9AcdW9" class="trial-btn">🎓 無料体験に申し込む</a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+      <!-- 基礎・入門 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--blue">📚</div>
+
+
+
+          <h2 class="category-title">基礎・入門</h2>
+
+
+
+          <div class="category-count">4コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📘</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">入門</span>
+
+
+
+                <h3 class="course-card-name">品質管理 基礎コース</h3>
+
+
+
+                <p class="course-card-target">👤 全社員・新人向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質管理の考え方と基礎知識を体系的に学ぶ入門コース。品質とは何か、なぜ品質が重要なのかから始まり、PDCAサイクル、品質管理の基本用語、検査の考え方まで網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0b-e481-e184-07fa-8f958917ea65" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🏭</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">入門</span>
+
+
+
+                <h3 class="course-card-name">製造業 基礎知識コース</h3>
+
+
+
+                <p class="course-card-target">👤 新人・非製造部門向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">製造業の仕組みや用語、業務の流れを理解するコース。生産管理、在庫管理、工程管理など製造業で働くために必要な基礎知識を身につけます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0c-5242-52e5-8d58-e19d717a6aef" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💪</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">基礎</span>
+
+
+
+                <h3 class="course-card-name">現場力向上コース</h3>
+
+
+
+                <p class="course-card-target">👤 製造・現場部門向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">5S・改善・安全など現場の実力を高めるスキルを習得。整理・整頓・清掃・清潔・躾の実践方法から、ムダの見つけ方、安全作業の基本まで学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0c-c9e7-7558-c77b-6b977b93b7b5" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🧩</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">基礎</span>
+
+
+
+                <h3 class="course-card-name">問題解決 基礎コース</h3>
+
+
+
+                <p class="course-card-target">👤 新人〜中堅向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">なぜなぜ分析・QCストーリーなど問題解決の思考法と手法を学ぶ。問題の定義から、原因分析、対策立案、効果確認まで一連の流れを習得します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0d-334c-ae19-4696-52b4d3c6a28d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- QC・統計・検査 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--blue">📊</div>
+
+
+
+          <h2 class="category-title">QC・統計・検査</h2>
+
+
+
+          <div class="category-count">3コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📈</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">QC七つ道具コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・製造・生産管理向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">パレート図・特性要因図・ヒストグラム・管理図・散布図・チェックシート・層別の7つの基本ツールをマスター。実例を使った演習で実践力を養います。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a03-5a66-6b56-375a-fb29f9ebb64f" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📉</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">統計・データ分析コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・技術・研究向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">統計の基礎から工程能力指数（Cp, Cpk）、検定・推定まで実務で使える分析手法を習得。数式の意味を理解し、Excelでの計算方法も学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a03-1583-fe7b-97f3-284e57000c76" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--blue">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🔍</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-blue">実践</span>
+
+
+
+                <h3 class="course-card-name">検査・計測コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・検査員向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">測定の基礎・校正・MSA（測定システム解析）の知識と技術を習得。測定誤差の理解、計測機器の管理方法、GR&R分析の実践方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a0d-6ed2-d794-2338-4eb44ee80f79" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- マネジメント・管理 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--navy">📋</div>
+
+
+
+          <h2 class="category-title">マネジメント・管理</h2>
+
+
+
+          <div class="category-count">8コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🏛️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質マネジメントシステムコース</h3>
+
+
+
+                <p class="course-card-target">👤 品質部門・管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">ISO9001をベースにQMSの構築・運用・内部監査を学ぶ。品質方針の策定、文書管理、内部監査の進め方、マネジメントレビューまで網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a14-f306-8c75-f39e-c4b76f0b0466" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">⚠️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">FMEA・源流管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 設計・品質・生産技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">設計段階からの品質作り込みとリスク予防手法を習得。設計FMEA・工程FMEAの作成方法、リスク優先数（RPN）の活用、源流での品質保証を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-2996-2647-ebd6-c899267f778d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🔄</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">変更管理・4M管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・製造・技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">Man・Machine・Material・Methodの変化点管理の実践手法を習得。変更点・変化点の違い、変更管理プロセス、4M変動時の対応方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-7a3d-c0be-77f2-510396162736" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📞</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">クレーム対応・是正処置コース</h3>
+
+
+
+                <p class="course-card-target">👤 品質・管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">クレームの初動対応から原因分析・再発防止までの一連の流れを習得。8Dレポートの書き方、真因追究の方法、水平展開の進め方を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-ae15-1135-17cb-6adb2bddfb83" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🤝</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">サプライヤ品質管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 購買・品質向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">仕入先の選定・評価・監査・品質改善支援の進め方を習得。サプライヤ評価基準の設定、監査チェックリストの作成、是正処置の管理方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a15-ec77-e250-32c9-b8dad2d96c85" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💰</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質コスト・KPI管理コース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質コスト（PAF：予防・評価・失敗コスト）の見える化と品質KPIの設定・運用方法を習得。品質を数値で語り、経営に貢献する品質部門を目指します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a16-1884-e2e2-eeec-5a365a102e2b" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🛡️</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">リスクマネジメントコース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質リスクの特定・評価・対応策立案とリスクベース思考の実践方法を習得。リスクマトリクスの作成、リスク対応計画、残留リスクの管理を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-18ae-ae29-8543-a40dbc40e504" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--navy">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">👥</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-navy">管理</span>
+
+
+
+                <h3 class="course-card-name">品質人材育成・組織マネジメントコース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">品質人材の育成計画・力量管理・品質文化を根付かせる組織づくりを習得。スキルマップの作成、OJT計画、品質意識を高める仕組みづくりを学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-e787-0f7e-3b1b-7b632daebc11" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+      <!-- 専門・業界特化 -->
+
+
+
+      <section class="category">
+
+
+
+        <div class="category-header">
+
+
+
+          <div class="category-icon category-icon--gold">🎖️</div>
+
+
+
+          <h2 class="category-title">専門・業界特化</h2>
+
+
+
+          <div class="category-count">4コース</div>
+
+
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🚗</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">トヨタ生産方式コース</h3>
+
+
+
+                <p class="course-card-target">👤 製造・生産管理向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">ジャストインタイム・自働化・かんばんなどTPSの思想と実践手法を習得。ムダの7つの視点、平準化、1個流しなど現場改善に直結する知識を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-4654-7599-afe7-62665f9590c6" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">📝</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">標準化コース</h3>
+
+
+
+                <p class="course-card-target">👤 全社員向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">標準化の考え方と手順書・作業標準・規程の作り方・維持管理を習得。なぜ標準化が必要か、分かりやすい文書の書き方、改訂管理の方法を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-76a1-a66f-154b-d1e48cbd201d" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">💻</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">専門</span>
+
+
+
+                <h3 class="course-card-name">DX・データ活用コース</h3>
+
+
+
+                <p class="course-card-target">👤 管理職・技術向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">製造業のDX推進・IoT活用・データドリブンな品質管理の進め方を習得。デジタル化の第一歩、データ収集・分析の仕組みづくり、AI活用の可能性を学びます。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a17-bd8c-001c-d8f0-6775673ed838" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="course-card course-card--gold">
+
+
+
+            <div class="course-card-header">
+
+
+
+              <div class="course-card-icon">🌿</div>
+
+
+
+              <div class="course-card-meta">
+
+
+
+                <span class="course-card-badge badge-gold">業界特化</span>
+
+
+
+                <h3 class="course-card-name">健康食品GMPコース</h3>
+
+
+
+                <p class="course-card-target">👤 健康食品製造向け</p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+            <p class="course-card-desc">健康食品GMP基準の理解と製造管理・品質管理の実践ポイントを習得。原材料管理、製造工程管理、試験検査、文書管理など規格要求を網羅します。</p>
+
+
+
+            <div class="course-card-footer">
+
+
+
+              <a href="https://ulizaportal.jp/pages/00674a18-18d6-6f3d-3ef9-ba6924487efd" class="course-card-btn" title="ログインが必要です">▶ 視聴する</a>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+
+
+  <!-- レベル別・テーマ横断コース -->
+
+
+
+  <div style="background:linear-gradient(135deg,rgba(200,160,255,.08),rgba(125,216,245,.05));border:1px solid rgba(200,160,255,.15);border-radius:var(--radius-lg);padding:40px 24px;margin:48px auto;max-width:1200px;text-align:center;">
+
+
+
+    <p style="font-size:1.2em;margin-bottom:4px;">🎯 <strong>レベル別・テーマ横断コース</strong></p>
+
+
+
+    <p style="color:var(--color-text-muted);font-size:0.9em;margin-bottom:0;">既存コースの動画をレベル・テーマ別に再編成。目的に合った学び方ができます。</p>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <section class="category">
+
+
+
+    <div class="category-header">
+
+
+
+      <div class="category-icon" style="background:linear-gradient(135deg,#c8a0ff,#9b6fdf);color:white;">📚</div>
+
+
+
+      <h2 class="category-title">レベル別コース</h2>
+
+
+
+      <div class="category-count">5コース</div>
+
+
+
+    </div>
+
+
+
+    <div class="courses-grid">
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">🌱</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">教養</span>
+
+
+
+            <h3 class="course-card-name">教養コース</h3>
+
+
+
+            <p class="course-card-target">👤 全社員向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理の基礎的な教養を幅広く身につけるコース。業務に直接関わらない方にも役立つ知識を厳選しています。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📗</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">初級</span>
+
+
+
+            <h3 class="course-card-name">初級コース</h3>
+
+
+
+            <p class="course-card-target">👤 新人・若手向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理の基本用語や考え方を学ぶ入門レベル。初めて品質に触れる方に最適なステップです。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📘</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">中級</span>
+
+
+
+            <h3 class="course-card-name">中級コース</h3>
+
+
+
+            <p class="course-card-target">👤 中堅・リーダー向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">基礎を踏まえた応用的な品質管理手法を学ぶ中級レベル。実務での判断力を高めます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📙</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">実践</span>
+
+
+
+            <h3 class="course-card-name">実践コース</h3>
+
+
+
+            <p class="course-card-target">👤 管理者・推進担当向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">現場で即活用できる実践的な品質管理スキルを習得。ケーススタディを通じて実務対応力を鍛えます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📕</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">具体例</span>
+
+
+
+            <h3 class="course-card-name">具体例編コース</h3>
+
+
+
+            <p class="course-card-target">👤 全レベル対象</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">実際の現場事例をもとに品質管理のポイントを学ぶコース。他社事例から学び、自社への応用力を養います。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🏥</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">ISO13485コース</h3>
+
+                  <span class="course-card-target">👤 医療機器製造・品質部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>医療機器の品質マネジメントシステム規格ISO13485を体系的に学ぶコース。設計管理、リスクマネジメント、バリデーションなど医療機器特有の要求事項を習得します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🚗</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">IATF 16949コース</h3>
+
+                  <span class="course-card-target">👤 自動車関連製造・品質部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>自動車産業の品質マネジメントシステム規格IATF 16949を学ぶコース。APQP・PPAP・コアツールの活用から、自動車業界特有の品質要求への対応方法を習得します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+            <a href="#" class="course-card">
+
+              <div class="course-card-header">
+
+                <div class="course-card-icon" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">🌍</div>
+
+                <div class="course-card-meta">
+
+                  <span class="course-card-badge" style="background: rgba(200,160,255,0.15); color: #c8a0ff;">テーマ</span>
+
+                  <h3 class="course-card-name">ISO14001コース</h3>
+
+                  <span class="course-card-target">👤 環境管理・管理部門向け</span>
+
+                </div>
+
+              </div>
+
+              <div class="course-card-desc">
+
+                <p>環境マネジメントシステム規格ISO14001を体系的に学ぶコース。環境側面の特定・評価、法規制対応、環境目標の設定・運用から内部監査まで網羅します。</p>
+
+              </div>
+
+              <div class="course-card-footer">
+
+                <span class="course-card-btn" style="background: linear-gradient(135deg, #c8a0ff, #a06cff);">▶ 準備中</span>
+
+              </div>
+
+            </a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+  <section class="category">
+
+
+
+    <div class="category-header">
+
+
+
+      <div class="category-icon" style="background:linear-gradient(135deg,#c8a0ff,#9b6fdf);color:white;">🏢</div>
+
+
+
+      <h2 class="category-title">テーマ横断コース</h2>
+
+
+
+      <div class="category-count">6コース</div>
+
+
+
+    </div>
+
+
+
+    <div class="courses-grid">
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">🏭</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">中小企業向け部門立ち上げコース</h3>
+
+
+
+            <p class="course-card-target">👤 経営者・部門責任者向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">中小企業で品質管理部門をゼロから立ち上げるためのノウハウを集約。体制づくりから運用定着まで学べます。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📝</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">マニュアル作成コース</h3>
+
+
+
+            <p class="course-card-target">👤 品質・製造・管理部門向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">品質管理に必要なマニュアル・手順書の作り方を学ぶコース。テンプレートの活用から運用・改訂まで網羅します。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="course-card" style="border-color:rgba(200,160,255,.2);">
+
+
+
+        <div class="course-card-header">
+
+
+
+          <div class="course-card-icon">📋</div>
+
+
+
+          <div class="course-card-meta">
+
+
+
+            <span class="course-card-badge" style="background:rgba(200,160,255,.15);color:#c8a0ff;">テーマ</span>
+
+
+
+            <h3 class="course-card-name">ISO9001コース</h3>
+
+
+
+            <p class="course-card-target">👤 品質・管理部門向け</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <p class="course-card-desc">ISO9001の要求事項を体系的に学ぶコース。品質マネジメントシステムの構築・運用に必要な知識を習得します。</p>
+
+
+
+        <div class="course-card-footer">
+
+
+
+          <a href="#" class="course-card-btn" style="color:#c8a0ff;">▶ 準備中</a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 追加予定のお知らせ -->
+
+
+
+      <div style="background:linear-gradient(135deg,rgba(125,216,245,.10),rgba(125,216,245,.04));border:1px solid rgba(125,216,245,.25);border-radius:20px;padding:32px;text-align:center;margin-top:24px;">
+
+
+
+        <div style="font-size:2rem;margin-bottom:12px;">📦</div>
+
+
+
+        <h3 style="font-size:18px;font-weight:700;color:var(--color-accent-blue);margin-bottom:12px;">コース・コンテンツは随時追加中！</h3>
+
+
+
+        <p style="font-size:14px;color:var(--color-text-muted);line-height:1.8;max-width:600px;margin:0 auto 20px;">
+
+
+
+          毎月5本以上コンテンツを追加予定！<br>
+
+
+
+          契約企業様からのリクエストも積極的に取り入れています。<br>
+
+
+
+          <span style="color:#ff90b0;font-weight:600;">「こんなコースが欲しい」など、お気軽にご要望ください。</span>
+
+
+
+        </p>
+
+
+
+        <a href="https://sangyo-tech.github.io/update/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);color:var(--color-text-secondary);font-size:14px;font-weight:600;border-radius:8px;transition:all .2s;">📅 今後の追加予定を見る</a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+
+  <!-- フッター -->
+
+
+
+  <footer class="footer">
+
+
+
+    <div class="container">
+
+
+
+      <div class="footer-brand">産業技術アカデミー</div>
+
+
+
+      <div class="footer-company">Product by Qulio LLC</div>
+
+
+
+      <nav class="footer-links">
+
+
+
+        <a href="https://sangyo-tech.github.io/top/">TOP</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/about-us/">私たちについて</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Pricing/">料金プラン</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Apply/">お申し込み</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Trial/">無料体験</a>
+
+
+
+        <a href="https://sangyo-tech.github.io/Contact/">お問い合わせ</a>
+
+
+
+      </nav>
+
+
+
+    </div>
+
+
+
+  <div style="margin-top:10px"><a href="https://sangyo-tech.github.io/top/tokushoho/" style="color:#6aacdd;text-decoration:none;font-size:12px">特定商取引法に基づく表記</a> &nbsp;|&nbsp; <a href="https://sangyo-tech.github.io/top/privacy/" style="color:#6aacdd;text-decoration:none;font-size:12px">プライバシーポリシー</a></div>
+
+</footer>
+
+
+
+
+
+
+
+</body>
+
+
+
+                                                                                                  </html>
+
+<!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
