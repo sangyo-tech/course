@@ -4676,7 +4676,7 @@
 
   
 
-    .search-filter-bar{background:rgba(255,255,255,.04);border:1px solid var(--color-border);border-radius:12px;padding:20px;margin-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
+    .search-filter-bar{background:rgba(255,255,255,.04);border:1px solid var(--color-border);border-radius:12px;padding:20px;margin-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-evenly}
 
     
 
@@ -4880,7 +4880,8 @@
 
       <button class="filter-btn" data-filter="level">レベル別</button>
 
-      <button class="filter-btn" data-filter="theme">テーマ横断</button><a href="https://sangyo-tech-testt.ulizaportal.jp/" target="_blank" class="all-content-btn">📺 全てのコンテンツ</a>
+      <button class="filter-btn" data-filter="theme">テーマ横断</button><button class="filter-btn" data-filter="all">⌂ 全てのコースを表示</button>
+        <a href="https://sangyo-tech-testt.ulizaportal.jp/" target="_blank" class="all-content-btn">📺 全てのコンテンツ</a>
 
     </div>
 
@@ -9519,10 +9520,10 @@
         var secs=document.querySelectorAll("section.category");
         var total=0;
         secs.forEach(function(s){if(s.style.display!=="none")total+=s.querySelectorAll(".course-card").length;});
-        var name=names[f]||f;
+        if(f==="all"){lbl.style.display="none";}else{var name=names[f]||f;
         lbl.textContent="\uD83D\uDD0D \u300C"+name+"\u300D\u306E\u691C\u7D22\u7D50\u679C\uFF1A"+total+"\u4EF6\u306E\u30B3\u30FC\u30B9";
-        lbl.style.display="block";
-      },450);
+        lbl.style.display="block";}
+      },1200);
     });
   });
 })();
