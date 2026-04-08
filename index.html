@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コンテンツ一覧 - 産業技術アカデミー</title>
+    <title>コース一覧 - 産業技術アカデミー</title>
     <style>
         * {
             margin: 0;
@@ -512,7 +512,7 @@
             font-size: 0.95rem;
         }
 
-        /* ===== 全コンテンツ一覧 ===== */
+        /* ===== 全コース一覧 ===== */
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -974,7 +974,7 @@
         <button class="nav-toggle" onclick="toggleNav()" aria-label="メニュー">☰</button>
         <div class="nav-links" id="navLinks">
             <a href="https://sangyo-tech.jp/">TOP</a>
-            <a href="learning-roadmap.html" class="active">コンテンツ一覧</a>
+            <a href="learning-roadmap.html" class="active">コース一覧</a>
             <a href="skill-assessment.html">スキル診断</a>
             <a href="glossary.html">用語辞典</a>
             <a href="qc7-tools-reference.html">QC7つ道具</a>
@@ -983,7 +983,7 @@
     </nav>
 
     <header>
-        <h1>コンテンツ一覧</h1>
+        <h1>コース一覧</h1>
         <p class="subtitle">あなたに最適な学習パスを見つけよう</p>
         <div class="summary-stats">
             <div class="stat-item">
@@ -1006,7 +1006,7 @@
 
     <div class="roadmap-container">
         <div class="mode-tabs">
-            <button class="tab-btn" data-color="gold" onclick="switchMode('all')">全コンテンツ一覧</button>
+            <button class="tab-btn" data-color="gold" onclick="switchMode('all')">全コース一覧</button>
             <button class="tab-btn" data-color="pink" onclick="switchMode('level')">レベル別</button>
             <button class="tab-btn" data-color="orange" onclick="switchMode('role')">職種別</button>
             <button class="tab-btn" data-color="green" onclick="switchMode('purpose')">目的別</button>
@@ -1964,7 +1964,7 @@
             </div>
         </div>
 
-        <!-- ===== 全コンテンツ一覧 ===== -->
+        <!-- ===== 全コース一覧 ===== -->
         <div id="all" class="roadmap-mode active">
             <div class="mode-description">
                 全34コースをカテゴリ別に表示しています。各コースをクリックして詳細情報をご覧ください。
@@ -2717,7 +2717,7 @@
             if (clickedBtn) clickedBtn.classList.add('active');
         }
 
-        // 初期状態：全コンテンツ一覧タブをアクティブに
+        // 初期状態：全コース一覧タブをアクティブに
         document.addEventListener('DOMContentLoaded', function() {
             const defaultTab = document.querySelector('.tab-btn[onclick*="all"]');
             if (defaultTab) defaultTab.classList.add('active');
@@ -2766,7 +2766,7 @@
     <!-- cursor glow + Quality text effect -->
     <style>
         .cursor-glow{position:fixed;width:28px;height:28px;border-radius:50%;pointer-events:none;z-index:99999;background:radial-gradient(circle,rgba(0,180,216,.55) 0%,rgba(0,180,216,0) 70%);box-shadow:0 0 18px 6px rgba(0,180,216,.35);transform:translate(-50%,-50%);transition:opacity .3s}
-        .quality-particle{position:fixed;pointer-events:none;z-index:99998;font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:rgba(0,180,216,.75);text-shadow:0 0 6px rgba(0,180,216,.4);user-select:none;transition:opacity .4s}
+        .quality-particle{position:fixed;pointer-events:none;z-index:99998;font-family:Arial,sans-serif;font-weight:700;font-size:15px;user-select:none;transition:opacity .4s}
     </style>
     <script>
     (function(){var g=document.createElement('div');g.className='cursor-glow';document.body.appendChild(g);var mx=-100,my=-100,stopped=false,st=null,ps=[],N=7,W='Quality';for(var i=0;i<N;i++){var e=document.createElement('div');e.className='quality-particle';e.textContent=W;e.style.opacity='0';document.body.appendChild(e);ps.push({el:e,x:0,y:0,tx:0,ty:0,ox:0,oy:0,ph:Math.random()*Math.PI*2,sp:0.8+Math.random()*1.2,v:false})}function ap(){var s=20,sy=my-((N-1)*s)/2;ps.forEach(function(p,i){p.tx=mx+30+Math.random()*10;p.ty=sy+i*s})}function ro(){ps.forEach(function(p){p.ox=(Math.random()-0.5)*80;p.oy=(Math.random()-0.5)*80})}ro();document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;g.style.left=mx+'px';g.style.top=my+'px';g.style.opacity='1';stopped=false;clearTimeout(st);ro();ps.forEach(function(p){if(!p.v){p.el.style.opacity='0.75';p.v=true}});st=setTimeout(function(){stopped=true;ap()},400)});document.addEventListener('mouseleave',function(){g.style.opacity='0';ps.forEach(function(p){p.el.style.opacity='0';p.v=false})});var t=0;function tick(){t+=0.016;ps.forEach(function(p){if(!p.v)return;var tx,ty;if(stopped){tx=p.tx;ty=p.ty}else{tx=mx+p.ox+Math.sin(t*p.sp+p.ph)*25;ty=my+p.oy+Math.cos(t*p.sp+p.ph)*25}p.x+=(tx-p.x)*0.08;p.y+=(ty-p.y)*0.08;p.el.style.left=p.x+'px';p.el.style.top=p.y+'px'});requestAnimationFrame(tick)}tick()})();
