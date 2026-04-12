@@ -2780,7 +2780,8 @@
     <script src="content-inject.js?v=4">
     <script>
 document.querySelectorAll(".course-step-name").forEach(function(el) {
-    el.addEventListener("click", function() {
+    el.addEventListener("click", function(e) {
+        e.stopPropagation();
         var name = this.textContent.trim();
         var cards = document.querySelectorAll(".course-card");
         var targetCard = null;
