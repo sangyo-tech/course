@@ -458,6 +458,13 @@
             color: #e0e6f0;
             font-weight: 500;
             font-size: 0.92rem;
+          cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .course-step-name:hover {
+            color: #c8a84e;
+            text-decoration: underline;
         }
 
         .step-number-label {
@@ -1695,6 +1702,46 @@
             </div>
 
             <div class="path-view">
+                <!-- 製造業全般 -->
+                <div class="path-card">
+                    <div class="path-title"><span class="path-icon">🏭</span>製造業全般</div>
+                    <div class="path-description">あらゆる製造業に共通する品質管理とQC基礎を習得します。</div>
+                    <div class="path-courses">
+                        <div class="course-step">
+                            <span class="course-step-name">品質管理 基礎コース</span>
+                            <span class="step-badge required">必須</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">製造業 基礎知識コース</span>
+                            <span class="step-badge required">必須</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">現場力向上コース</span>
+                            <span class="step-badge required">必須</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">問題解決 基礎コース</span>
+                            <span class="step-badge required">必須</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">QC七つ道具コース</span>
+                            <span class="step-badge recommended">推奨</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">検査・計測コース</span>
+                            <span class="step-badge recommended">推奨</span>
+                        </div>
+                        <div class="course-step">
+                            <span class="course-step-name">品質マネジメントシステムコース</span>
+                            <span class="step-badge optional">任意</span>
+                        </div>
+                    </div>
+                    <div class="path-time">
+                        <span>推定学習時間</span>
+                        <span><span class="time-value">約210分</span>（必須）</span>
+                    </div>
+                </div>
+
                 <!-- 健康食品業界 -->
                 <div class="path-card">
                     <div class="path-title"><span class="path-icon">🍀</span>健康食品業界</div>
@@ -1928,46 +1975,6 @@
                     <div class="path-time">
                         <span>推定学習時間</span>
                         <span><span class="time-value">約240分</span>（必須）</span>
-                    </div>
-                </div>
-
-                <!-- 一般製造業 -->
-                <div class="path-card">
-                    <div class="path-title"><span class="path-icon">🏭</span>一般製造業</div>
-                    <div class="path-description">あらゆる製造業に共通する品質管理とQC基礎を習得します。</div>
-                    <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">製造業 基礎知識コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">問題解決 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">検査・計測コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
-                    </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約210分</span>（必須）</span>
                     </div>
                 </div>
             </div>
@@ -2770,7 +2777,35 @@
         }
     </script>
   <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
-    <script src="content-inject.js?v=3"></script>
+    <script src="content-inject.js?v=4">
+    <script>
+    // Make industry path course names clickable
+    document.querySelectorAll(".course-step-name").forEach(function(el) {
+        el.addEventListener("click", function() {
+            var name = this.textContent.trim();
+            // Find matching course card by name
+            var cards = document.querySelectorAll(".course-card");
+            for (var i = 0; i < cards.length; i++) {
+                var header = cards[i].querySelector(".course-name");
+                if (header && header.textContent.trim() === name) {
+                    // Switch to all-courses view first
+                    if (typeof showView === "function") showView("all-courses");
+                    else {
+                        var allBtn = document.querySelector("[onclick*=\"all-courses\"]");
+                        if (allBtn) allBtn.click();
+                    }
+                    setTimeout(function() {
+                        cards[i].scrollIntoView({behavior: "smooth", block: "center"});
+                        cards[i].style.boxShadow = "0 0 20px rgba(200,168,78,0.6)";
+                        setTimeout(function() { cards[i].style.boxShadow = ""; }, 2000);
+                    }, 300);
+                    break;
+                }
+            }
+        });
+    });
+    </script>
+</script>
 </body>
 </html>
 
