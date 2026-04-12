@@ -2789,11 +2789,7 @@
                 var header = cards[i].querySelector(".course-name");
                 if (header && header.textContent.trim() === name) {
                     // Switch to all-courses view first
-                    if (typeof showView === "function") showView("all-courses");
-                    else {
-                        var allBtn = document.querySelector("[onclick*=\"all-courses\"]");
-                        if (allBtn) allBtn.click();
-                    }
+                    switchMode("all");
                     setTimeout(function() {
                         cards[i].scrollIntoView({behavior: "smooth", block: "center"});
                         cards[i].style.boxShadow = "0 0 20px rgba(200,168,78,0.6)";
