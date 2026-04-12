@@ -216,7 +216,7 @@ var items=m[name];
 var isActive=active.indexOf(name)>-1;
 var section=document.createElement("div");
 section.className="course-content-section";
-section.style.cssText="display:none;margin-top:8px;padding:8px;background:#f8f9fa;border-radius:6px;max-height:200px;overflow-y:auto;";
+section.style.cssText="display:none;margin-top:8px;padding:8px;background:#0f1a2e;color:#d0d8e8;border-radius:6px;max-height:200px;overflow-y:auto;";
 var ul=document.createElement("ul");
 ul.style.cssText="list-style:none;padding:0;margin:0;font-size:0.8rem;";
 items.forEach(function(item){
