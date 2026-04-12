@@ -205,35 +205,52 @@ var m={
 "具体例編コース":["再現性を生む「標準化」","5W1Hで極める「迷わせない手順書」の書き方実務","ミスの原因「接続詞」を排す：作業を最小分解する明文化の技術","業務フローの可視化（見える化）","NG動作を仕組みで防ぐポカヨケ教育","暗黙知を形式知へ：ベテランのノウハウ承継術","マニュアルの形骸化を防ぐ「読み合わせ会」","「守・破・離」の「守」を徹底する","「事実」と「データ」で語る：客観的証拠に基づく意思決定","3ム（ムリ・ムダ・ムラ）排除","全員参加の品質経営（TQM）","5Sを基盤とした職場体質強化","「三現主義」の実践","なぜなぜ分析：「仕組みの欠陥」を突き止める","是正処置vs修正処置","QC七つ道具活用","PDCAを回す技術","製造物責任（PL法）入門","リスクマネジメント（ISO 31000）","事故の「前兆」を捉える感性教育","「安全なくして生産なし」","危機管理とBCP（事業継続計画）","故障モード影響解析（FMEA）","方針管理と目標展開","プロセスアプローチ","現場のリーダーシップ","多能工化の推進","測定システム解析（MSA）","サプライヤー・外部委託管理","スマート工場の基礎：IoT・AI・RPA"],
 "QC検定3級 対策コース":["QC検定3級の全体像と学習の進め方","品質管理の基本的な考え方 — QC的ものの見方","データの種類と収集方法 — 計量値と計数値","データのまとめ方 — 平均・範囲・標準偏差","QC七つ道具①：パレート図と特性要因図","QC七つ道具②：ヒストグラムとチェックシート","QC七つ道具③：散布図と層別","QC七つ道具④：管理図の基礎","正規分布の基礎 — 確率と標準正規分布表の読み方","工程能力指数（Cp・Cpk）の計算と判定","相関分析 — 相関係数の求め方と解釈","管理図の作り方と異常判定ルール","抜取検査の基礎 — OC曲線とAQL","検定と推定の基本的な考え方","実験計画法の基礎 — 一元配置と繰返しのある二元配置","新QC七つ道具の概要 — 親和図・連関図・系統図","問題解決の手順 — QCストーリーの進め方","品質保証と品質機能展開の基礎","プロセス管理 — 日常管理と方針管理","標準化と社内標準の整備","ISO9001と品質マネジメントシステムの基礎知識","原価・納期・安全と品質の関係","QC検定3級 模擬問題の解き方と試験対策"],
 "QC検定2級 対策コース":["QC検定2級の全体像と3級からのステップアップ","確率分布 — 二項分布・ポアソン分布・正規分布の応用","検定と推定①：母平均・母分散の検定と区間推定","検定と推定②：二つの母集団の比較（t検定・F検定）","検定と推定③：適合度検定と独立性の検定（カイ二乗検定）","実験計画法①：一元配置分散分析と分散分析表の読み方","実験計画法②：繰返しのある二元配置と交互作用","実験計画法③：直交表実験（L8・L16）の計画と解析","回帰分析 — 単回帰・重回帰の手法と寄与率","多変量解析の基礎 — 主成分分析と判別分析の考え方","抜取検査の設計 — 計数・計量抜取検査とJIS規格","管理図の応用 — 計量値・計数値管理図の選択と運用","工程解析と工程能力の評価 — 非正規データへの対応","信頼性工学の基礎 — MTBF・MTTR・信頼度関数","信頼性工学の応用 — ワイブル分析とFTA・FMEA","品質機能展開（QFD）— 要求品質展開と品質表の作成","新QC七つ道具の活用 — PDPC法・マトリックスデータ解析法","方針管理と日常管理の実践 — 目標展開とフォロー","品質保証体系 — 保証の網と品質保証プログラム","品質コストとロス関数 — タグチメソッドの基礎","ISO9001の要求事項と審査のポイント","問題解決と課題達成 — 上級QCストーリーの展開","QC検定2級 模擬問題の解き方と試験対策"]};
-/* CSS */
-var style=window.addEventListener("load",function(){document.querySelectorAll(".course-card").forEach(function(card){
+var active=["品質管理 基礎コース","製造業 基礎知識コース","現場力向上コース","問題解決 基礎コース","QC七つ道具コース","検査・計測コース","統計・データ分析コース","品質マネジメントシステムコース","FMEA・源流管理コース","変更管理・4M管理コース","クレーム対応・是正処置コース","サプライヤ品質管理コース","品質コスト・KPI管理コース","リスクマネジメントコース","健康食品GMPコース","標準化コース","トヨタ生産方式コース","DX・データ活用コース","品質人材育成・組織マネジメントコース","教養コース","初級コース","中級コース","実践コース"];
+window.addEventListener("load",function(){
+document.querySelectorAll(".course-card").forEach(function(card){
 var nameEl=card.querySelector(".course-name");
 if(!nameEl)return;
 var name=nameEl.textContent.trim();
 if(!m[name])return;
 var items=m[name];
+var isActive=active.indexOf(name)>-1;
 var section=document.createElement("div");
 section.className="course-content-section";
-section.style.display="none";
-section.style.marginTop="8px";
-section.style.borderTop="1px solid #e0e0e0";
-section.style.paddingTop="8px";
+section.style.cssText="display:none;margin-top:8px;padding:8px;background:#f8f9fa;border-radius:6px;max-height:200px;overflow-y:auto;";
+var ul=document.createElement("ul");
+ul.style.cssText="list-style:none;padding:0;margin:0;font-size:0.8rem;";
+items.forEach(function(item){
+var li=document.createElement("li");
+li.style.cssText="padding:3px 0;border-bottom:1px solid #eee;";
+if(!isActive){
+li.style.color="#bbb";
+li.textContent=item+" \u{1F6A7}";
+}else{
+li.textContent=item;
+}
+ul.appendChild(li);
+});
+section.appendChild(ul);
+if(!isActive){
+var note=document.createElement("div");
+note.style.cssText="text-align:center;color:#999;font-size:0.75rem;margin-top:6px;";
+note.textContent="\u203B \u30B3\u30F3\u30C6\u30F3\u30C4\u6E96\u5099\u4E2D";
+section.appendChild(note);
+}
 var btn=document.createElement("button");
 btn.className="course-content-toggle";
-btn.style.cssText="background:none;border:1px solid #ccc;border-radius:4px;padding:4px 10px;font-size:12px;cursor:pointer;color:#555;margin-top:6px;width:100%;text-align:left;";
-btn.innerHTML='<span class="arrow">&#9654;</span> <span class="course-content-count">'+items.length+'件のコンテンツ一覧</span>';
-var ul=document.createElement("ul");
-ul.className="course-content-list";
-ul.style.cssText="list-style:none;padding:0;margin:6px 0 0 0;font-size:12px;line-height:1.8;color:#444;max-height:200px;overflow-y:auto;";
-items.forEach(function(t){var li=document.createElement("li");li.textContent=t;li.style.cssText="padding:2px 0;border-bottom:1px solid #f0f0f0;";ul.appendChild(li)});
-section.appendChild(ul);
+btn.style.cssText="margin-top:8px;padding:4px 12px;font-size:0.75rem;background:#e3eafc;color:#2c5fad;border:none;border-radius:12px;cursor:pointer;width:100%;";
+btn.textContent="\u30B3\u30F3\u30C6\u30F3\u30C4\u4E00\u89A7 \u25BC";
 btn.addEventListener("click",function(e){
 e.stopPropagation();
-var open=section.style.display!=="none";
-section.style.display=open?"none":"block";
-btn.querySelector(".arrow").innerHTML=open?"&#9654;":"&#9660;";
+if(section.style.display==="none"){
+section.style.display="block";btn.textContent="\u30B3\u30F3\u30C6\u30F3\u30C4\u4E00\u89A7 \u25B2";
+}else{
+section.style.display="none";btn.textContent="\u30B3\u30F3\u30C6\u30F3\u30C4\u4E00\u89A7 \u25BC";
+}
 });
 card.appendChild(btn);
 card.appendChild(section);
-})});
+})
+});
 })();
