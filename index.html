@@ -2779,28 +2779,30 @@
   <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
     <script src="content-inject.js?v=4">
     <script>
-    // Make industry path course names clickable
-    document.querySelectorAll(".course-step-name").forEach(function(el) {
-        el.addEventListener("click", function() {
-            var name = this.textContent.trim();
-            // Find matching course card by name
-            var cards = document.querySelectorAll(".course-card");
-            for (var i = 0; i < cards.length; i++) {
-                var header = cards[i].querySelector(".course-name");
-                if (header && header.textContent.trim() === name) {
-                    // Switch to all-courses view first
-                    switchMode("all");
-                    setTimeout(function() {
-                        cards[i].scrollIntoView({behavior: "smooth", block: "center"});
-                        cards[i].style.boxShadow = "0 0 20px rgba(200,168,78,0.6)";
-                        setTimeout(function() { cards[i].style.boxShadow = ""; }, 2000);
-                    }, 300);
-                    break;
-                }
+document.querySelectorAll(".course-step-name").forEach(function(el) {
+    el.addEventListener("click", function() {
+        var name = this.textContent.trim();
+        var cards = document.querySelectorAll(".course-card");
+        var targetCard = null;
+        for (var i = 0; i < cards.length; i++) {
+            var header = cards[i].querySelector(".course-name");
+            if (header && header.textContent.trim() === name) {
+                targetCard = cards[i];
+                break;
             }
-        });
+        }
+        if (targetCard) {
+            switchMode("all");
+            var card = targetCard;
+            setTimeout(function() {
+                card.scrollIntoView({behavior: "smooth", block: "center"});
+                card.style.boxShadow = "0 0 20px rgba(200,168,78,0.6)";
+                setTimeout(function() { card.style.boxShadow = ""; }, 2000);
+            }, 300);
+        }
     });
-    </script>
+});
+</script>
 </script>
 </body>
 </html>
