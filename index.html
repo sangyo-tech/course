@@ -6,720 +6,501 @@
     <link rel="canonical" href="https://course.sangyo-tech.jp/">
     <title>コース一覧 | 産業技術アカデミー</title>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ItemList","name":"コース一覧","url":"https://course.sangyo-tech.jp/","inLanguage":"ja","publisher":{"@type":"EducationalOrganization","name":"産業技術アカデミー","url":"https://sangyo-tech.jp/"}}
+    {"@context":"https://schema.org","@type":"ItemList","name":"コース一覧","url":"https://course.sangyo-tech.jp/","inLanguage":"ja","publisher":{"@type":"EducationalOrganization","name":"ザ産業技術アカデミー","url":"https://sangyo-tech.jp/"}}
     </script>
-  <meta name="description" content="産業技術アカデミーの全32コース一覧。品質管理、ISO、GMP、製造技術、マネジメントなど、製造業に必要な知識を体系的に学べるeラーニングコースをご紹介します。">
+    <meta name="description" content="産業技術アカデミーの全24コース一覧。品質管理、ISO、GMP、製造技術、マネジメントなど、製造業に必要な知識を体系的に学べるeラーニングコースをご紹介します。">
+    <meta property="og:title" content="コース一覧 | 産業技術アカデミー">
+    <meta property="og:description" content="品質管理・ISO・に製造技術など全24コース。製造業の教育を体系化するeラーニング。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://course.sangyo-tech.jp/">
+    <meta property="og:image" content="https://sangyo-tech.jp/ogp.png">
+    <meta property="og:site_name" content="産業技術アカデミー">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --accent: #7c3aed;
+            --accent-light: #ede9fe;
+            --amber: #f59e0b;
+            --amber-light: #fef3c7;
+            --emerald: #10b981;
+            --emerald-light: #d1fae5;
+            --rose: #f43f5e;
+            --rose-light: #ffe4e6;
+            --sky: #0ea5e9;
+            --sky-light: #e0f2fe;
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            --radius: 12px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+            --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'メイリオ', 'ヒラギノ角ゴ Pro';
-            background-color: #0a1628;
-            color: #ffffff;
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--slate-50);
+            color: var(--slate-800);
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* ===== ナビバー ===== */
-        .navbar {
-            background-color: #060d1a;
-            border-bottom: 1px solid #1a2a4a;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            position: sticky;
-            top: 0;
-            z-index: 900;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        /* ===== ナビバー (overrides for unav) ===== */
+        .unav { background: #fff !important; border-bottom: 1px solid var(--slate-200) !important; }
+        .unav-brand-en { color: var(--slate-400) !important; }
+        .unav-brand-ja { color: var(--primary) !important; }
+        .unav-links a { color: var(--slate-600) !important; }
+        .unav-links a:hover { color: var(--primary) !important; background: var(--primary-light) !important; }
+        .unav-links a.unav-active { color: var(--primary) !important; background: var(--primary-light) !important; font-weight: 600 !important; }
+        .unav-links a.unav-cta { color: #fff !important; background: var(--primary) !important; }
+        .unav-links a.unav-cta:hover { background: var(--primary-dark) !important; }
+        .unav-toggle { color: var(--primary) !important; }
+        @media (max-width:768px) {
+            .unav-links { background: #fff !important; border-bottom: 1px solid var(--slate-200) !important; }
         }
 
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            flex-shrink: 0;
-        }
-
-        .nav-brand-en {
-            font-size: 0.6rem;
-            color: #808a9a;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            line-height: 1;
-        }
-
-        .nav-brand-ja {
-            font-size: 0.95rem;
-            color: #c8a84e;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .nav-links a {
-            color: #b0b8c8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            padding: 8px 14px;
-            border-radius: 6px;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-            background-color: rgba(200, 168, 78, 0.12);
-        }
-
-        .nav-links a.active {
-            color: #c8a84e;
-            background-color: rgba(200, 168, 78, 0.15);
-            font-weight: 600;
-        }
-
-        .nav-links a.nav-cta {
-            color: #0a1628;
-            background-color: #c8a84e;
-            font-weight: 600;
-            border-radius: 20px;
-            padding: 8px 18px;
-        }
-
-        .nav-links a.nav-cta:hover {
-            background-color: #e6c76e;
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #c8a84e;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        /* ===== ヘッダー ===== */
-        header {
-            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0f1f3a 100%);
-            border-bottom: 3px solid #c8a84e;
-            padding: 48px 20px 40px;
+        /* ===== ヒーロー ===== */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 40%, #7c3aed 100%);
+            padding: 56px 24px 48px;
             text-align: center;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #c8a84e;
-            margin-bottom: 8px;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: #b0b8c8;
-            margin-bottom: 24px;
-        }
-
-        .summary-stats {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2px;
-            background: rgba(200, 168, 78, 0.08);
-            border: 1px solid rgba(200, 168, 78, 0.25);
-            border-radius: 10px;
-            padding: 12px 22px;
-            min-width: 100px;
-        }
-
-        .stat-value {
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: #c8a84e;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.78rem;
-            color: #808a9a;
-            font-weight: 500;
-        }
-
-        .header-actions {
-            margin-top: 24px;
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn-assessment {
-            padding: 12px 28px;
-            background-color: #c8a84e;
-            color: #0a1628;
-            border: none;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-assessment:hover {
-            background-color: #e6c76e;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(200, 168, 78, 0.3);
-        }
-
-        /* ===== タブ切替 ===== */
-        .mode-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 30px 20px;
-            flex-wrap: wrap;
-            max-width: 100%;
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
-
-        .tab-btn {
-            padding: 10px 22px;
-            background-color: transparent;
-            cursor: pointer;
-            border-radius: 25px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-            flex-shrink: 0;
-            border: 2px solid;
-        }
-
-        /* カラフルタブ：各カテゴリ別カラー */
-        .tab-btn[data-color="pink"] {
-            border-color: #e84c6a;
-            color: #e84c6a;
-        }
-        .tab-btn[data-color="pink"]:hover,
-        .tab-btn[data-color="pink"].active {
-            background-color: #e84c6a;
-            color: #ffffff;
-            box-shadow: 0 0 14px rgba(232, 76, 106, 0.35);
-        }
-
-        .tab-btn[data-color="orange"] {
-            border-color: #f0943a;
-            color: #f0943a;
-        }
-        .tab-btn[data-color="orange"]:hover,
-        .tab-btn[data-color="orange"].active {
-            background-color: #f0943a;
-            color: #ffffff;
-            box-shadow: 0 0 14px rgba(240, 148, 58, 0.35);
-        }
-
-        .tab-btn[data-color="green"] {
-            border-color: #4ade80;
-            color: #4ade80;
-        }
-        .tab-btn[data-color="green"]:hover,
-        .tab-btn[data-color="green"].active {
-            background-color: #4ade80;
-            color: #0a1628;
-            box-shadow: 0 0 14px rgba(74, 222, 128, 0.35);
-        }
-
-        .tab-btn[data-color="purple"] {
-            border-color: #a78bfa;
-            color: #a78bfa;
-        }
-        .tab-btn[data-color="purple"]:hover,
-        .tab-btn[data-color="purple"].active {
-            background-color: #a78bfa;
-            color: #ffffff;
-            box-shadow: 0 0 14px rgba(167, 139, 250, 0.35);
-        }
-
-        .tab-btn[data-color="red"] {
-            border-color: #f87171;
-            color: #f87171;
-        }
-        .tab-btn[data-color="red"]:hover,
-        .tab-btn[data-color="red"].active {
-            background-color: #f87171;
-            color: #ffffff;
-            box-shadow: 0 0 14px rgba(248, 113, 113, 0.35);
-        }
-
-        .tab-btn[data-color="teal"] {
-            border-color: #2dd4bf;
-            color: #2dd4bf;
-        }
-        .tab-btn[data-color="teal"]:hover,
-        .tab-btn[data-color="teal"].active {
-            background-color: #2dd4bf;
-            color: #0a1628;
-            box-shadow: 0 0 14px rgba(45, 212, 191, 0.35);
-        }
-
-        .tab-btn[data-color="gold"] {
-            border-color: #c8a84e;
-            color: #c8a84e;
-        }
-        .tab-btn[data-color="gold"]:hover,
-        .tab-btn[data-color="gold"].active {
-            background-color: #c8a84e;
-            color: #0a1628;
-            box-shadow: 0 0 14px rgba(200, 168, 78, 0.35);
-        }
-
-        /* ===== ロードマップコンテナ ===== */
-        .roadmap-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .roadmap-mode {
-            display: none;
-        }
-
-        .roadmap-mode.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .mode-description {
-            background: linear-gradient(90deg, rgba(200,168,78,0.08), transparent);
-            border-left: 4px solid #c8a84e;
-            padding: 16px 24px;
-            margin-bottom: 36px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
-            color: #d0d8e8;
-            line-height: 1.7;
-        }
-
-        /* ===== レベル別ビュー ===== */
-        .level-view {
-            display: flex;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .level-stage {
             position: relative;
+            overflow: hidden;
         }
 
-        .level-stage::after {
+        .hero::before {
             content: '';
             position: absolute;
-            left: 50%;
-            top: 100%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 60px;
-            background: linear-gradient(to bottom, #c8a84e, transparent);
-        }
-
-        .level-stage:last-child::after {
-            display: none;
-        }
-
-        .stage-label {
-            text-align: center;
-            color: #c8a84e;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding: 10px 24px;
-            background: rgba(200,168,78,0.08);
-            border: 1px solid rgba(200,168,78,0.2);
-            border-radius: 30px;
-            display: inline-block;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .courses-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        /* ===== 職種別・目的別・業界別ビュー ===== */
-        .path-view {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .path-card {
-            background: linear-gradient(160deg, #111d33 0%, #0c1726 100%);
-            border: 1px solid #2a3a5a;
-            border-radius: 12px;
-            padding: 28px;
-            overflow: hidden;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .path-card:hover {
-            border-color: #c8a84e;
-            box-shadow: 0 4px 20px rgba(200,168,78,0.1);
-        }
-
-        .path-title {
-            color: #c8a84e;
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .path-icon {
-            font-size: 1.3rem;
-        }
-
-        .path-description {
-            font-size: 0.88rem;
-            color: #808a9a;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #1a2a4a;
-        }
-
-        .path-courses {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .course-step {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-        }
-
-        .course-step::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background-color: #c8a84e;
-            border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .course-step-name {
-            color: #e0e6f0;
-            font-weight: 500;
-            font-size: 0.92rem;
-          cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .course-step-name:hover {
-            color: #c8a84e;
-            text-decoration: underline;
-        }
-
-        .step-number-label {
-            color: #555e70;
-            font-size: 0.7rem;
-            font-weight: 600;
-            min-width: 16px;
-        }
-
-        .step-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: auto;
-            flex-shrink: 0;
-            letter-spacing: 0.03em;
-        }
-
-        .step-badge.required {
-            background-color: rgba(232,76,61,0.15);
-            color: #f07060;
-            border: 1px solid rgba(232,76,61,0.3);
-        }
-
-        .step-badge.recommended {
-            background-color: rgba(200,168,78,0.12);
-            color: #c8a84e;
-            border: 1px solid rgba(200,168,78,0.3);
-        }
-
-        .step-badge.optional {
-            background-color: rgba(100,110,130,0.15);
-            color: #808a9a;
-            border: 1px solid rgba(100,110,130,0.3);
-        }
-
-        .path-courses {
-            flex: 1;
-        }
-
-        .path-time {
-            margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid #1e2e48;
-            font-size: 0.85rem;
-            color: #606a7a;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .time-value {
-            color: #c8a84e;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        /* ===== 全コース一覧 ===== */
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
-        }
-
-        .section-heading {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin: 44px 0 18px 0;
-            padding: 10px 20px;
-            border-radius: 0 6px 6px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-left: 3px solid;
-        }
-
-        .section-heading .badge-count {
-            font-size: 0.75rem;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-
-        .section-heading.cat-orange {
-            color: #f0943a;
-            background: rgba(240,148,58,0.06);
-            border-left-color: #f0943a;
-        }
-        .section-heading.cat-orange .badge-count {
-            background-color: rgba(240,148,58,0.15);
-            color: #f0943a;
-        }
-
-        .section-heading.cat-green {
-            color: #4ade80;
-            background: rgba(74,222,128,0.06);
-            border-left-color: #4ade80;
-        }
-        .section-heading.cat-green .badge-count {
-            background-color: rgba(74,222,128,0.15);
-            color: #4ade80;
-        }
-
-        .section-heading.cat-purple {
-            color: #a78bfa;
-            background: rgba(167,139,250,0.06);
-            border-left-color: #a78bfa;
-        }
-        .section-heading.cat-purple .badge-count {
-            background-color: rgba(167,139,250,0.15);
-            color: #a78bfa;
-        }
-
-        .section-heading.cat-red {
-            color: #f87171;
-            background: rgba(248,113,113,0.06);
-            border-left-color: #f87171;
-        }
-        .section-heading.cat-red .badge-count {
-            background-color: rgba(248,113,113,0.15);
-            color: #f87171;
-        }
-
-        .section-heading.cat-teal {
-            color: #2dd4bf;
-            background: rgba(45,212,191,0.06);
-            border-left-color: #2dd4bf;
-        }
-        .section-heading.cat-teal .badge-count {
-            background-color: rgba(45,212,191,0.15);
-            color: #2dd4bf;
-        }
-
-        .section-heading.cat-pink {
-            color: #e84c6a;
-            background: rgba(232,76,106,0.06);
-            border-left-color: #e84c6a;
-        }
-        .section-heading.cat-pink .badge-count {
-            background-color: rgba(232,76,106,0.15);
-            color: #e84c6a;
-        }
-
-        .section-heading.cat-gold {
-            color: #c8a84e;
-            background: rgba(200,168,78,0.06);
-            border-left-color: #c8a84e;
-        }
-        .section-heading.cat-gold .badge-count {
-            background-color: rgba(200,168,78,0.15);
-            color: #c8a84e;
-        }
-
-        .course-card {
-            background-color: #111d33;
-            border: 1px solid #1e2e48;
-            border-radius: 10px;
-            padding: 20px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-card:hover {
-            border-color: #c8a84e;
-            box-shadow: 0 6px 18px rgba(200, 168, 78, 0.12);
-            transform: translateY(-3px);
-        }
-
-        .course-card.coming-soon {
-            opacity: 0.5;
+            inset: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(124,58,237,.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(37,99,235,.3) 0%, transparent 50%);
             pointer-events: none;
         }
 
-        .course-card.coming-soon .course-name {
-            color: #555e70;
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+
+        .hero .subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,.8);
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 12px;
+            padding: 12px 24px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .hero-stat-label {
+            font-size: .75rem;
+            color: rgba(255,255,255,.7);
+            font-weight: 500;
+        }
+
+        /* ===== タブ ===== */
+        .tabs-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 24px 20px 0;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tab-btn {
+            padding: 9px 20px;
+            background: #fff;
+            border: 1.5px solid var(--slate-200);
+            border-radius: 50px;
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+            white-space: nowrap;
+            color: var(--slate-500);
+            font-family: inherit;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px rgba(37,99,235,.3);
+        }
+
+        /* ===== メインコンテナ ===== */
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        .roadmap-mode { display: none; }
+        .roadmap-mode.active { display: block; animation: fadeUp .35s ease; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mode-desc {
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            font-size: .92rem;
+            color: var(--slate-600);
+            line-height: 1.7;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ===== セクション見出し ===== */
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 36px 0 14px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .count {
+            font-size: .72rem;
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-weight: 700;
+        }
+
+        .section-title.cat-level { background: var(--rose-light); color: var(--rose); }
+        .section-title.cat-level .count { background: rgba(244,63,94,.15); color: var(--rose); }
+
+        .section-title.cat-basic { background: #fff7ed; color: #ea580c; }
+        .section-title.cat-basic .count { background: rgba(234,88,12,.12); color: #ea580c; }
+
+        .section-title.cat-qc { background: var(--emerald-light); color: #059669; }
+        .section-title.cat-qc .count { background: rgba(5,150,105,.12); color: #059669; }
+
+        .section-title.cat-mgmt { background: var(--accent-light); color: var(--accent); }
+        .section-title.cat-mgmt .count { background: rgba(124,58,237,.12); color: var(--accent); }
+
+        .section-title.cat-special { background: var(--sky-light); color: #0284c7; }
+        .section-title.cat-special .count { background: rgba(2,132,199,.12); color: #0284c7; }
+
+        .section-title.cat-cross { background: var(--amber-light); color: #d97706; }
+        .section-title.cat-cross .count { background: rgba(217,119,6,.12); color: #d97706; }
+
+        .section-title.cat-audio { background: var(--slate-100); color: var(--slate-700); }
+        .section-title.cat-audio .count { background: rgba(51,65,85,.1); color: var(--slate-700); }
+
+        /* ===== コースカード ===== */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 14px;
+        }
+
+        .course-card {
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 20px;
+            cursor: pointer;
+            transition: all .2s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .course-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .course-card.coming-soon {
+            opacity: .45;
+            pointer-events: none;
         }
 
         .course-card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
-            gap: 10px;
+            margin-bottom: 8px;
+            gap: 8px;
         }
 
         .course-name {
-            color: #e0e6f0;
-            font-size: 0.98rem;
+            font-size: .95rem;
             font-weight: 700;
-            flex: 1;
+            color: var(--slate-800);
             line-height: 1.4;
+            flex: 1;
         }
 
         .course-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            background-color: rgba(200,168,78,0.12);
-            color: #c8a84e;
-            border: 1px solid rgba(200,168,78,0.25);
-            border-radius: 4px;
-            font-size: 0.7rem;
+            padding: 2px 10px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: .7rem;
             font-weight: 600;
             white-space: nowrap;
             flex-shrink: 0;
         }
 
         .course-badge.coming {
-            background-color: rgba(100,110,130,0.15);
-            color: #666a78;
-            border-color: rgba(100,110,130,0.3);
+            background: var(--slate-100);
+            color: var(--slate-400);
         }
 
         .course-difficulty {
-            color: #808a9a;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            font-weight: 500;
+            font-size: .8rem;
+            color: var(--slate-500);
+            margin-bottom: 4px;
         }
 
-        .course-difficulty .stars {
-            color: #c8a84e;
-        }
+        .course-difficulty .stars { color: var(--amber); }
 
         .course-target {
-            font-size: 0.82rem;
-            color: #606a7a;
-            margin-bottom: 8px;
+            font-size: .8rem;
+            color: var(--slate-400);
+            margin-bottom: 6px;
         }
 
         .course-count {
-            font-size: 0.85rem;
-            color: #b0b8c8;
+            font-size: .82rem;
+            color: var(--slate-600);
             font-weight: 500;
         }
 
-        .difficulty-stars {
-            display: inline;
-            color: #c8a84e;
+        /* ===== レベル別ビュー ===== */
+        .level-view { display: flex; flex-direction: column; gap: 64px; }
+
+        .level-stage { position: relative; }
+        .level-stage::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 48px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+        .level-stage:last-child::after { display: none; }
+
+        .stage-label {
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding: 8px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50px;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 8px rgba(37,99,235,.25);
         }
 
-        /* ===== ポップアップモーダル ===== */
+        .courses-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+        }
+
+        /* ===== 職種別・目的別・業界別 ===== */
+        .path-view {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .path-card {
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: all .2s;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .path-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .path-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .path-icon { font-size: 1.2rem; }
+
+        .path-description {
+            font-size: .85rem;
+            color: var(--slate-500);
+            margin-bottom: 16px;
+            line-height: 1.6;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .path-courses { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+
+        .course-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .9rem;
+        }
+
+        .course-step::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .course-step-name {
+            color: var(--slate-700);
+            font-weight: 500;
+            cursor: pointer;
+            transition: color .2s;
+        }
+
+        .course-step-name:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .step-badge {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: .68rem;
+            font-weight: 600;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .step-badge.required { background: rgba(244,63,94,.1); color: var(--rose); }
+        .step-badge.recommended { background: rgba(37,99,235,.1); color: var(--primary); }
+        .step-badge.optional { background: var(--slate-100); color: var(--slate-400); }
+
+        .path-time {
+            margin-top: auto;
+            padding-top: 14px;
+            border-top: 1px solid var(--slate-100);
+            font-size: .82rem;
+            color: var(--slate-400);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .time-value { color: var(--primary); font-weight: 700; font-size: .92rem; }
+
+        /* ===== 聞き流し ===== */
+        .paths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+        }
+
+        .audio-card {
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-top: 3px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .audio-card .path-title { color: var(--primary); }
+        .audio-card .path-course {
+            font-size: .88rem;
+            color: var(--slate-600);
+            padding: 3px 0;
+        }
+
+        /* ===== モーダル ===== */
         .modal {
             display: none;
             position: fixed;
             z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 0.3s ease;
+            inset: 0;
+            background: rgba(15,23,42,.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            animation: fadeUp .25s ease;
         }
 
         .modal.active {
@@ -729,121 +510,94 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #1a2a4a 0%, #0f1f3a 100%);
-            border: 2px solid #c8a84e;
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 600px;
-            width: 90%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 560px;
+            width: 92%;
             max-height: 80vh;
             overflow-y: auto;
             position: relative;
+            box-shadow: var(--shadow-lg);
         }
 
         .close-btn {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #c8a84e;
+            top: 14px;
+            right: 14px;
+            font-size: 24px;
+            color: var(--slate-400);
             cursor: pointer;
             background: none;
             border: none;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            transition: all .2s;
         }
 
-        .close-btn:hover {
-            background-color: rgba(200, 168, 78, 0.2);
-        }
+        .close-btn:hover { background: var(--slate-100); color: var(--slate-700); }
 
         .modal h2 {
-            color: #c8a84e;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            color: var(--slate-800);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            padding-right: 32px;
         }
 
-        .modal-section {
-            margin-bottom: 20px;
-        }
+        .modal-section { margin-bottom: 18px; }
 
         .modal-section-title {
-            color: #c8a84e;
-            font-weight: 700;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: .85rem;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: .04em;
         }
 
         .modal-section-content {
-            color: #d0d8e8;
-            font-size: 0.9rem;
-            line-height: 1.6;
+            color: var(--slate-600);
+            font-size: .9rem;
+            line-height: 1.7;
         }
 
-        .modal-list {
-            list-style: none;
-            padding-left: 0;
-        }
+        .modal-cta { margin-top: 24px; text-align: center; }
 
-        .modal-list li {
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
-            color: #d0d8e8;
-        }
-
-        .modal-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #c8a84e;
-            font-weight: bold;
-        }
-
-        /* ===== モーダルCTA ===== */
-        .modal-cta {
-            margin-top: 28px;
-            text-align: center;
-        }
-
-        .btn-start-course {
+        .btn-start {
             display: inline-block;
-            padding: 14px 36px;
-            background-color: #c8a84e;
-            color: #0a1628;
-            border-radius: 25px;
-            font-size: 1rem;
+            padding: 13px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border-radius: 50px;
+            font-size: .95rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.3s ease;
-            letter-spacing: 0.03em;
+            transition: all .2s;
+            box-shadow: 0 2px 8px rgba(37,99,235,.3);
         }
 
-        .btn-start-course:hover {
-            background-color: #e6c76e;
+        .btn-start:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(200, 168, 78, 0.4);
+            box-shadow: 0 4px 16px rgba(37,99,235,.4);
         }
 
-        .btn-start-course.disabled {
-            background-color: #2a3a5a;
-            color: #555e70;
+        .btn-start.disabled {
+            background: var(--slate-200);
+            color: var(--slate-400);
             pointer-events: none;
-            cursor: default;
+            box-shadow: none;
         }
 
         /* ===== フッター ===== */
         footer {
-            background-color: #060d1a;
-            border-top: 1px solid #1a2a4a;
+            background: var(--slate-800);
             padding: 40px 24px;
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         .footer-inner {
@@ -852,155 +606,53 @@
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 40px;
-            align-items: start;
+            align-items: center;
         }
 
-        .footer-brand {
-            font-size: 0.95rem;
-            color: #c8a84e;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .footer-copy {
-            font-size: 0.8rem;
-            color: #555e70;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #606a7a;
-            text-decoration: none;
-            font-size: 0.82rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #c8a84e;
-        }
+        .footer-brand { font-size: .95rem; color: #fff; font-weight: 600; margin-bottom: 4px; }
+        .footer-copy { font-size: .78rem; color: var(--slate-400); }
+        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: var(--slate-400); text-decoration: none; font-size: .82rem; transition: color .2s; }
+        .footer-links a:hover { color: #fff; }
 
         /* ===== レスポンシブ ===== */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 0 16px;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background-color: #060d1a;
-                border-bottom: 1px solid #1a2a4a;
-                flex-direction: column;
-                padding: 12px 16px;
-                gap: 4px;
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .summary-stats {
-                gap: 12px;
-            }
-
-            .stat-item {
-                padding: 10px 16px;
-                min-width: 80px;
-            }
-
-            .stat-value {
-                font-size: 1.3rem;
-            }
-
-            .path-view {
-                grid-template-columns: 1fr;
-            }
-
-            .courses-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                padding: 20px;
-            }
-
-            .mode-tabs {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                justify-content: flex-start;
-                padding: 0 16px 10px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+            .hero { padding: 40px 16px 36px; }
+            .hero h1 { font-size: 1.6rem; }
+            .tabs-wrap { gap: 6px; padding: 16px 12px 0; }
+            .tab-btn { padding: 7px 14px; font-size: .82rem; }
+            .path-view { grid-template-columns: 1fr; }
+            .courses-grid { grid-template-columns: 1fr; }
+            .modal-content { padding: 24px 18px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 20px; }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .tab-btn {
-                padding: 8px 14px;
-                font-size: 0.85rem;
-            }
-
-            .course-card {
-                padding: 16px;
-            }
-
-            .summary-stats {
-                flex-direction: row;
-                gap: 10px;
-            }
+            .hero h1 { font-size: 1.35rem; }
+            .hero-stats { gap: 10px; }
+            .hero-stat { padding: 10px 16px; min-width: 80px; }
+            .hero-stat-value { font-size: 1.3rem; }
+            .course-card { padding: 16px; }
         }
     </style>
 
-  <meta property="og:title" content="コース一覧 | 産業技術アカデミー">
-  <meta property="og:description" content="品質管理・ISO・製造技術など全32コース。製造業の教育を体系化するeラーニング。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://course.sangyo-tech.jp/">
-  <meta property="og:image" content="https://sangyo-tech.jp/ogp.png">
-  <meta property="og:site_name" content="産業技術アカデミー">
-  <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
 <style id="unav-styles">
-.unav{background-color:#060d1a;border-bottom:1px solid #1a2a4a;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:9000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",sans-serif;box-sizing:border-box}
+.unav{background-color:#fff;border-bottom:1px solid #e2e8f0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:9000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;box-sizing:border-box}
 .unav *{box-sizing:border-box}
 .unav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
-.unav-brand-en{font-size:.6rem;color:#808a9a;letter-spacing:1.5px;text-transform:uppercase;line-height:1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:400}
-.unav-brand-ja{font-size:.95rem;color:#c8a84e;font-weight:700;line-height:1;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",sans-serif;letter-spacing:.05em;margin-top:4px}
+.unav-brand-en{font-size:.6rem;color:#94a3b8;letter-spacing:1.5px;text-transform:uppercase;line-height:1}
+.unav-brand-ja{font-size:.95rem;color:#2563eb;font-weight:700;line-height:1;letter-spacing:.05em;margin-top:4px}
 .unav-links{display:flex;align-items:center;gap:4px}
-.unav-links a{color:#b0b8c8;text-decoration:none;font-size:.85rem;padding:8px 14px;border-radius:6px;transition:all .25s ease;white-space:nowrap;font-weight:500;background:none;border:none}
-.unav-links a:nth-child(1){color:#7dd3fc}.unav-links a:nth-child(2){color:#fda4af}.unav-links a:nth-child(3){color:#fcd34d}.unav-links a:nth-child(4){color:#86efac}.unav-links a:nth-child(5){color:#c4b5fd}.unav-links a:nth-child(6){color:#f0abfc}.unav-links a:hover{color:#fff;background-color:rgba(200,168,78,.12)}
-.unav-links a.unav-active{color:#c8a84e;background-color:rgba(200,168,78,.15);font-weight:600}
-.unav-links a.unav-cta{color:#0a1628;background-color:#c8a84e;font-weight:600;border-radius:20px;padding:8px 18px;margin-left:4px}
-.unav-links a.unav-cta:hover{background-color:#d4b862;color:#0a1628}
-.unav-toggle{display:none;background:none;border:none;color:#c8a84e;font-size:1.5rem;cursor:pointer;padding:4px}
-@media (max-width:768px){.unav-links{display:none;position:absolute;top:60px;left:0;right:0;background-color:#060d1a;border-bottom:1px solid #1a2a4a;flex-direction:column;align-items:stretch;padding:12px 16px;gap:4px}.unav-links.unav-open{display:flex}.unav-links a{text-align:left}.unav-links a.unav-cta{margin-left:0;text-align:center}.unav-toggle{display:block}}
+.unav-links a{color:#475569;text-decoration:none;font-size:.85rem;padding:8px 14px;border-radius:6px;transition:all .25s ease;white-space:nowrap;font-weight:500}
+.unav-links a:hover{color:#2563eb;background-color:rgba(37,99,235,.08)}
+.unav-links a.unav-active{color:#2563eb;background-color:rgba(37,99,235,.1);font-weight:600}
+.unav-links a.unav-cta{color:#fff;background-color:#2563eb;font-weight:600;border-radius:20px;padding:8px 18px;margin-left:4px}
+.unav-links a.unav-cta:hover{background-color:#1d4ed8}
+.unav-toggle{display:none;background:none;border:none;color:#2563eb;font-size:1.5rem;cursor:pointer;padding:4px}
+@media(max-width:768px){.unav-links{display:none;position:absolute;top:60px;left:0;right:0;background-color:#fff;border-bottom:1px solid #e2e8f0;flex-direction:column;align-items:stretch;padding:12px 16px;gap:4px}.unav-links.unav-open{display:flex}.unav-links a{text-align:left}.unav-links a.unav-cta{margin-left:0;text-align:center}.unav-toggle{display:block}}
 </style>
 </head>
 <body>
-    
 
     <nav class="unav" role="navigation" aria-label="メインナビゲーション">
     <a href="https://sangyo-tech.jp/" class="unav-brand" aria-label="産業技術アカデミー">
@@ -1013,230 +665,412 @@
     <div class="unav-links" id="unavLinks">
       <a href="https://sangyo-tech.jp/">TOP</a>
       <a href="https://course.sangyo-tech.jp/" class="unav-active">コース</a>
-      <a href="https://contents.sangyo-tech.jp/">コンテンツ一覧</a><a href="https://pricing.sangyo-tech.jp/">料金</a>
+      <a href="https://contents.sangyo-tech.jp/">コンテンツ一覧</a>
+      <a href="https://pricing.sangyo-tech.jp/">料金</a>
       <a href="https://service.sangyo-tech.jp/">支援サービス</a>
       <a href="https://about-us.sangyo-tech.jp/">私たちについて</a>
       <a href="https://apply.sangyo-tech.jp/" class="unav-cta">お申込み</a>
     </div>
   </nav>
 
-    <div class="roadmap-container">
-        <div class="mode-tabs">
-            <button class="tab-btn" data-color="gold" onclick="switchMode('all')">全コース一覧</button>
-            <button class="tab-btn" data-color="pink" onclick="switchMode('level')">レベル別</button>
-            <button class="tab-btn" data-color="orange" onclick="switchMode('role')">職種別</button>
-            <button class="tab-btn" data-color="green" onclick="switchMode('purpose')">目的別</button>
-            <button class="tab-btn" data-color="purple" onclick="switchMode('industry')">業界別</button>
-            <button class="tab-btn" data-color="teal" onclick="switchMode('audio')">🎧 聞き流し</button>
+    <!-- ===== ヒーロー ===== -->
+    <section class="hero">
+        <h1>コース一覧</h1>
+        <p class="subtitle">製造業の品質管理を体系的に学べるeラーニング</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">24</div>
+                <div class="hero-stat-label">コース</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">160+</div>
+                <div class="hero-stat-label">コンテンツ</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">6</div>
+                <div class="hero-stat-label">カテゴリ</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== タブ ===== -->
+    <div class="tabs-wrap">
+        <button class="tab-btn active" onclick="switchMode('all')">全コース一覧</button>
+        <button class="tab-btn" onclick="switchMode('level')">レベル別</button>
+        <button class="tab-btn" onclick="switchMode('role')">職種別</button>
+        <button class="tab-btn" onclick="switchMode('purpose')">目的別</button>
+        <button class="tab-btn" onclick="switchMode('industry')">業界別</button>
+        <button class="tab-btn" onclick="switchMode('audio')">🎧 聞き流し</button>
+    </div>
+
+    <!-- ===== メイン ===== -->
+    <div class="main-container">
+
+        <!-- ===== 全コース一覧 ===== -->
+        <div id="all" class="roadmap-mode active">
+            <div class="mode-desc">全24コースをカテゴリ別に表示しています。各コースをクリックして詳細をご覧ください。</div>
+
+            <div class="section-title cat-level">レベル別コース <span class="count">4コース</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('教養')">
+                    <div class="course-card-header">
+                        <div class="course-name">教養コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 入門</div>
+                    <div class="course-target">全社員向け</div>
+                    <div class="course-count">15コンテンツ | 約1時間35分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('初級')">
+                    <div class="course-card-header">
+                        <div class="course-name">初級コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 入門</div>
+                    <div class="course-target">新人・若手向け</div>
+                    <div class="course-count">23コンテンツ | 約1時間55分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('中級')">
+                    <div class="course-card-header">
+                        <div class="course-name">中級コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">中堅・リーダー向け</div>
+                    <div class="course-count">12コンテンツ | 約1時間</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('実践')">
+                    <div class="course-card-header">
+                        <div class="course-name">実践コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">管理者・推進担当向け</div>
+                    <div class="course-count">8コンテンツ | 約40分</div>
+               </div>
+            </div>
+
+            <div class="section-title cat-basic">基礎・入門 <span class="count">4コース</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('品質管理_基礎')">
+                    <div class="course-card-header">
+                        <div class="course-name">品質管理 基礎コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 入門</div>
+                    <div class="course-target">全社員・新人向け</div>
+                    <div class="course-count">9コンテンツ | 約45分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('製造業_基礎知識')">
+                    <div class="course-card-header">
+                        <div class="course-name">製造業 基礎知識コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 入門</div>
+                    <div class="course-target">新人・非製造部門向け</div>
+                    <div class="course-count">4コンテンツ | 約20分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('現場力向上')">
+                    <div class="course-card-header">
+                        <div class="course-name">現場力向上コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 入門</div>
+                    <div class="course-target">製造・現場部門向け</div>
+                    <div class="course-count">6コンテンツ | 約30分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('問題解決_基礎')">
+                    <div class="course-card-header">
+                        <div class="course-name">問題解決 基礎コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">新人〻中堅向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+            </div>
+
+            <div class="section-title cat-qc">QC・統計・検査 <span class="count">3コース</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('QC七つ道具')">
+                    <div class="course-card-header">
+                        <div class="course-name">QC七つ道具コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質・製造・生甧管理向け</div>
+                    <div class="course-count">4コンテンツ | 約20分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('統計データ分析')">
+                    <div class="course-card-header">
+                        <div class="course-name">統計・データ分析コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質・技術・研究向け</div>
+                    <div class="course-count">5コンテンツ | 約25分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('検査計測')">
+                    <div class="course-card-header">
+                        <div class="course-name">検査・計測コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質・検査員向け</div>
+                    <div class="course-count">4コンテンツ | 約20分</div>
+                </div>
+            </div>
+
+            <div class="section-title cat-mgmt">マネジメント・管理 <span class="count">8コース</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('品質マネジメント')">
+                    <div class="course-card-header">
+                        <div class="course-name">品質マネジメントシステムコース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質部門・管理職向け</div>
+                    <div class="course-count">5コンテンツ | 約25分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('FMEA源流')">
+                    <div class="course-card-header">
+                        <div class="course-name">FMEA・源流管理コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">設計・品質・生甧技術向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('変更管理4M')">
+                    <div class="course-card-header">
+                        <div class="course-name">変更管理・4M管理コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質・製造・技術向け</div>
+                    <div class="course-count">2コンテンツ | 約10分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('クレーム是正')">
+                    <div class="course-card-header">
+                        <div class="course-name">クレーム対応・是正処置コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">品質・管理職向け</div>
+                    <div class="course-count">2コンテンツ | 約10分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('サプライヤ品質')">
+                    <div class="course-card-header">
+                        <div class="course-name">サプライヤ品質管理コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">購買・品質向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('品質コストKPI')">
+                    <div class="course-card-header">
+                        <div class="course-name">品質コスト・KPI管理コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">管理職向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('リスク')">
+                    <div class="course-card-header">
+                        <div class="course-name">リスクマネジメントコース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">管理職向け</div>
+                    <div class="course-count">2コンテンツ | 約10分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('品質人材育成')">
+                    <div class="course-card-header">
+                        <div class="course-name">品質人材育成・組織マネジメントコース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">管理職向け</div>
+                    <div class="course-count">2コンテンツ | 約10分</div>
+                </div>
+            </div>
+
+            <div class="section-title cat-special">専門・業界特化 <span class="count">4コース</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('トヨタ生産')">
+                    <div class="course-card-header">
+                        <div class="course-name">トヨタ生産方式コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">製造・生甧管理向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('標準化')">
+                    <div class="course-card-header">
+                        <div class="course-name">標準化コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★</span>☆ 中級</div>
+                    <div class="course-target">全社員向け</div>
+                    <div class="course-count">3コンテンツ | 約15分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('DX')">
+                    <div class="course-card-header">
+                        <div class="course-name">DX・データ活用コース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">管理職・技術向け</div>
+                    <div class="course-count">2コンテンツ | 約10分</div>
+                </div>
+                <div class="course-card" onclick="showCourseDetail('健康食品GMP')">
+                    <div class="course-card-header">
+                        <div class="course-name">健康食品GMPコース</div>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★★★</span> 上級</div>
+                    <div class="course-target">健康食品製造向け</div>
+                    <div class="course-count">21コンテンツ | 約1時間45分</div>
+                </div>
+            </div>
+
+            <div class="section-title cat-audio">🎧 聞き流し学習 <span class="count">1コース（50コンテンツ）</span></div>
+            <div class="courses-grid">
+                <div class="course-card" onclick="showCourseDetail('聞き流し学習')" style="border-left: 3px solid var(--primary);">
+                    <div class="course-card-header">
+                        <div class="course-name">🎧 聞き流し学習（音声コンテンツ）</div>
+                        <span class="course-badge">音声</span>
+                    </div>
+                    <div class="course-difficulty"><span class="stars">★</span>☆☆ 全レベル</div>
+                    <div class="course-target">全社員向け（通勤・作業中に最適）</div>
+                    <div class="course-count">50コンテンツ | ラジオ形式</div>
+                </div>
+            </div>
         </div>
 
         <!-- ===== レベル別ビュー ===== -->
         <div id="level" class="roadmap-mode">
-            <div class="mode-description">
-                初心者から上級者まで、段階的にスキルアップできる学習パスです。各ステップの後に次のステップへ進んでください。
-            </div>
+            <div class="mode-desc">初心者から上級者まで、段階的にスキルアップできる学習パスです。</div>
 
             <div class="level-view">
-                <!-- 入門ステップ -->
                 <div class="level-stage">
-                    <div class="stage-label">入門ステップ</div>
+                    <div class="stage-label">入門ステッブ</div>
                     <div class="courses-row">
                         <div class="course-card" onclick="showCourseDetail('品質管理_基礎')">
-                            <div class="course-card-header">
-                                <div class="course-name">品質管理 基礎コース</div>
-                                <span class="course-badge">9コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★☆☆</div>
+                            <div class="course-card-header"><div class="course-name">品質管理 基礎コース</div><span class="course-badge">9コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★</span>☆☆</div>
                             <div class="course-target">全社員・新人向け</div>
                             <div class="course-count">約45分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('製造業_基礎知識')">
-                            <div class="course-card-header">
-                                <div class="course-name">製造業 基礎知識コース</div>
-                                <span class="course-badge">4コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★☆☆</div>
+                            <div class="course-card-header"><div class="course-name">製造業 基礎知識コース</div><span class="course-badge">4コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★</span>☆☆</div>
                             <div class="course-target">新人・非製造部門向け</div>
                             <div class="course-count">約20分</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 基礎ステップ -->
                 <div class="level-stage">
                     <div class="stage-label">基礎ステップ</div>
                     <div class="courses-row">
                         <div class="course-card" onclick="showCourseDetail('現場力向上')">
-                            <div class="course-card-header">
-                                <div class="course-name">現場力向上コース</div>
-                                <span class="course-badge">6コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★☆☆</div>
+                            <div class="course-card-header"><div class="course-name">現場力向上コース</div><span class="course-badge">6コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★</span>☆☆</div>
                             <div class="course-target">製造・現場部門向け</div>
                             <div class="course-count">約30分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('問題解決_基礎')">
-                            <div class="course-card-header">
-                                <div class="course-name">問題解決 基礎コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">問題解決 基礎コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">新人〜中堅向け</div>
                             <div class="course-count">約15分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('QC七つ道具')">
-                            <div class="course-card-header">
-                                <div class="course-name">QC七つ道具コース</div>
-                                <span class="course-badge">4コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">QC七つ道具コース</div><span class="course-badge">4コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質・製造・生産管理向け</div>
                             <div class="course-count">約20分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('検査計測')">
-                            <div class="course-card-header">
-                                <div class="course-name">検査・計測コース</div>
-                                <span class="course-badge">4コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">検査・計測コース</div><span class="course-badge">4コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質・検査員向け</div>
                             <div class="course-count">約20分</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 応用ステップ -->
                 <div class="level-stage">
                     <div class="stage-label">応用ステップ</div>
                     <div class="courses-row">
                         <div class="course-card" onclick="showCourseDetail('統計データ分析')">
-                            <div class="course-card-header">
-                                <div class="course-name">統計・データ分析コース</div>
-                                <span class="course-badge">5コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">統計・データ分析コース</div><span class="course-badge">5コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質・技術・研究向け</div>
                             <div class="course-count">約25分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('品質マネジメント')">
-                            <div class="course-card-header">
-                                <div class="course-name">品質マネジメントシステムコース</div>
-                                <span class="course-badge">5コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">品質マネジメントシステムコース</div><span class="course-badge">5コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質部門・管理職向け</div>
                             <div class="course-count">約25分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('FMEA源流')">
-                            <div class="course-card-header">
-                                <div class="course-name">FMEA・源流管理コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★★</div>
-                            <div class="course-target">設計・品質・生産技術向け</div>
+                            <div class="course-card-header"><div class="course-name">FMEA・源流管理コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★★</span></div>
+                            <div class="course-target">設計・品質・生甧技術向け</div>
                             <div class="course-count">約15分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('変更管理4M')">
-                            <div class="course-card-header">
-                                <div class="course-name">変更管理・4M管理コース</div>
-                                <span class="course-badge">2コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">変更管理・4M管理コース</div><span class="course-badge">2コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質・製造・技術向け</div>
                             <div class="course-count">約10分</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 実践ステップ -->
                 <div class="level-stage">
                     <div class="stage-label">実践ステップ</div>
                     <div class="courses-row">
                         <div class="course-card" onclick="showCourseDetail('クレーム是正')">
-                            <div class="course-card-header">
-                                <div class="course-name">クレーム対応・是正処置コース</div>
-                                <span class="course-badge">2コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">クレーム対応・是正処置コース</div><span class="course-badge">2コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">品質・管理職向け</div>
                             <div class="course-count">約10分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('サプライヤ品質')">
-                            <div class="course-card-header">
-                                <div class="course-name">サプライヤ品質管理コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">サプライヤ品質管理コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">購買・品質向け</div>
-                            <div class="course-count">約15分</div>
+                            <div class="course-count">約15`+g</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('品質コストKPI')">
-                            <div class="course-card-header">
-                                <div class="course-name">品質コスト・KPI管理コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">品質コスト・KPI管理コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">管理職向け</div>
                             <div class="course-count">約15分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('リスク')">
-                            <div class="course-card-header">
-                                <div class="course-name">リスクマネジメントコース</div>
-                                <span class="course-badge">2コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★★</div>
+                            <div class="course-card-header"><div class="course-name">リスクマネジメントコース</div><span class="course-badge">2コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★★</span></div>
                             <div class="course-target">管理職向け</div>
                             <div class="course-count">約10分</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 専門ステップ -->
                 <div class="level-stage">
-                    <div class="stage-label">専門ステップ</div>
+                    <div class="stage-label">専門ステッブ</div>
                     <div class="courses-row">
                         <div class="course-card" onclick="showCourseDetail('健康食品GMP')">
-                            <div class="course-card-header">
-                                <div class="course-name">健康食品GMPコース</div>
-                                <span class="course-badge">21コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★★</div>
+                            <div class="course-card-header"><div class="course-name">健康食品GMPコース</div><span class="course-badge">21コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★★</span></div>
                             <div class="course-target">健康食品製造向け</div>
                             <div class="course-count">約1時間45分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('標準化')">
-                            <div class="course-card-header">
-                                <div class="course-name">標準化コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">標準化コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">全社員向け</div>
                             <div class="course-count">約15分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('トヨタ生産')">
-                            <div class="course-card-header">
-                                <div class="course-name">トヨタ生産方式コース</div>
-                                <span class="course-badge">3コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★☆</div>
+                            <div class="course-card-header"><div class="course-name">トヨタ生産方式コース</div><span class="course-badge">3コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★</span>☆</div>
                             <div class="course-target">製造・生産管理向け</div>
                             <div class="course-count">約15分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('DX')">
-                            <div class="course-card-header">
-                                <div class="course-name">DX・データ活用コース</div>
-                                <span class="course-badge">2コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★★</div>
+                            <div class="course-card-header"><div class="course-name">DX・データ活用コース</div><span class="course-badge">2コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★★</span></div>
                             <div class="course-target">管理職・技術向け</div>
                             <div class="course-count">約10分</div>
                         </div>
                         <div class="course-card" onclick="showCourseDetail('品質人材育成')">
-                            <div class="course-card-header">
-                                <div class="course-name">品質人材育成・組織マネジメントコース</div>
-                                <span class="course-badge">2コンテンツ</span>
-                            </div>
-                            <div class="course-difficulty">難易度: ★★★</div>
+                            <div class="course-card-header"><div class="course-name">品質人材育成・組織マネジメントコース</div><span class="course-badge">2コンテンツ</span></div>
+                            <div class="course-difficulty"><span class="stars">★★★</span></div>
                             <div class="course-target">管理職向け</div>
                             <div class="course-count">約10分</div>
                         </div>
@@ -1247,1073 +1081,242 @@
 
         <!-- ===== 職種別ビュー ===== -->
         <div id="role" class="roadmap-mode">
-            <div class="mode-description">
-                あなたの職種に応じた最適な学習パスです。必須コースから始めて、推奨・任意コースにステップアップします。
-            </div>
-
+            <div class="mode-desc">あなたの職種に応じた最適な学習パスです。必須コースから始めて、推奨・任意コースにステップアップします。</div>
             <div class="path-view">
-                <!-- 製造・現場担当 -->
                 <div class="path-card">
                     <div class="path-title">製造・現場担当</div>
                     <div class="path-description">生産現場で品質を確保するための知識と技能を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">検査・計測コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">トヨタ生産方式コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">QC七つ道具コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">検査・計測コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">トヨタ生産方式コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約250分</span>（全コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約250分</span>（全コース）</span></div>
                 </div>
-
-                <!-- 品質管理担当 -->
                 <div class="path-card">
                     <div class="path-title">品質管理担当</div>
                     <div class="path-description">品質管理の専門知識を体系的に習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">FMEA・源流管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">クレーム対応・是正処置コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">QC七つ道具コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">統計・データ分析コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">FMEA・源流管理コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">クレーム対応・是正処置コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">変更管理・4M管理コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約260分</span>（必須コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約260分</span>（必須コース）</span></div>
                 </div>
-
-                <!-- 設計・技術担当 -->
                 <div class="path-card">
                     <div class="path-title">設計・技術担当</div>
                     <div class="path-description">設計段階からの品質確保と技術的課題解決を学びます。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">FMEA・源流管理コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">DX・データ活用コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">FMEA・源流管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">統計・データ分析コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">変更管理・4M管理コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">リスクマネジメントコース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">DX・データ活用コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約200分</span>（必須コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約200分</span>（必須コース）</span></div>
                 </div>
-
-                <!-- 購買・調達担当 -->
                 <div class="path-card">
                     <div class="path-title">購買・調達担当</div>
                     <div class="path-description">サプライヤ管理と外部品質確保の知識を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">検査・計測コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">サプライヤ品質管理コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質コスト・KPI管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">検査・計測コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">サプライヤ品質管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質コスト・KPI管理コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約130分</span>（必須コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約130分</span>（必須コース）</span></div>
                 </div>
-
-                <!-- 管理職・経営者 -->
                 <div class="path-card">
                     <div class="path-title">管理職・経営者</div>
                     <div class="path-description">組織全体の品質マネジメントとリーダーシップを習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質コスト・KPI管理コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質人材育成・組織マネジメントコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">DX・データ活用コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質コスト・KPI管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">リスクマネジメントコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質人材育成・組織マネジメントコース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">DX・データ活用コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約180分</span>（必須コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約180分</span>（必須コース）</span></div>
                 </div>
-
-                <!-- 新入社員 -->
                 <div class="path-card">
                     <div class="path-title">新入社員</div>
                     <div class="path-description">製造業の基礎から品質管理の基本までを段階的に学びます。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">製造業 基礎知識コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">問題解決 基礎コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">製造業 基礎知識コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">問題解決 基礎コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約130分</span>（必須コース）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約130分</span>（必須コース）</span></div>
                 </div>
-
-                <!-- 健康食品製造担当 -->
                 <div class="path-card">
                     <div class="path-title">健康食品製造担当</div>
                     <div class="path-description">健康食品業界特有のGMPと品質管理を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">健康食品GMPコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">健康食品GMPコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約370分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約370分</span>（必須）</span></div>
                 </div>
             </div>
         </div>
 
         <!-- ===== 目的別ビュー ===== -->
         <div id="purpose" class="roadmap-mode">
-            <div class="mode-description">
-                達成したい目標に応じた学習パスです。目的を選んで、必要なコースを順に学んでください。
-            </div>
-
+            <div class="mode-desc">達成したい目標に応じた学習パスです。目的を選んで、必要なコースを順に学んでください。</div>
             <div class="path-view">
-                <!-- QC検定合格を目指す -->
                 <div class="path-card">
-                    <div class="path-title">QC検定合格を目指す</div>
-                    <div class="path-description">3級から2級へと段階的に合格を目指します。</div>
+                    <div class="path-title">品質管理の基礎を固めたい</div>
+                    <div class="path-description">品質管理の基本概念から実践手法までを段階的に学びます。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC検定3級 対策コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC検定2級 対策コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">QC七つ道具コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">統計・データ分析コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">問題解決 基礎コース</span><span class="step-badge recommended">推奨</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約170分</span>（3級対応）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約130分</span>（必須）</span></div>
                 </div>
-
-                <!-- ISO9001認証取得を目指す -->
                 <div class="path-card">
-                    <div class="path-title">ISO9001認証取得を目指す</div>
-                    <div class="path-description">品質マネジメントシステムの構築と認証取得までを学びます。</div>
+                    <div class="path-title">品質マネジメント体制を構築したい</div>
+                    <div class="path-description">品質マネジメントシステムの構築と運用を学びます。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">ISO9001コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">変更管理・4M管理コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">品質人材育成・組織マネジメントコース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約200分</span>（基本パス）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約200分</span>（基本パス）</span></div>
                 </div>
-
-                <!-- 品質部門を立ち上げたい -->
-                <div class="path-card">
-                    <div class="path-title">品質部門を立ち上げたい</div>
-                    <div class="path-description">ゼロから品質部門を構築するためのノウハウを習得します。</div>
-                    <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">中小企業向け品質部門立ち上げコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質人材育成・組織マネジメントコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                    </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約170分</span>（必須）</span>
-                    </div>
-                </div>
-
-                <!-- 健康食品GMP認定を取りたい -->
                 <div class="path-card">
                     <div class="path-title">健康食品GMP認定を取りたい</div>
                     <div class="path-description">健康食品業界のGMPに完全対応した認定取得を目指します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">健康食品GMPコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">健康食品GMPコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約370分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約370分</span>（必須）</span></div>
                 </div>
-
-                <!-- 自動車品質（IATF16949）に対応したい -->
                 <div class="path-card">
-                    <div class="path-title">自動車品質（IATF16949）に対応したい</div>
-                    <div class="path-description">自動車業界の厳格な品質要件に対応するための知識を習得します。</div>
+                    <div class="path-title">現場の改善力を高めたい</div>
+                    <div class="path-description">現場の問題発見から改善活動まで実践的に学びます。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">FMEA・源流管理コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">IATF16949コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">問題解決 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">トヨタ生産方式コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">FMEA・源流管理コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約170分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約120分</span>（必須）</span></div>
                 </div>
-
-                <!-- 医療機器品質（ISO13485）に対応したい -->
                 <div class="path-card">
-                    <div class="path-title">医療機器品質（ISO13485）に対応したい</div>
-                    <div class="path-description">医療機器業界の規制要件と品質マネジメント知識を習得します。</div>
+                    <div class="path-title">リスクと品質コストを管理したい</div>
+                    <div class="path-description">リスクマネジメントと品質コスト管理で組織の品質経営を強化します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">ISO13485コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">リスクマネジメントコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質コスト・KPI管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">FMEA・源流管理コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">DX・データ活用コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約170分</span>（必須）</span>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約140分</span>（必須）</span></div>
+                </div>
+                <div class="path-card">
+                    <div class="path-title">サプライチェーン品質を強化したい</div>
+                    <div class="path-description">サプライヤ管理からクレーム対応まで外部品質確保を学びます。</div>
+                    <div class="path-courses">
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">検査・計測コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">サプライヤ品質管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">クレーム対応・是正処置コース</span><span class="step-badge recommended">推奨</span></div>
                     </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約160分</span>（必須）</span></div>
                 </div>
             </div>
         </div>
 
         <!-- ===== 業界別ビュー ===== -->
         <div id="industry" class="roadmap-mode">
-            <div class="mode-description">
-                業界特有の要件に対応した学習パスです。あなたの業界を選んで、業界標準や規制に対応したスキルを習得します。
-            </div>
-
+            <div class="mode-desc">業界特有の要件に対応した学習パスです。あなたの業界を選んで、業界標準や規制に対応したスキルを習得します。</div>
             <div class="path-view">
-                <!-- 製造業全般 -->
                 <div class="path-card">
                     <div class="path-title"><span class="path-icon">🏭</span>製造業全般</div>
                     <div class="path-description">あらゆる製造業に共通する品質管理とQC基礎を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">製造業 基礎知識コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">問題解決 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">検査・計測コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">製造業 基礎知識コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">問題解決 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">QC七つ道具コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">検査・計測コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約210分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約210分</span>（必須）</span></div>
                 </div>
-
-                <!-- 健康食品業界 -->
                 <div class="path-card">
                     <div class="path-title"><span class="path-icon">🍀</span>健康食品業界</div>
                     <div class="path-description">健康食品製造業特有のGMPと品質管理に完全対応します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">健康食品GMPコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質コスト・KPI管理コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">健康食品GMPコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">品質コスト・KPI管理コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約370分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約370分</span>（必須）</span></div>
                 </div>
-
-                <!-- 自動車業界 -->
                 <div class="path-card">
                     <div class="path-title"><span class="path-icon">🚗</span>自動車業界</div>
-                    <div class="path-description">IATF16949やトヨタ生産方式に対応した品質要件を習得します。</div>
+                    <div class="path-description">トヨタ生産方式に対応した品質要件を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">QC七つ道具コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">FMEA・源流管理コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">トヨタ生産方式コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">IATF16949コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">QC七つ道具コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">FMEA・源流管理コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">統計・データ分析コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">トヨタ生産方式コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">変更管理・4M管理コース</span><span class="step-badge recommended">推奨</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約220分</span>（必須）</span>
-                    </div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約220分</span>（必須）</span></div>
                 </div>
-
-                <!-- 医療機器業界 -->
-                <div class="path-card">
-                    <div class="path-title"><span class="path-icon">🏥</span>医療機器業界</div>
-                    <div class="path-description">ISO13485と医療機器規制に対応した品質マネジメントを習得します。</div>
-                    <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">ISO13485コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
-                    </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約170分</span>（必須）</span>
-                    </div>
-                </div>
-
-                <!-- 医薬品・化粧品業界 -->
                 <div class="path-card">
                     <div class="path-title"><span class="path-icon">💊</span>医薬品・化粧品業界</div>
-                    <div class="path-description">GMPを基盤とした製造管理・品質管理と、化粧品・医薬部外品特有の規制対応を習得します。</div>
+                    <div class="path-description">GMPを基盤とした製造管理・品質管理と規制対応を習得します。</div>
                     <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">健康食品GMPコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">サプライヤ品質管理コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
+                        <div class="course-step"><span class="course-step-name">品質管理 基礎コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">現場力向上コース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">健康食品GMPコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">品質マネジメントシステムコース</span><span class="step-badge required">必須</span></div>
+                        <div class="course-step"><span class="course-step-name">リスクマネジメントコース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">標準化コース</span><span class="step-badge recommended">推奨</span></div>
+                        <div class="course-step"><span class="course-step-name">サプライヤ品質管理コース</span><span class="step-badge optional">任意</span></div>
                     </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約410分</span>（必須）</span>
-                    </div>
-                </div>
-
-                <!-- 石油・化学業界 -->
-                <div class="path-card">
-                    <div class="path-title"><span class="path-icon">🛢️</span>石油・化学業界</div>
-                    <div class="path-description">プロセス産業特有の工程管理・安全管理と、ISO品質マネジメントを習得します。</div>
-                    <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">統計・データ分析コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">リスクマネジメントコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">ISO14001コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">DX・データ活用コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
-                    </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約230分</span>（必須）</span>
-                    </div>
-                </div>
-
-                <!-- 食品包材業界 -->
-                <div class="path-card">
-                    <div class="path-title"><span class="path-icon">📦</span>食品包材業界</div>
-                    <div class="path-description">食品接触材料の安全性確保、トレーサビリティ、異物混入防止など包材特有の品質管理を習得します。</div>
-                    <div class="path-courses">
-                        <div class="course-step">
-                            <span class="course-step-name">品質管理 基礎コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">現場力向上コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">検査・計測コース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">品質マネジメントシステムコース</span>
-                            <span class="step-badge required">必須</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">サプライヤ品質管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">変更管理・4M管理コース</span>
-                            <span class="step-badge recommended">推奨</span>
-                        </div>
-                        <div class="course-step">
-                            <span class="course-step-name">標準化コース</span>
-                            <span class="step-badge optional">任意</span>
-                        </div>
-                    </div>
-                    <div class="path-time">
-                        <span>推定学習時間</span>
-                        <span><span class="time-value">約240分</span>（必須）</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== 全コース一覧 ===== -->
-        <div id="all" class="roadmap-mode active">
-            <div class="mode-description">
-                全34コースをカテゴリ別に表示しています。各コースをクリックして詳細情報をご覧ください。
-            </div>
-
-            <!-- レベル別コース（5コース） -->
-            <h3 class="section-heading cat-pink">レベル別コース <span class="badge-count">5コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card" onclick="showCourseDetail('教養')">
-                    <div class="course-card-header">
-                        <div class="course-name">教養コース</div>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 入門</div>
-                    <div class="course-target">全社員向け</div>
-                    <div class="course-count">19コンテンツ | 約1時間35分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('初級')">
-                    <div class="course-card-header">
-                        <div class="course-name">初級コース</div>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 入門</div>
-                    <div class="course-target">新人・若手向け</div>
-                    <div class="course-count">23コンテンツ | 約1時間55分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('中級')">
-                    <div class="course-card-header">
-                        <div class="course-name">中級コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">中堅・リーダー向け</div>
-                    <div class="course-count">12コンテンツ | 約1時間</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('実践')">
-                    <div class="course-card-header">
-                        <div class="course-name">実践コース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">管理者・推進担当向け</div>
-                    <div class="course-count">8コンテンツ | 約40分</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('具体例編')">
-                    <div class="course-card-header">
-                        <div class="course-name">具体例編コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">全レベル対象</div>
-                    <div class="course-count">準備中</div>
-                </div>
-            </div>
-
-            <!-- 基礎・入門（4コース） -->
-            <h3 class="section-heading cat-orange">基礎・入門 <span class="badge-count">4コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card" onclick="showCourseDetail('品質管理_基礎')">
-                    <div class="course-card-header">
-                        <div class="course-name">品質管理 基礎コース</div>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 入門</div>
-                    <div class="course-target">全社員・新人向け</div>
-                    <div class="course-count">9コンテンツ | 約45分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('製造業_基礎知識')">
-                    <div class="course-card-header">
-                        <div class="course-name">製造業 基礎知識コース</div>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 入門</div>
-                    <div class="course-target">新人・非製造部門向け</div>
-                    <div class="course-count">4コンテンツ | 約20分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('現場力向上')">
-                    <div class="course-card-header">
-                        <div class="course-name">現場力向上コース</div>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 入門</div>
-                    <div class="course-target">製造・現場部門向け</div>
-                    <div class="course-count">6コンテンツ | 約30分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('問題解決_基礎')">
-                    <div class="course-card-header">
-                        <div class="course-name">問題解決 基礎コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">新人〜中堅向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-            </div>
-
-            <!-- QC・統計・検査（5コース） -->
-            <h3 class="section-heading cat-green">QC・統計・検査 <span class="badge-count">5コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card coming-soon" onclick="showCourseDetail('QC検定3級')">
-                    <div class="course-card-header">
-                        <div class="course-name">QC検定3級 対策コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">製造・品質部門向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('QC検定2級')">
-                    <div class="course-card-header">
-                        <div class="course-name">QC検定2級 対策コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">リーダー・管理職向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('QC七つ道具')">
-                    <div class="course-card-header">
-                        <div class="course-name">QC七つ道具コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・製造・生産管理向け</div>
-                    <div class="course-count">4コンテンツ | 約20分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('統計データ分析')">
-                    <div class="course-card-header">
-                        <div class="course-name">統計・データ分析コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・技術・研究向け</div>
-                    <div class="course-count">5コンテンツ | 約25分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('検査計測')">
-                    <div class="course-card-header">
-                        <div class="course-name">検査・計測コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・検査員向け</div>
-                    <div class="course-count">4コンテンツ | 約20分</div>
-                </div>
-            </div>
-
-            <!-- マネジメント・管理（8コース） -->
-            <h3 class="section-heading cat-purple">マネジメント・管理 <span class="badge-count">8コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card" onclick="showCourseDetail('品質マネジメント')">
-                    <div class="course-card-header">
-                        <div class="course-name">品質マネジメントシステムコース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質部門・管理職向け</div>
-                    <div class="course-count">5コンテンツ | 約25分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('FMEA源流')">
-                    <div class="course-card-header">
-                        <div class="course-name">FMEA・源流管理コース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">設計・品質・生産技術向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('変更管理4M')">
-                    <div class="course-card-header">
-                        <div class="course-name">変更管理・4M管理コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・製造・技術向け</div>
-                    <div class="course-count">2コンテンツ | 約10分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('クレーム是正')">
-                    <div class="course-card-header">
-                        <div class="course-name">クレーム対応・是正処置コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・管理職向け</div>
-                    <div class="course-count">2コンテンツ | 約10分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('サプライヤ品質')">
-                    <div class="course-card-header">
-                        <div class="course-name">サプライヤ品質管理コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">購買・品質向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('品質コストKPI')">
-                    <div class="course-card-header">
-                        <div class="course-name">品質コスト・KPI管理コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">管理職向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('リスク')">
-                    <div class="course-card-header">
-                        <div class="course-name">リスクマネジメントコース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">管理職向け</div>
-                    <div class="course-count">2コンテンツ | 約10分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('品質人材育成')">
-                    <div class="course-card-header">
-                        <div class="course-name">品質人材育成・組織マネジメントコース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">管理職向け</div>
-                    <div class="course-count">2コンテンツ | 約10分</div>
-                </div>
-            </div>
-
-            <!-- 専門・業界特化（5コース） -->
-            <h3 class="section-heading cat-red">専門・業界特化 <span class="badge-count">5コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card coming-soon" onclick="showCourseDetail('ISO9001監査')">
-                    <div class="course-card-header">
-                        <div class="course-name">ISO9001 監査・審査コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                                        <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">内部監査員・品質管理責任者向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('トヨタ生産')">
-                    <div class="course-card-header">
-                        <div class="course-name">トヨタ生産方式コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">製造・生産管理向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('標準化')">
-                    <div class="course-card-header">
-                        <div class="course-name">標準化コース</div>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">全社員向け</div>
-                    <div class="course-count">3コンテンツ | 約15分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('DX')">
-                    <div class="course-card-header">
-                        <div class="course-name">DX・データ活用コース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">管理職・技術向け</div>
-                    <div class="course-count">2コンテンツ | 約10分</div>
-                </div>
-                <div class="course-card" onclick="showCourseDetail('健康食品GMP')">
-                    <div class="course-card-header">
-                        <div class="course-name">健康食品GMPコース</div>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">健康食品製造向け</div>
-                    <div class="course-count">21コンテンツ | 約1時間45分</div>
-                </div>
-            </div>
-
-            <!-- テーマ横断コース（6コース） -->
-            <h3 class="section-heading cat-teal">テーマ横断コース <span class="badge-count">6コース</span></h3>
-            <div class="courses-grid">
-                <div class="course-card coming-soon" onclick="showCourseDetail('中小企業立ち上げ')">
-                    <div class="course-card-header">
-                        <div class="course-name">中小企業向け品質部門立ち上げコース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">経営者・部門責任者向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('マニュアル作成')">
-                    <div class="course-card-header">
-                        <div class="course-name">マニュアル作成コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・製造・管理部門向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('ISO9001')">
-                    <div class="course-card-header">
-                        <div class="course-name">ISO9001コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">品質・管理部門向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('ISO13485')">
-                    <div class="course-card-header">
-                        <div class="course-name">ISO13485コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">医療機器業界向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('IATF16949')">
-                    <div class="course-card-header">
-                        <div class="course-name">IATF 16949コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★★ 上級</div>
-                    <div class="course-target">自動車業界向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-                <div class="course-card coming-soon" onclick="showCourseDetail('ISO14001')">
-                    <div class="course-card-header">
-                        <div class="course-name">ISO14001コース</div>
-                        <span class="course-badge coming">Coming Soon</span>
-                    </div>
-                    <div class="course-difficulty">★★☆ 中級</div>
-                    <div class="course-target">環境マネジメント担当向け</div>
-                    <div class="course-count">準備中</div>
-                </div>
-            </div>
-
-            <!-- レベル別コース（5コース） -->
-            <h3 class="section-heading cat-gold">🎧 聞き流し学習 <span class="badge-count">1コース（50コンテンツ）</span></h3>
-            <div class="courses-grid">
-                <div class="course-card" onclick="showCourseDetail('聞き流し学習')" style="border-left: 3px solid #c8a84e;">
-                    <div class="course-card-header">
-                        <div class="course-name">🎧 聞き流し学習（音声コンテンツ）</div>
-                        <span class="course-badge">音声コンテンツ</span>
-                    </div>
-                    <div class="course-difficulty">★☆☆ 全レベル</div>
-                    <div class="course-target">全社員向け（通勤・作業中に最適）</div>
-                    <div class="course-count">50コンテンツ | ラジオ形式</div>
+                    <div class="path-time"><span>推定学習時間</span><span><span class="time-value">約410分</span>（必須）</span></div>
                 </div>
             </div>
         </div>
 
         <!-- ===== 聞き流し学習ビュー ===== -->
         <div id="audio" class="roadmap-mode">
-            <div class="mode-description">
-                ラジオ形式の音声コンテンツです。通勤中・作業中・休憩中の"ながら学習"に最適。画面を見ずに品質管理の知識を身につけられます。<br><strong style="color: #c8a84e;">全50コンテンツ ─ 近日公開予定</strong>
-            </div>
+            <div class="mode-desc">ラジオ形式の音声コンテンツです。通勤中・作業中・休憩中の"ながらて習"に最適。画面を見ずに品質管理の知識を身につけられます。<br><strong style="color: var(--primary);">全50コンテンツ収録</strong></div>
 
             <div class="paths-grid">
-                <div class="path-card" style="border-top: 3px solid #c8a84e;">
-                    <div class="path-title">🎧 品質管理の基礎 <span class="course-badge" style="font-size:0.7rem; vertical-align:middle;">音声コンテンツ</span></div>
+                <div class="audio-card">
+                    <div class="path-title">🎧 品質管理の基礎 <span class="course-badge" style="vertical-align:middle;">音声</span></div>
                     <div class="path-description">品質とは何か、QC活動の目的、顧客満足の考え方など基本的なトピックを対話形式で解説</div>
                     <div class="path-courses">
                         <div class="path-course">品質管理の基本概念</div>
@@ -2322,14 +1325,10 @@
                         <div class="path-course">5Sと現場力の基礎</div>
                         <div class="path-course">標準化の考え方</div>
                     </div>
-                    <div class="path-time">
-                        <span>収録数</span>
-                        <span><span class="time-value">約10本</span></span>
-                    </div>
+                    <div class="path-time"><span>収録数</span><span><span class="time-value">約10本</span></span></div>
                 </div>
-
-                <div class="path-card" style="border-top: 3px solid #c8a84e;">
-                    <div class="path-title">🎧 QCツール・統計 <span class="course-badge" style="font-size:0.7rem; vertical-align:middle;">音声コンテンツ</span></div>
+                <div class="audio-card">
+                    <div class="path-title">🎧 QCツール・統計 <span class="course-badge" style="vertical-align:middle;">音声</span></div>
                     <div class="path-description">QC7つ道具、統計的手法、データの読み方など分析系トピックをわかりやすく音声解説</div>
                     <div class="path-courses">
                         <div class="path-course">パレート図と特性要因図</div>
@@ -2338,14 +1337,10 @@
                         <div class="path-course">統計的データ分析入門</div>
                         <div class="path-course">検査・計測の基礎知識</div>
                     </div>
-                    <div class="path-time">
-                        <span>収録数</span>
-                        <span><span class="time-value">約10本</span></span>
-                    </div>
+                    <div class="path-time"><span>収録数</span><span><span class="time-value">約10本</span></span></div>
                 </div>
-
-                <div class="path-card" style="border-top: 3px solid #c8a84e;">
-                    <div class="path-title">🎧 ISO・マネジメント <span class="course-badge" style="font-size:0.7rem; vertical-align:middle;">音声コンテンツ</span></div>
+                <div class="audio-card">
+                    <div class="path-title">🎧 ISO・マネジメント <span class="course-badge" style="vertical-align:middle;">音声</span></div>
                     <div class="path-description">ISO9001の考え方、品質マネジメントシステム、リスク管理など組織運営テーマ</div>
                     <div class="path-courses">
                         <div class="path-course">ISO9001の基本と要件</div>
@@ -2354,15 +1349,11 @@
                         <div class="path-course">内部監査のポイント</div>
                         <div class="path-course">マネジメントレビュー</div>
                     </div>
-                    <div class="path-time">
-                        <span>収録数</span>
-                        <span><span class="time-value">約10本</span></span>
-                    </div>
+                    <div class="path-time"><span>収録数</span><span><span class="time-value">約10本</span></span></div>
                 </div>
-
-                <div class="path-card" style="border-top: 3px solid #c8a84e;">
-                    <div class="path-title">🎧 問題解決・改善手法 <span class="course-badge" style="font-size:0.7rem; vertical-align:middle;">音声コンテンツ</span></div>
-                    <div class="path-description">FMEA、なぜなぜ分析、是正処置、変更管理など問題解決の実践テーマ</div>
+                <div class="audio-card">
+                    <div class="path-title">🎧 問題解決・改善手法 <span class="course-badge" style="vertical-align:middle;">音声</span></div>
+                    <div class="path-description">FMEA、なぜなざ分析、是正処置、変更管理など問題解決の実践テーマ</div>
                     <div class="path-courses">
                         <div class="path-course">問題解決の4ステップ</div>
                         <div class="path-course">FMEA・源流管理</div>
@@ -2370,14 +1361,10 @@
                         <div class="path-course">変更管理・4M管理</div>
                         <div class="path-course">トヨタ生産方式の考え方</div>
                     </div>
-                    <div class="path-time">
-                        <span>収録数</span>
-                        <span><span class="time-value">約10本</span></span>
-                    </div>
+                    <div class="path-time"><span>収録数</span><span><span class="time-value">約10本</span></span></div>
                 </div>
-
-                <div class="path-card" style="border-top: 3px solid #c8a84e;">
-                    <div class="path-title">🎧 業界別トピック <span class="course-badge" style="font-size:0.7rem; vertical-align:middle;">音声コンテンツ</span></div>
+                <div class="audio-card">
+                    <div class="path-title">🎧 業界別トピック <span class="course-badge" style="vertical-align:middle;">音声</span></div>
                     <div class="path-description">自動車・医療機器・健康食品・化学など業界固有の品質管理トピックを解説</div>
                     <div class="path-courses">
                         <div class="path-course">自動車業界の品質要件</div>
@@ -2386,47 +1373,40 @@
                         <div class="path-course">化学・石油業界の安全管理</div>
                         <div class="path-course">食品包材の品質基準</div>
                     </div>
-                    <div class="path-time">
-                        <span>収録数</span>
-                        <span><span class="time-value">約10本</span></span>
-                    </div>
+                    <div class="path-time"><span>収録数</span><span><span class="time-value">約10本</span></span></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== ポップアップモーダル ===== -->
+    <!-- ===== モーダル ===== -->
     <div id="courseModal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeCourseDetail()">&times;</button>
             <h2 id="modalTitle">コース名</h2>
-
             <div class="modal-section">
                 <div class="modal-section-title">対象者</div>
                 <div class="modal-section-content" id="modalTarget">--</div>
             </div>
-
             <div class="modal-section">
                 <div class="modal-section-title">学習内容</div>
                 <div class="modal-section-content" id="modalContent">--</div>
             </div>
-
             <div class="modal-section">
                 <div class="modal-section-title">前提コース</div>
                 <div class="modal-section-content" id="modalPrerequisite">--</div>
             </div>
-
             <div class="modal-section">
                 <div class="modal-section-title">次のステップ</div>
                 <div class="modal-section-content" id="modalNextStep">--</div>
             </div>
-
             <div class="modal-cta">
-                <a id="modalCourseLink" href="#" target="_blank" class="btn-start-course">このコースを受講する →</a>
+                <a id="modalCourseLink" href="#" target="_blank" class="btn-start">このコースを受講する →</a>
             </div>
         </div>
     </div>
 
+    <!-- ===== フッター ===== -->
     <footer>
         <div class="footer-inner">
             <div>
@@ -2450,7 +1430,7 @@
                 content: '品質管理の基本概念、QC活動の目的、品質の定義、顧客満足について学びます。',
                 prerequisite: 'なし',
                 nextStep: '現場力向上コース / QC七つ道具コース / 問題解決基礎コース',
-                url: 'https://ulizaportal.jp/pages/006758e4-0ae2-b7b9-498c-8fb2f5f644b6'
+                url: 'https://ulizaportal.jp/pages/0067662c-30db-d8c5-ea9c-0887a34c79f4'
             },
             '製造業_基礎知識': {
                 title: '製造業 基礎知識コース',
@@ -2458,7 +1438,7 @@
                 content: '製造業全体の基本知識、生産工程、品質の重要性、労働安全について学びます。',
                 prerequisite: 'なし',
                 nextStep: '品質管理基礎コース / 現場力向上コース',
-                url: 'https://ulizaportal.jp/pages/00674a0c-5242-52e5-8d58-e19d717a6aef'
+                url: 'https://ulizaportal.jp/pages/0067662e-a054-d934-4b15-1a49da4c024a'
             },
             '現場力向上': {
                 title: '現場力向上コース',
@@ -2466,7 +1446,7 @@
                 content: '現場での問題発見、改善提案、作業効率化、5S活動について学びます。',
                 prerequisite: '品質管理基礎コース（推奨）',
                 nextStep: 'QC七つ道具コース / 検査・計測コース',
-                url: 'https://ulizaportal.jp/pages/00674a0c-c9e7-7558-c77b-6b977b93b7b5'
+                url: 'https://ulizaportal.jp/pages/0067662f-560e-9162-2f7b-cc8042e75f36'
             },
             '問題解決_基礎': {
                 title: '問題解決 基礎コース',
@@ -2474,39 +1454,23 @@
                 content: '問題の定義、原因分析、対策検討、効果確認の四段階について学びます。',
                 prerequisite: '品質管理基礎コース',
                 nextStep: 'QC七つ道具コース / FMEA・源流管理コース',
-                url: 'https://ulizaportal.jp/pages/00674a0d-334c-ae19-4696-52b4d3c6a28d'
-            },
-            'QC検定3級': {
-                title: 'QC検定3級 対策コース',
-                target: '製造・品質部門向け',
-                content: '準備中です。',
-                prerequisite: 'QC七つ道具コース / 統計・データ分析コース',
-                nextStep: 'QC検定2級対策コース',
-                url: 'https://sangyo-tech-testt.ulizaportal.jp/'
-            },
-            'QC検定2級': {
-                title: 'QC検定2級 対策コース',
-                target: 'リーダー・管理職向け',
-                content: '準備中です。',
-                prerequisite: 'QC検定3級対策コース',
-                nextStep: '品質マネジメントシステムコース',
-                url: 'https://sangyo-tech-testt.ulizaportal.jp/'
+                url: 'https://ulizaportal.jp/pages/0067662f-9a60-f57c-972b-1962a04026d5'
             },
             'QC七つ道具': {
                 title: 'QC七つ道具コース',
-                target: '品質・製造・生産管理向け',
+                target: '品賨・製造・生産管理向け',
                 content: 'パレート図、特性要因図、層別、ヒストグラム、散布図、チェックシート、管理図について学びます。',
                 prerequisite: '品質管理基礎コース',
                 nextStep: '統計・データ分析コース / FMEA・源流管理コース',
-                url: 'https://ulizaportal.jp/pages/00674a03-5a66-6b56-375a-fb29f9ebb64f'
+                url: 'https://ulizaportal.jp/pages/0067662c-fc63-30ee-18e0-daac3ea28b14'
             },
             '統計データ分析': {
                 title: '統計・データ分析コース',
                 target: '品質・技術・研究向け',
-                content: '基本統計量、正規分布、仮説検定、相関分析、回帰分析について学びます。',
+                content: '基本統計量、正規分布、仮説検定。相関分析、回帰分析について学びます。',
                 prerequisite: 'QC七つ道具コース',
                 nextStep: '品質マネジメントシステムコース / DX・データ活用コース',
-                url: 'https://ulizaportal.jp/pages/00674a03-1583-fe7b-97f3-284e57000c76'
+                url: 'https://ulizaportal.jp/pages/0067662d-a0e1-17ac-835b-abf3eadb89d9'
             },
             '検査計測': {
                 title: '検査・計測コース',
@@ -2514,15 +1478,15 @@
                 content: '検査の種類、測定誤差、ゲージR&R、計測機器の管理について学びます。',
                 prerequisite: '品質管理基礎コース',
                 nextStep: 'サプライヤ品質管理コース / QC七つ道具コース',
-                url: 'https://ulizaportal.jp/pages/00674a0d-6ed2-d794-2338-4eb44ee80f79'
+                url: 'https://ulizaportal.jp/pages/0067662f-e83b-8842-b5e2-a0f7783e8b07'
             },
             '品質マネジメント': {
                 title: '品質マネジメントシステムコース',
-                target: '品質部門・管理職向け',
+                target: '品質部镠・管理職向け',
                 content: 'ISO9001、QMS構築、プロセスアプローチ、マネジメントレビューについて学びます。',
                 prerequisite: '品質管理基礎コース / QC七つ道具コース',
-                nextStep: 'ISO9001コース / リスクマネジメントコース',
-                url: 'https://ulizaportal.jp/pages/00674a14-f306-8c75-f39e-c4b76f0b0466'
+                nextStep: 'リスクマネジメントコース',
+                url: 'https://ulizaportal.jp/pages/00676630-9244-4ef3-77b9-d0549561ef04'
             },
             'FMEA源流': {
                 title: 'FMEA・源流管理コース',
@@ -2530,7 +1494,7 @@
                 content: 'FMEA手法、源流管理の考え方、設計FMEA、プロセスFMEAについて学びます。',
                 prerequisite: '品質管理基礎コース / QC七つ道具コース',
                 nextStep: 'リスクマネジメントコース / 統計・データ分析コース',
-                url: 'https://ulizaportal.jp/pages/00674a15-2996-2647-ebd6-c899267f778d'
+                url: 'https://ulizaportal.jp/pages/00676630-e475-b9fb-a28f-1386de060c4f'
             },
             '変更管理4M': {
                 title: '変更管理・4M管理コース',
@@ -2538,15 +1502,15 @@
                 content: '4M変動、変更管理プロセス、変更前後の確認、標準化について学びます。',
                 prerequisite: '品質管理基礎コース',
                 nextStep: '標準化コース / クレーム対応・是正処置コース',
-                url: 'https://ulizaportal.jp/pages/00674a15-7a3d-c0be-77f2-510396162736'
+                url: 'https://ulizaportal.jp/pages/00676631-3c6d-7f85-79aa-7fde621b41be'
             },
             'クレーム是正': {
                 title: 'クレーム対応・是正処置コース',
-                target: '品質・管理職向け',
+                target: '品質・管琘職向け',
                 content: 'クレーム対応フロー、根本原因分析、是正処置、予防処置について学びます。',
                 prerequisite: '品質管理基礎コース / 問題解決基礎コース',
                 nextStep: '品質マネジメントシステムコース',
-                url: 'https://ulizaportal.jp/pages/00674a15-ae15-1135-17cb-6adb2bddfb83'
+                url: 'https://ulizaportal.jp/pages/00676631-d98f-409b-fde0-52e1522436b9'
             },
             'サプライヤ品質': {
                 title: 'サプライヤ品質管理コース',
@@ -2554,7 +1518,7 @@
                 content: 'サプライヤ評価、品質協力依頼、監査、改善支援について学びます。',
                 prerequisite: '品質管理基礎コース / 検査・計測コース',
                 nextStep: '品質コスト・KPI管理コース',
-                url: 'https://ulizaportal.jp/pages/00674a15-ec77-e250-32c9-b8dad2d96c85'
+                url: 'https://ulizaportal.jp/pages/0067663b-ee59-d340-d12c-900deef97dbe'
             },
             '品質コストKPI': {
                 title: '品質コスト・KPI管理コース',
@@ -2562,7 +1526,7 @@
                 content: '品質コスト概念、COQ計算、品質KPI設定、データ分析について学びます。',
                 prerequisite: '品質管理基礎コース',
                 nextStep: 'DX・データ活用コース',
-                url: 'https://ulizaportal.jp/pages/00674a16-1884-e2e2-eeec-5a365a102e2b'
+                url: 'https://ulizaportal.jp/pages/0067663c-9864-a13b-37ea-4d700d621d98'
             },
             'リスク': {
                 title: 'リスクマネジメントコース',
@@ -2570,7 +1534,7 @@
                 content: 'リスク概念、リスク評価、リスク対策、危機管理について学びます。',
                 prerequisite: '品質管理基礎コース / FMEA・源流管理コース',
                 nextStep: '品質人材育成・組織マネジメントコース',
-                url: 'https://ulizaportal.jp/pages/00674a17-18ae-ae29-8543-a40dbc40e504'
+                url: 'https://ulizaportal.jp/pages/0067663d-e462-8e55-4700-09d0c92983f7'
             },
             '品質人材育成': {
                 title: '品質人材育成・組織マネジメントコース',
@@ -2578,7 +1542,7 @@
                 content: '人材育成計画、教育プログラム設計、OJT、組織文化構築について学びます。',
                 prerequisite: '品質管理基礎コース / リスクマネジメントコース',
                 nextStep: '経営戦略への統合',
-                url: 'https://ulizaportal.jp/pages/00674a17-e787-0f7e-3b1b-7b632daebc11'
+                url: 'https://ulizaportal.jp/pages/00676642-b881-6647-c3db-3ef6cba9301d'
             },
             'トヨタ生産': {
                 title: 'トヨタ生産方式コース',
@@ -2586,15 +1550,15 @@
                 content: 'ジャストインタイム、自働化、改善（カイゼン）、標準作業について学びます。',
                 prerequisite: '品質管理基礎コース / 現場力向上コース',
                 nextStep: '変更管理・4M管理コース',
-                url: 'https://ulizaportal.jp/pages/00674a17-4654-7599-afe7-62665f9590c6'
+                url: 'https://ulizaportal.jp/pages/0067663f-2997-420c-5dd5-b4470ab7df0c'
             },
             '標準化': {
                 title: '標準化コース',
                 target: '全社員向け',
                 content: '標準化の意義、標準書作成、改訂管理、実行確認について学びます。',
                 prerequisite: 'なし',
-                nextStep: 'マニュアル作成コース',
-                url: 'https://ulizaportal.jp/pages/00674a17-76a1-a66f-154b-d1e48cbd201d'
+                nextStep: '変更管理・4M管理コース',
+                url: 'https://ulizaportal.jp/pages/00676640-58d1-ac84-f1ad-19cd2efea511'
             },
             'DX': {
                 title: 'DX・データ活用コース',
@@ -2602,7 +1566,7 @@
                 content: 'デジタル化の推進、データ分析基礎、AI活用、システム導入について学びます。',
                 prerequisite: '統計・データ分析コース',
                 nextStep: '組織的DX推進',
-                url: 'https://ulizaportal.jp/pages/00674a17-bd8c-001c-d8f0-6775673ed838'
+                url: 'https://ulizaportal.jp/pages/00676642-3068-dbd6-294c-db8ad83019f2'
             },
             '健康食品GMP': {
                 title: '健康食品GMPコース',
@@ -2610,7 +1574,7 @@
                 content: '健康食品産業の特性、GMP規程、製造プロセス管理、記録・報告について学びます。全21コンテンツで、健康食品GMPの全要件をカバーしています。',
                 prerequisite: '品質管理基礎コース / 現場力向上コース',
                 nextStep: '品質マネジメントシステムコース',
-                url: 'https://ulizaportal.jp/pages/00674a18-18d6-6f3d-3ef9-ba6924487efd'
+                url: 'https://ulizaportal.jp/pages/00676699-7a40-4789-91eb-9488dbdce0e3'
             },
             '教養': {
                 title: '教養コース',
@@ -2618,7 +1582,7 @@
                 content: '品質管理の基本的な教養知識、業界動向、事例学習を含む19コンテンツです。',
                 prerequisite: 'なし',
                 nextStep: '初級コース / 職種別専門コース',
-                url: 'https://ulizaportal.jp/pages/00675a2f-5f53-2241-6636-909efad5a18a'
+                url: 'https://ulizaportal.jp/pages/0067669b-576d-ea85-fc2e-dd9cc9fddd53'
             },
             '初級': {
                 title: '初級コース',
@@ -2626,7 +1590,7 @@
                 content: '新入社員向けの基礎から基本までを網羅した23コンテンツのコースです。',
                 prerequisite: '品質管理基礎コース（推奨）',
                 nextStep: '中級コース',
-                url: 'https://ulizaportal.jp/pages/00675a2f-bca2-2c13-750d-98fa3b638553'
+                url: 'https://ulizaportal.jp/pages/0067669d-97c8-7d06-12d0-77a4dcd74b59'
             },
             '中級': {
                 title: '中級コース',
@@ -2634,7 +1598,7 @@
                 content: 'リーダー育成向けの応用知識と実践例を学ぶ12コンテンツのコースです。',
                 prerequisite: '初級コース / 各種専門コース',
                 nextStep: '実践コース',
-                url: 'https://ulizaportal.jp/pages/00675a2f-f601-24b6-b7bd-5141dc4c2269'
+                url: 'https://ulizaportal.jp/pages/006766a2-f14c-636e-8790-4a41cdd19aa2'
             },
             '実践': {
                 title: '実践コース',
@@ -2642,129 +1606,47 @@
                 content: '管理者向けの実践的課題解決事例を学ぶ8コンテンツのコースです。',
                 prerequisite: '中級コース',
                 nextStep: '組織推進活動',
-                url: 'https://ulizaportal.jp/pages/00675a30-3d7c-1124-5db5-0eec5aeb8dae'
-            },
-            '具体例編': {
-                title: '具体例編コース',
-                target: '全レベル対象',
-                content: '準備中です。',
-                prerequisite: 'なし',
-                nextStep: '職種別・業界別コース'
-            },
-            '中小企業立ち上げ': {
-                title: '中小企業向け品質部門立ち上げコース',
-                target: '経営者・部門責任者向け',
-                content: '準備中です。',
-                prerequisite: '品質管理基礎コース',
-                nextStep: '品質マネジメントシステムコース'
-            },
-            'マニュアル作成': {
-                title: 'マニュアル作成コース',
-                target: '品質・製造・管理部門向け',
-                content: '準備中です。',
-                prerequisite: '標準化コース',
-                nextStep: '変更管理・4M管理コース'
-            },
-            'ISO9001': {
-                title: 'ISO9001コース',
-                target: '品質・管理部門向け',
-                content: '準備中です。',
-                prerequisite: '品質マネジメントシステムコース',
-                nextStep: '認証取得支援'
-            },
-            'ISO13485': {
-                title: 'ISO13485コース',
-                target: '医療機器業界向け',
-                content: '準備中です。',
-                prerequisite: '品質マネジメントシステムコース / リスクマネジメントコース',
-                nextStep: '認証取得支援'
-            },
-            'IATF16949': {
-                title: 'IATF 16949コース',
-                target: '自動車業界向け',
-                content: '準備中です。',
-                prerequisite: '品質マネジメントシステムコース / FMEA・源流管理コース',
-                nextStep: '認証取得支援'
-            },
-            'ISO14001': {
-                title: 'ISO14001コース',
-                target: '環境マネジメント担当向け',
-                content: '準備中です。',
-                prerequisite: '品質管理基礎コース',
-                nextStep: '環境マネジメント推進'
-            },
-            'ISO9001監査': {
-                title: 'ISO9001 監査・審査コース',
-                target: '内部監査員・品質管理責任者・管理職向け',
-                content: '準備中です。',
-                prerequisite: 'ISO9001コース / 品質マネジメントシステムコース',
-                nextStep: '品質人材育成・組織マネジメントコース / リスクマネジメントコース'
+                url: 'https://ulizaportal.jp/pages/006766a4-4437-ae2f-5c63-6a1e554db2b7'
             },
             '聞き流し学習': {
                 title: '聞き流し学習（音声コンテンツ）',
                 target: '全社員向け（通勤・作業中の"ながら学習"に最適）',
-                content: 'ラジオ形式の音声コンテンツ。品質管理の基礎からQCツール、ISO規格、業界別トピックまで幅広いテーマを対話形式で聞きながら学べます。全50コンテンツ収録。画面を見られない移動中や作業中でも学習を進められます。',
+                content: 'ラジオ形式の音声コンテンツ。品質管理の基礎からQCツール、ISO規格。業界別トピックまで幅広いテーマを対話形式で聞きながら学べます。全50コンテンツ収録。画面を見られない移動中や作業中でも学習を進められます。',
                 prerequisite: 'なし（どのレベルからでも聴取可能）',
                 nextStep: '各テーマの動画コースで深掘り学習',
-                url: 'https://ulizaportal.jp/pages/00676068-c646-740b-c889-06ab4f318f01',
+                url: 'https://ulizaportal.jp/pages/006766a6-1370-07cd-fe79-6b33516797f7',
                 ctaText: '音声コンテンツを聴く →'
             }
         };
 
-        // ナビバートグル
-        function toggleNav() {
-            document.getElementById('navLinks').classList.toggle('open');
-        }
-
         function switchMode(mode) {
-            // モード内容を隠す
-            document.querySelectorAll('.roadmap-mode').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // タブボタンをアクティブにする
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // 選択したモードを表示
+            document.querySelectorAll('.roadmap-mode').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.tab-btn').forEach(function(btn) { btn.classList.remove('active'); });
             document.getElementById(mode).classList.add('active');
-
-            // クリックされたタブをアクティブに
-            const clickedBtn = document.querySelector('.tab-btn[onclick*="' + mode + '"]');
+            var clickedBtn = document.querySelector('.tab-btn[onclick*="' + mode + '"]');
             if (clickedBtn) clickedBtn.classList.add('active');
         }
 
-        // 初期状態：全コース一覧タブをアクティブに
-        document.addEventListener('DOMContentLoaded', function() {
-            const defaultTab = document.querySelector('.tab-btn[onclick*="all"]');
-            if (defaultTab) defaultTab.classList.add('active');
-        });
-
         function showCourseDetail(courseId) {
-            const course = courseDatabase[courseId];
+            var course = courseDatabase[courseId];
             if (!course) return;
-
             document.getElementById('modalTitle').textContent = course.title;
             document.getElementById('modalTarget').textContent = course.target;
             document.getElementById('modalContent').textContent = course.content;
             document.getElementById('modalPrerequisite').textContent = course.prerequisite;
             document.getElementById('modalNextStep').textContent = course.nextStep;
-
-            // コースリンク設定
-            const linkEl = document.getElementById('modalCourseLink');
+            var linkEl = document.getElementById('modalCourseLink');
             if (course.url) {
                 linkEl.href = course.url;
                 linkEl.classList.remove('disabled');
                 linkEl.textContent = course.ctaText || 'このコースを受講する →';
-                linkEl.target = course.url.startsWith('http') ? '_blank' : '_self';
+                linkEl.target = '_blank';
             } else {
                 linkEl.href = '#';
                 linkEl.classList.add('disabled');
                 linkEl.textContent = '準備中';
                 linkEl.target = '_self';
             }
-
             document.getElementById('courseModal').classList.add('active');
         }
 
@@ -2772,43 +1654,33 @@
             document.getElementById('courseModal').classList.remove('active');
         }
 
-        // モーダル外をクリックで閉じる
         window.onclick = function(event) {
-            const modal = document.getElementById('courseModal');
-            if (event.target === modal) {
-                modal.classList.remove('active');
-            }
-        }
+            var modal = document.getElementById('courseModal');
+            if (event.target === modal) modal.classList.remove('active');
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.course-step-name').forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var name = this.textContent.trim();
+                    var cards = document.querySelectorAll('.course-card');
+                    for (var i = 0; i < cards.length; i++) {
+                        var header = cards[i].querySelector('.course-name');
+                        if (header && header.textContent.trim() === name) {
+                            var oc = cards[i].getAttribute('onclick');
+                            if (oc) {
+                                var m = oc.match(/showCourseDetail\('([^']+)'\)/);
+                                if (m) showCourseDetail(m[1]);
+                            }
+                            break;
+                        }
+                    }
+                });
+            });
+        });
     </script>
-  <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
-    <script src="content-inject.js?v=4">
-    <script>
-document.querySelectorAll(".course-step-name").forEach(function(el) {
-    el.addEventListener("click", function(e) {
-        e.stopPropagation();
-        var name = this.textContent.trim();
-        var cards = document.querySelectorAll(".course-card");
-        for (var i = 0; i < cards.length; i++) {
-            var header = cards[i].querySelector(".course-name");
-            if (header && header.textContent.trim() === name) {
-                var oc = cards[i].getAttribute("onclick");
-                if (oc) {
-                    var m = oc.match(/showCourseDetail\('([^']+)'\)/);
-                    if (m) { if (cards[i].classList.contains("coming-soon")) { alert("準備中です"); } else { showCourseDetail(m[1]); } }
-                }
-                break;
-            }
-        }
-    });
-});
-</script>
-</script>
+    <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
+    <script src="content-inject.js?v=4"></script>
 </body>
 </html>
-
-    <!-- cursor glow + Quality text effect -->
-    <style>
-
-
-    </style>
-    
