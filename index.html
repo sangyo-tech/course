@@ -1691,12 +1691,9 @@
         function filterCourses(query) {
             query = query.toLowerCase().trim();
             var cards = document.querySelectorAll('.course-card');
-            var sections = document.querySelectorAll('.roadmap-mode.active .course-section, .roadmap-mode.active .audio-card, .roadmap-mode.active h3');
             cards.forEach(function(card) {
-                var name = card.querySelector('.course-name');
-                var desc = card.querySelector('.course-desc');
-                var text = (name ? name.textContent : '') + ' ' + (desc ? desc.textContent : '') + ' ' + (card.textContent || '');
-                card.style.display = (!query || text.toLowerCase().includes(query)) ? '' : 'none';
+                var text = card.textContent.toLowerCase();
+                card.style.display = (!query || text.includes(query)) ? '' : 'none';
             });
         }
 
