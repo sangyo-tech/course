@@ -709,6 +709,11 @@
         <!-- ===== 全コース一覧 ===== -->
         <div id="all" class="roadmap-mode active">
             <div class="mode-desc">全24コースをカテゴリ別に表示しています。各コースをクリックして詳細をご覧ください。</div>
+            <div style="margin:16px 0 0;position:relative">
+                <input type="text" id="courseSearch" placeholder="コース名やキーワードで検索..." oninput="filterCourses(this.value)" style="width:100%;padding:12px 16px 12px 42px;border:2px solid #e2e8f0;border-radius:12px;font-size:15px;background:#fff;color:#1e293b;outline:none;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;transition:border-color .2s">
+                <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:18px;color:#94a3b8">🔍</span>
+            </div>
+
 
             <div class="section-title cat-level">レベル別コース <span class="count">4コース</span></div>
             <div class="courses-grid">
@@ -1681,6 +1686,19 @@
         });
     </script>
     <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
-    <script src="content-inject.js?v=4"></script>
+    <script src="content-inject.js?v=4">
+        function filterCourses(query) {
+            query = query.toLowerCase().trim();
+            var cards = document.querySelectorAll('.course-card');
+            var sections = document.querySelectorAll('.roadmap-mode.active .course-section, .roadmap-mode.active .audio-card, .roadmap-mode.active h3');
+            cards.forEach(function(card) {
+                var name = card.querySelector('.course-name');
+                var desc = card.querySelector('.course-desc');
+                var text = (name ? name.textContent : '') + ' ' + (desc ? desc.textContent : '') + ' ' + (card.textContent || '');
+                card.style.display = (!query || text.toLowerCase().includes(query)) ? '' : 'none';
+            });
+        }
+
+</script>
 </body>
 </html>
