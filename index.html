@@ -2764,7 +2764,7 @@
             // コースリンク設定
             const linkEl = document.getElementById('modalCourseLink');
             if (course.url) {
-                linkEl.href = course.url;
+                linkEl.href = 'https://apply.sangyo-tech.jp/?plan=trial';
                 linkEl.classList.remove('disabled');
                 linkEl.textContent = course.ctaText || 'このコースを受講する →';
                 linkEl.target = course.url.startsWith('http') ? '_blank' : '_self';
